@@ -82,3 +82,9 @@ ul {
   margin-right: 20px;
   margin-left: 15px;
 }
+
+/*SCHEDULE*/
+iframe {
+  width: 100%;
+  height: 100%;
+}
