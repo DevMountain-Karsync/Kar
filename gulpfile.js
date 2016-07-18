@@ -3,7 +3,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 
 gulp.task('default', function (){
-gulp.src('js/*.js')
+gulp.src('src/*.js')
 .pipe(concat('all.min.js'))
 .pipe(uglify())
 .pipe(gulp.dest('gulped'))
