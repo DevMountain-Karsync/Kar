@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="karSync">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <a ui-sref="index">Index</a>
+      <a ui-sref="dashboard">Dashboard</a>
+      <a ui-sref="addCust">Add</a>
+      <a ui-sref="currentCust">Current</a>
+      <a ui-sref="login">Login</a>
+      <a ui-sref="maintenance">Maintenance</a>
+     </div>
+    <ui-view></ui-view>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
+    <script src="./app.js"></script>
+    <script src="./controllers/addCustomerController.js"></script>
+    <script src="./controllers/currentCustomerController.js"></script>
+    <script src="./controllers/dashboardController.js"></script>
+    <script src="./controllers/loginController.js"></script>
+    <script src="./controllers/maintenanceController.js"></script>
+
+  </body>
+</html>
