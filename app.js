@@ -31,10 +31,12 @@ angular.module('karSync', ['ui.router'])
     })
     .state('diagnostics', {
       templateUrl: './views/diagnostics.html',
+      url: '/diagnostics/',
       controller: 'diagnosticsCtrl'
     })
     .state('schedule', {
       templateUrl: './views/schedule.html',
+      url: '/schedule/',
       controller: 'scheduleCtrl'
     })
   $urlRouterProvider
