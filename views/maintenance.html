@@ -2,5 +2,12 @@
   <div class="column1">
   </div>
   <div class="column2">
+    <section ng-repeat="item in maintarr">{{item.item}}
+    <section>Engine Code: {{item.engineCode}}</section>
+    <section>Interval Mileage: {{item.intervalMileage}}</section>
+    <section>Interval Month: {{item.intervalMonth}}</section>
+    <section>maintenance Type: {{item.action}}</section>
+    <section>Description: {{item.itemDescription}}</section>
+  </section>
   </div>
 </section>
