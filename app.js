@@ -29,6 +29,14 @@ angular.module('karSync', ['ui.router'])
       url: '/maintenance/',
       controller: 'maintCtrl'
     })
+    .state('diagnostics', {
+      templateUrl: './views/diagnostics.html',
+      controller: 'diagnosticsCtrl'
+    })
+    .state('schedule', {
+      templateUrl: './views/schedule.html',
+      controller: 'scheduleCtrl'
+    })
   $urlRouterProvider
   .otherwise('/')
 });
