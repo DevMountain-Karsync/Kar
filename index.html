@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="karSync">
+  <head>
+    <meta charset="utf-8">
+    <title>KarSync</title>
+    <link rel ="stylesheet" type="text/css" href="./main.css">
+  </head>
+  <body>
+    <section class="main-container">
+      <section class="nav-bar">
+        <div id="nav-logo"><img src="./styles/imgs/logo.png"></div>
+        <div class="nav-links">
+        <ul>
+          <li><a ui-sref="dashboard">Dashboard</a></li>
+          <li><a ui-sref="addCust">Add New Customer</a></li>
+          <li><a ui-sref="schedule">My Schedule</a></li>
+          <li><a ui-sref="maintenance">Car Maintenance Schedule</a></li>
+          <li><a ui-sref="diagnostics">Diagnostic Lookup</a></li>
+        </ul>
+        </div>
+      </section>
+      <section class="route-container">
+        <ui-view></ui-view>
+      </section>
+
+
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
+    <script src="./app.js"></script>
+    <script src="./controllers/addCustomerController.js"></script>
+    <script src="./controllers/currentCustomerController.js"></script>
+    <script src="./controllers/dashboardController.js"></script>
+    <script src="./controllers/loginController.js"></script>
+    <script src="./controllers/maintenanceController.js"></script>
+    <script src="./controllers/scheduleController.js"></script>
+    <script src="./controllers/diagnosticsController.js"></script>
+
+  </body>
+</html>
