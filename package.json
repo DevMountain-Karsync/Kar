@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-less": "^1.0.0",
     "better-js-class": "*",
     "cps": "*",
     "gulp": "^3.9.1",
