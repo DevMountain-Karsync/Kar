@@ -1,5 +1,21 @@
 <section class="route-main">
   <div class="column1">
+    <div class="search-container">
+    <input type="text" placeholder="          Search..." id="makesSearch" ng-model="searchString" ng-class="{'typeSearch': searchString }">
+    </div>
+      <section class="make-list">
+      <section ng-repeat="make in makes | searchFor:searchString"><div id="make-click" ng-click="makeList(make.name)">{{make.name}}</div></section>
+    </section>
+    <div class="search-container">
+
+   <input type="text" placeholder="          Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelslist': searchString }">
+    </div>
+    <section class="model-list">
+      <section ng-repeat="model in models | searchFor:searchString1"><div id="model-click" ng-click="yearOption(model)">{{model.name}}</div></section>
+    </section>
+    <section class="year-list">
+      <section ng-repeat="year in years"><div id="year-click" ng-click="yearsModel(year.year)">{{year.year}}</div></section>
+    </section>
   </div>
   <div class="column2">
   </div>
