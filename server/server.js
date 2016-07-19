@@ -15,12 +15,43 @@ app.use(cors(options));
 
 var config = require('./config.js');
 
+var mysql = require('mysql');
 
-var box = new DB({
-    host     : config.host,
-    user     : config.user,
-    password : config.password,
-});
+var connection  = require('express-myconnection');
+//
+app.use(
+
+    connection(mysql,{
+
+        host     : config.host,
+        user     : config.user,
+        password : config.password,
+        port     : 3306,
+        database : config.database,
+    },'request')
+);
+
+// var connection = mysql.createConnection({
+//   host     : config.host,
+//   user     : config.user,
+//   password : config.password,
+//   database: config.database,
+// });
+//
+// connection.connect(function(err){
+//   if (err) {
+//     console.log(err);
+//   }
+//   console.log("success");
+// });
+
+var selectUser = require("./selectUser")
+
+app.get('/api/user/:id', selectUser.queryUser)
+
+
+
+
 
 var port = 3000;
 
