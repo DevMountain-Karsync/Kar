@@ -1,4 +1,4 @@
-angular.module('karSync', ['ui.router', 'ngLess'])
+angular.module('karSync', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider){
   $stateProvider
     .state('index', {
