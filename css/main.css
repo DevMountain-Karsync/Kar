@@ -1,5 +1,14 @@
 
 
+.users-dashboard {
+  height: 100%;
+  width: 100%;
+}
+.users-div {
+  height: 50px;
+  width: 100%;
+  border: solid 1px #F7F7F7;
+}
 
 
 /*LESS*/
