@@ -4,10 +4,11 @@ angular.module('karSync')
 this.getUser = function(){
   return $http({
     method: 'GET',
-    url: 'https://karsync-1133.appspot.com/api/user?id=de39d4ab-4d22-11e6-9e98-0680f03a8445'
+    url: 'http://localhost:3000/api/customers/1'
   })
   .then(function(response){
-    // console.log(response);
+    // console.log(response.data[1]);
+    // console.log(response.data[1].first_name);
     return response.data;
   })
  }
