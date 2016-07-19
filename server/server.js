@@ -21,6 +21,7 @@ var box = new DB({
     user     : config.user,
     password : config.password,
 });
+
 var port = 3000;
 
 app.listen(port, function(){
