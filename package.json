@@ -11,8 +11,11 @@
   "dependencies": {
     "angular-less": "^1.0.0",
     "better-js-class": "*",
+    "body-parser": "^1.15.2",
     "cors": "^2.7.1",
     "cps": "*",
+    "express": "^4.14.0",
+    "express-myconnection": "^1.0.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
