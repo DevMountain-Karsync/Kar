@@ -10,6 +10,7 @@ body {
   background-color: #F7F7F7;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 /*MAIN*/
 .main-container {
@@ -125,4 +126,12 @@ section.year-list {
 .maintenance-schedule {
   overflow: scroll;
   height: 100%;
+}
+::-webkit-scrollbar {
+  width: 25px;
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: grey;
 }
