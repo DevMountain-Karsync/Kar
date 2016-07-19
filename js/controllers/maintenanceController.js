@@ -21,19 +21,18 @@ $scope.yearOption = function(model) {
 
   }
 $scope.yearsModel = function(year) {
-  // console.log($scope.years);
-  // console.log(year);
+
   for (var i = 0; i < $scope.years.length; i++) {
     if($scope.years[i].year === year){
 
       edmundService.byYear($scope.years[i].id).then(function(res){
-
+        console.log(res);
         $scope.maintArr = res.data.actionHolder;
           if(res.data.actionHolder.length === 0) {
             $scope.alert ='no maintanence schedule available'
           }
 
-        // console.log(res)
+
       })
     }
   }
