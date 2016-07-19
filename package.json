@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-less": "^1.0.0",
     "better-js-class": "*",
     "cors": "^2.7.1",
     "cps": "*",
