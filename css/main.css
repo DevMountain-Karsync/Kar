@@ -103,6 +103,7 @@ section.make-list {
 #make-click {
   padding: 5px;
   border-top: solid 1px grey;
+  cursor: pointer;
 }
 section.model-list {
   overflow: scroll;
@@ -112,6 +113,7 @@ section.model-list {
 #model-click {
   padding: 5px;
   border-top: solid 1px grey;
+  cursor: pointer;
 }
 section.year-list {
   overflow: scroll;
@@ -121,6 +123,7 @@ section.year-list {
 #year-click {
   padding: 5px;
   border-top: solid 1px grey;
+  cursor: pointer;
 }
 .maintenance-schedule {
   overflow: scroll;
