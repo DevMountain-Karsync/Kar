@@ -12,8 +12,12 @@
 
 
 /*LESS*/
+@import 'https://fonts.googleapis.com/css?family=Roboto';
 /*@mainbackground: #F7F7F7*/
 /*HTML*/
+* {
+  font-family: 'Roboto', sans-serif;
+}
 html,
 body {
   background-color: #F7F7F7;
