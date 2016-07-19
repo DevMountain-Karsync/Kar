@@ -17,6 +17,7 @@
 /*HTML*/
 * {
   font-family: 'Roboto', sans-serif;
+  color: #727476;
 }
 html,
 body {
@@ -158,8 +159,9 @@ iframe {
   font-size: 1em;
 }
 section.make-list {
+  margin-top: 5%;
   overflow: scroll;
-  height: 40%;
+  height: 30%;
   background-color: white;
 }
 #make-click {
@@ -168,8 +170,9 @@ section.make-list {
   cursor: pointer;
 }
 section.model-list {
+  margin-top: 5%;
   overflow: scroll;
-  height: 35%;
+  height: 30%;
   background-color: white;
 }
 #model-click {
@@ -178,8 +181,9 @@ section.model-list {
   cursor: pointer;
 }
 section.year-list {
+  margin-top: 5%;
   overflow: scroll;
-  height: 20%;
+  height: 18%;
   background-color: white;
 }
 #year-click {
