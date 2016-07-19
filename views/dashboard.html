@@ -1,11 +1,16 @@
 <section class="route-main">
   <div class="column1">
-    <!-- <section ng-repeat="user in userList || filter: user"></section> -->
+    <div class="search-container">
+    <input type="text" placeholder="          Search..." class="usersSearch" ng-model="searchUser" ng-class="{'typeSearch': searchUser }">
+    </div>
+    <section ng-repeat="user in userList | searchUserList:searchUser"></section>
       <section class="users-dashboard">
-        <div class="users-div">{{user.first_name}} {{user.last_name}}</div>  
+        <div class="users-div">{{user.first_name}} {{user.last_name}}</div>
       </section>
     </div>
   </div>
   <div class="column2">
+    <div class="row1"></div>
+    <div class="row2"></div>
   </div>
 </section>

@@ -5,9 +5,32 @@
   width: 100%;
 }
 .users-div {
+  padding-top: 1vh;
   height: 50px;
   width: 100%;
   border: solid 1px #F7F7F7;
+  overflow: scroll;
+  height: 40%;
+  background-color: white;
+}
+.usersSearch {
+  background-color: white;
+  text-align: justify;
+  background-image: url('../IMG/mag-glass.png');
+  background-repeat: no-repeat;
+  background-size: 3vh;
+  opacity: .3;
+  background-position: left;
+  background-position: .5vw;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 4vh;
+  width: 20vw;
+  border-radius: 15px 15px 15px 15px;
+  font-size: 1em;
+}
+.searchUsers {
+  background-image: none;
 }
 
 
@@ -104,9 +127,6 @@ iframe {
   height: 100%;
 }
 
-.column1 {
-  background-color: #EEEEEE;
-}
 .search-container {
   display: -ms-flexbox;
   display: flex;
@@ -116,7 +136,7 @@ iframe {
   padding-bottom: 2vh;
   background-color: #EEEEEE;
 }
-#makesSearch {
+.makesSearch {
   background-color: white;
   text-align: justify;
   background-image: url('../IMG/mag-glass.png');
@@ -158,7 +178,7 @@ section.make-list {
   height: 40%;
   background-color: white;
 }
-#make-click {
+.make-click {
   padding: 5px;
   border-top: solid 1px grey;
   cursor: pointer;

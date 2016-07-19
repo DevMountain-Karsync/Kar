@@ -1,13 +1,12 @@
 <section class="route-main">
   <div class="column1">
     <div class="search-container">
-    <input type="text" placeholder="          Search..." id="makesSearch" ng-model="searchString" ng-class="{'typeSearch': searchString }">
+    <input type="text" placeholder="          Search..." class="makesSearch" ng-model="searchString"  ng-class="{'typeSearch': searchString }">
     </div>
       <section class="make-list">
-      <section ng-repeat="make in makes | searchFor:searchString"><div id="make-click" ng-click="makeList(make.name)">{{make.name}}</div></section>
+      <section ng-repeat="make in makes | searchFor:searchString"><div class="make-click" ng-click="makeList(make.name)">{{make.name}}</div></section>
     </section>
     <div class="search-container">
-
    <input type="text" placeholder="          Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelslist': searchString }">
     </div>
     <section class="model-list">
@@ -20,7 +19,6 @@
   <div class="column2">
     <div class="no-maint" ng-show="showAlert">{{alert}}</div>
     <section class="maintenance-schedule">
-
     <section ng-repeat="item in maintArr">
       <div class="maint-container">
       <section>Service: {{item.item}}</section>
