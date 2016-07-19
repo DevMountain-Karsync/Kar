@@ -16,7 +16,7 @@ angular.module('karSync')
     return function(arr, searchString1){
     if(!searchString1){
         return arr;
-    }
+    };
     var result = [];
     searchString1 = searchString1.toLowerCase();
     angular.forEach(arr, function(item){
@@ -26,4 +26,5 @@ angular.module('karSync')
     });
     return result;
   }
+
 });

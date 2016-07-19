@@ -24,7 +24,7 @@ $scope.yearsModel = function(year) {
     if($scope.years[i].year === year){
 
       edmundService.byYear($scope.years[i].id).then(function(res){
-        console.log(res);
+
         $scope.showAlert = false;
 
         $scope.maintArr = res.data.actionHolder;

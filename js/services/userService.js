@@ -12,4 +12,4 @@ this.getUser = function(){
     return response.data;
   })
  }
-})
+});
