@@ -1,12 +1,17 @@
 <section class="route-main">
   <div class="column1">
-    <section ng-repeat="make in makes"><button  ng-click="makeList(make.name)">{{make.name}}</button></section>
-
-    <section ng-repeat="model in models"><button ng-click="yearOption(model)">{{model.name}}</button></section>
-
-    <section ng-repeat="year in years"><button ng-click="yearsModel(year.year)">{{year.year}}</button></section>
+    <section class="make-list">
+      <section ng-repeat="make in makes"><div id="make-click" ng-click="makeList(make.name)">{{make.name}}</div></section>
+    </section>
+    <section class="model-list">
+      <section ng-repeat="model in models"><div id="model-click" ng-click="yearOption(model)">{{model.name}}</div></section>
+    </section>
+    <section class="year-list">
+      <section ng-repeat="year in years"><div id="year-click" ng-click="yearsModel(year.year)">{{year.year}}</div></section>
+    </section>
   </div>
   <div class="column2">
+    <section class="maintenance-schedule">
     {{alert}}
     <section ng-repeat="item in maintArr">Item: {{item.item}}
     <section>Engine Code: {{item.engineCode}}</section>
@@ -17,6 +22,7 @@
     <section>Part Units: {{item.partUnits}}</section>
     <section>maintenance Type: {{item.action}}</section>
     <section>Description: {{item.itemDescription}}</section>
+  </section>
   </section>
   </div>
 </section>
