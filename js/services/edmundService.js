@@ -39,6 +39,7 @@ this.byYear = function(yId) {
 
           }
           return data;
+
         });
 
 }
