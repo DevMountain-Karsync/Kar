@@ -1,74 +1,77 @@
+
+
+
+
 /*LESS*/
-
 /*@mainbackground: #F7F7F7*/
-
-
 /*HTML*/
-html, body {
+html,
+body {
   background-color: #F7F7F7;
   margin: 0;
   padding: 0;
 }
-
 /*MAIN*/
 .main-container {
+  display: -ms-flexbox;
   display: flex;
   height: auto;
   width: auto;
 }
-
 /*NAVBAR*/
-.nav-bar{
+.nav-bar {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  order: 1;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-order: 1;
+      order: 1;
   height: 100vh;
   width: 22%;
   background-color: white;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
-
 #nav-logo {
   width: 100%;
   height: auto;
-  order: 1;
+  -ms-flex-order: 1;
+      order: 1;
   padding-top: 5vh;
   padding-bottom: 5vh;
 }
-
 .nav-links {
   width: 100%;
   height: auto;
-  order: 2;
+  -ms-flex-order: 2;
+      order: 2;
 }
-
-.nav-links> ul> li {
+.nav-links > ul > li {
   list-style-type: none;
   margin-top: 25px;
   padding-left: 0px;
   border-top: solid 1px #F7F7F7;
 }
-
 a:link {
   text-decoration: none;
 }
-
 ul {
   padding: 0;
 }
-
 /*ROUTES*/
 .route-container {
+  display: -ms-flexbox;
   display: flex;
-  order: 2;
+  -ms-flex-order: 2;
+      order: 2;
   height: auto;
   width: 78%;
   background-color: #F7F7F7;
 }
-
 .route-main {
   width: 78vw;
   height: 100%;
+  display: -ms-flexbox;
   display: flex;
 }
 .column1 {
@@ -78,7 +81,6 @@ ul {
   margin-left: 20px;
   margin-top: 20px;
 }
-
 .column2 {
   width: 63%;
   height: 100vh;
@@ -87,9 +89,40 @@ ul {
   margin-right: 20px;
   margin-left: 15px;
 }
-
 /*SCHEDULE*/
 iframe {
   width: 100%;
+  height: 100%;
+}
+
+section.make-list {
+  overflow: scroll;
+  height: 40%;
+  background-color: white;
+}
+#make-click {
+  padding: 5px;
+  border-top: solid 1px grey;
+}
+section.model-list {
+  overflow: scroll;
+  height: 35%;
+  background-color: white;
+}
+#model-click {
+  padding: 5px;
+  border-top: solid 1px grey;
+}
+section.year-list {
+  overflow: scroll;
+  height: 20%;
+  background-color: white;
+}
+#year-click {
+  padding: 5px;
+  border-top: solid 1px grey;
+}
+.maintenance-schedule {
+  overflow: scroll;
   height: 100%;
 }
