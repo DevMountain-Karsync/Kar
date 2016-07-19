@@ -9,6 +9,11 @@ angular.module('karSync', ['ui.router'])
     url: '/dashboard/',
     controller: 'dashCtrl'
     })
+    .state('dashboardDisplay', {
+    templateUrl: './views/dashboardDisplay.html',
+    url: '/display',
+    parent: "dashboard",
+    })
     .state('addCust', {
       templateUrl: './views/addCustomer.html',
       url: '/add/',
@@ -32,7 +37,7 @@ angular.module('karSync', ['ui.router'])
     .state('diagnostics', {
       templateUrl: './views/diagnostics.html',
       url: '/diagnostics/',
-      controller: 'diagnosticsCtrl'
+      controller: 'diagCtrl'
     })
     .state('schedule', {
       templateUrl: './views/schedule.html',

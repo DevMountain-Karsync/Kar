@@ -1,11 +1,14 @@
 <section class="route-main">
   <div class="column1">
-
-  <section ng-repeat="user in userList">
+    <div class="search-container">
+  <input type="text" placeholder="          Search..." class="usersSearch" ng-model="searchUser" ng-class="{'typeSearch': searchUser }">
+  </div>
+  <section ng-repeat="user in userList | searchUserList:searchUser">
         <div class="users-div"> {{user.first_name}} {{user.last_name}} </div>
     </section>
     </div>
   </div>
   <div class="column2">
+    <ui-view></ui-view>
   </div>
 </section>
