@@ -45,11 +45,12 @@ app.use(
 //   console.log("success");
 // });
 
-var selectUser = require("./selectUser")
+var selectUser = require("./controllers/selectUser")
+var getCustomers = require("./controllers/getCustomers")
 
 app.get('/api/user/:id', selectUser.queryUser)
 
-
+app.get('/api/customers/:id', getCustomers.queryCutomers)
 
 
 
