@@ -1,6 +1,5 @@
 angular.module('karSync')
 .filter('searchUserList', function(){
-  console.log('dash user test');
   return function(arr, searchUser){
     if(!searchUser){
       return arr;
