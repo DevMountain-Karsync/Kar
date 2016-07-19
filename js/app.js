@@ -32,7 +32,7 @@ angular.module('karSync', ['ui.router'])
     .state('diagnostics', {
       templateUrl: './views/diagnostics.html',
       url: '/diagnostics/',
-      controller: 'diagnosticsCtrl'
+      controller: 'diagCtrl'
     })
     .state('schedule', {
       templateUrl: './views/schedule.html',
