@@ -1,11 +1,43 @@
 angular.module('karSync')
 .controller('maintCtrl', function($scope, edmundService){
-  edmundService.receiveArr("ford", "mustang").then(function(res){
-    var mock = res.data.years[0].id;
-  edmundService.byYear(mock).then(function(res){
-    $scope.maintarr = res.data.actionHolder;
+
+  edmundService.getMake().then(function(res){
+    $scope.makes = res.data.makes;
 
   })
-  });
+  edmundService.getModel().then(function(res){
+    $scope.models = res.data.models;
+
+  })
+
+ $scope.makeList = function(make){
+  edmundService.getModel(make).then(function(res){
+    $scope.models = res.data.models;
+  })
+  }
+$scope.yearOption = function(model) {
+
+  $scope.years = model.years;
+
+  }
+$scope.yearsModel = function(year) {
+  // console.log($scope.years);
+  // console.log(year);
+  for (var i = 0; i < $scope.years.length; i++) {
+    if($scope.years[i].year === year){
+
+      edmundService.byYear($scope.years[i].id).then(function(res){
+
+        $scope.maintArr = res.data.actionHolder;
+          if(res.data.actionHolder.length === 0) {
+            $scope.alert ='no maintanence schedule available'
+          }
+
+        // console.log(res)
+      })
+    }
+  }
+
+}
 
 });
