@@ -11,7 +11,7 @@ angular.module('karSync', ['ui.router'])
     })
     .state('dashboardDisplay', {
     templateUrl: './views/dashboardDisplay.html',
-    url: '/display',
+    url: 'display/',
     parent: "dashboard",
     })
     .state('addCust', {
