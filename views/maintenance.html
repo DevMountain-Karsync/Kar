@@ -1,19 +1,29 @@
 <section class="route-main">
   <div class="column1">
-    <section class="make-list">
-      <section ng-repeat="make in makes"><div id="make-click" ng-click="makeList(make.name)">{{make.name}}</div></section>
+    <div class="search-container">
+    <input type="text" placeholder="          Search..." id="makesSearch" ng-model="searchString" ng-class="{'typeSearch': searchString }">
+    </div>
+      <section class="make-list">
+      <section ng-repeat="make in makes | searchFor:searchString"><div id="make-click" ng-click="makeList(make.name)">{{make.name}}</div></section>
     </section>
+    <div class="search-container">
+
+   <input type="text" placeholder="          Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelslist': searchString }">
+    </div>
     <section class="model-list">
-      <section ng-repeat="model in models"><div id="model-click" ng-click="yearOption(model)">{{model.name}}</div></section>
+      <section ng-repeat="model in models | searchFor:searchString1"><div id="model-click" ng-click="yearOption(model)">{{model.name}}</div></section>
     </section>
     <section class="year-list">
       <section ng-repeat="year in years"><div id="year-click" ng-click="yearsModel(year.year)">{{year.year}}</div></section>
     </section>
   </div>
   <div class="column2">
+    <div class="no-maint" ng-show="showAlert">{{alert}}</div>
     <section class="maintenance-schedule">
-    {{alert}}
-    <section ng-repeat="item in maintArr">Item: {{item.item}}
+
+    <section ng-repeat="item in maintArr">
+      <div class="maint-container">
+      <section>Service: {{item.item}}</section>
     <section>Engine Code: {{item.engineCode}}</section>
     <section>Interval Mileage: {{item.intervalMileage}}</section>
     <section>Interval Month: {{item.intervalMonth}}</section>
@@ -22,6 +32,7 @@
     <section>Part Units: {{item.partUnits}}</section>
     <section>maintenance Type: {{item.action}}</section>
     <section>Description: {{item.itemDescription}}</section>
+    </div>
   </section>
   </section>
   </div>

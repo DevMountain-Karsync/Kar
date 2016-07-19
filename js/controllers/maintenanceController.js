@@ -1,13 +1,11 @@
 angular.module('karSync')
 .controller('maintCtrl', function($scope, edmundService){
-
   edmundService.getMake().then(function(res){
     $scope.makes = res.data.makes;
-
   })
+
   edmundService.getModel().then(function(res){
     $scope.models = res.data.models;
-
   })
 
  $scope.makeList = function(make){
@@ -27,9 +25,12 @@ $scope.yearsModel = function(year) {
 
       edmundService.byYear($scope.years[i].id).then(function(res){
         console.log(res);
+        $scope.showAlert = false;
+
         $scope.maintArr = res.data.actionHolder;
           if(res.data.actionHolder.length === 0) {
-            $scope.alert ='no maintanence schedule available'
+            $scope.alert ='no maintanence schedule available';
+            $scope.showAlert = true;
           }
 
 

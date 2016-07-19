@@ -10,7 +10,6 @@ body {
   background-color: #F7F7F7;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 /*MAIN*/
 .main-container {
@@ -96,6 +95,55 @@ iframe {
   height: 100%;
 }
 
+.column1 {
+  background-color: #EEEEEE;
+}
+.search-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: #EEEEEE;
+}
+#makesSearch {
+  background-color: white;
+  text-align: justify;
+  background-image: url('../IMG/mag-glass.png');
+  background-repeat: no-repeat;
+  background-size: 3vh;
+  opacity: .3;
+  background-position: left;
+  background-position: .5vw;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 4vh;
+  width: 20vw;
+  border-radius: 15px 15px 15px 15px;
+  font-size: 1em;
+}
+.typeSearch {
+  background-image: none;
+}
+.modelslist {
+  background-image: none;
+}
+.modelSearch {
+  background-image: url('../IMG/mag-glass.png');
+  background-repeat: no-repeat;
+  background-size: 3vh;
+  background-position: left;
+  font-color: black;
+  opacity: .3;
+  background-position: .5vw;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 4vh;
+  width: 20vw;
+  border-radius: 15px 15px 15px 15px;
+  font-size: 1em;
+}
 section.make-list {
   overflow: scroll;
   height: 40%;
@@ -129,6 +177,16 @@ section.year-list {
 .maintenance-schedule {
   overflow: scroll;
   height: 100%;
+}
+.maint-container {
+  padding-bottom: 4vh;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  border-bottom: solid 1px grey;
+}
+.no-maint {
+  text-align: center;
+  padding-top: 50vh;
 }
 ::-webkit-scrollbar {
   width: 25px;
