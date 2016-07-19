@@ -16,7 +16,7 @@ connection.connect();
 
 var id = '1';
 
-var query = connection.query('select * from articles where id = ?', id, function(err, result) {
+var query = connection.query('select * from articles where id = ?',id, function(err, result) {
   console.log(query.sql);
   console.log(result);
 });
