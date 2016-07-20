@@ -1,1 +1,69 @@
-<h1>I AM A SUB VIEW</h1>
+<section class="display-view-container">
+
+
+  <section class="customer-info-container">
+
+    <section class="customer-container">
+      <h3>{{user.first_name}} {{user.last_name}}</h3>
+      {{user.primary_phone}} <br>
+      {{user.secondary_phone}} <br>
+      {{user.email}}<br>
+                    <br>
+                    <br>
+      {{user.streetAddress}} <br>
+      {{user.cityAndState}}
+
+    </section >
+    <section class="primaryUser-on-account-container">
+      <h3>{{primaryUser.first_name}} {{primaryUser.last_name}}</h3>
+      {{primaryUser.primary_phone}} <br>
+      {{primaryUser.secondary_phone}} <br>
+      {{primaryUser.email}}<br>
+                    <br>
+                    <br>
+      {{primaryUser.streetAddress}} <br>
+      {{primaryUser.cityAndState}}
+
+    </section>
+    <section class="customer-service-plan-container">
+      <h3>Current Service Plan</h3><br>
+      {{user.userPlan}} - <strong>$ {{user.userPlanPrice}}</strong>/mo <br>
+      <br>
+      NEXT BILL DATE <br>
+      <strong>08/12/16</strong> <br>
+      <br>
+      END BILL DATE <br>
+      <strong>12/12/16</strong>
+    </section>
+
+  </section>
+  <section class="select-car-container">
+    Select a Car
+
+    <select class="select-car-dropdown" name="">
+      <option value="volvo">the Volvo</option>
+      <option value="saab">the Saab</option>
+      <option value="mercedes"> the Mercedes</option>
+      <option value="audi"> the Audi</option>
+    </select>
+
+    <button type="button" class="blue" name="button"> ADD NEW CAR</button>
+    <button class="red"type="button" name="button"> DELETE CAR</button>
+
+  </section>
+  <section class="car-info-container">
+    car info and alerts
+    <section class="alert-box-container">
+      <section class="alert-box-head red">
+        <img src=".//styles/imgs/bell.png" alt="bell" /> CAR Name here! or something
+      </section>
+      <p>
+        some text here
+      </p>
+    </section>
+  </section>
+  <section class="maintence-user-car-container">
+    edmonds api maintenance scehdule
+  </section>
+
+</section>
