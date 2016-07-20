@@ -1,28 +1,43 @@
 var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
+var config = require('../config');
 
-var User = require('../models/UserModel');
+passport.use(new GoogleStrategy({
+    clientID:     config.clientID,
+    clientSecret: config.clientSecret,
+    callbackURL: "http://localhost:3000/auth/google/callback",
+    passReqToCallback: true
+  },
 
-passport.use(new LocalStrategy({
-  usernameField: 'email',
-  passwordField: 'password'
-}, function(email, password, done) {
-  User.findOne({ email: email })
-  .exec(function(err, user) {
-    if(err) done(err);
-    if(!user) return done(null, false);
-    if(user.verifyPassword(password)) return done(null, user);
-    return done(null, false);
-  });
-}));
+  function(request, accessToken, refreshToken, profile, done) {
 
+    //***SQL CODE HERE***//
+    //SQL CODE TO EITHER FIND OR CREATE USER/CLIENT WITH GOOGLE ID ATTACHED
+    //http://stackoverflow.com/questions/639854/check-if-a-row-exists-otherwise-insert
+
+    //you now have access to profile.id (see console.log below)
+    //you can match profile.id to the google_auth property in your user database
+    //in the SQL callback, make sure you include the following line:
+    //   return done(err, user)
+    //where user is the user found in the SQL database
+
+
+    console.log(profile.id)
+
+    process.nextTick(function() {
+      return done(null, profile);
+    })
+  }
+
+));
+
+// CREATE SESSIONS //
 passport.serializeUser(function(user, done) {
-  done(null, user._id);
+  done(null, user);
 });
-passport.deserializeUser(function(_id, done) {
-  User.findById(_id, function(err, user) {
-    done(err, user);
-  });
+
+passport.deserializeUser(function(obj, done) {
+  done(null, obj);
 });
 
 module.exports = passport;
