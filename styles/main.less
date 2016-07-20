@@ -48,17 +48,27 @@ html, body {
 
 .nav-links {
   width: 100%;
-  height: auto;
   order: 2;
 }
 
 .nav-links> ul> li {
   list-style-type: none;
-  margin-top: 25px;
+
   padding-left: 0px;
   border-top: solid 1px #F7F7F7;
 }
-
+.nav-button {
+  height: 7vh;
+  width:  100%;
+  background-color: white;
+  font-size: 1rem;
+  border-color: transparent;
+    text-align: left;
+}
+.nav-button:focus{
+  background-color: @mainGreen;
+  color: white;
+}
 a:link {
   text-decoration: none;
 }
@@ -73,7 +83,7 @@ ul {
   order: 2;
   height: auto;
   width: 78%;
-  background-color: #F7F7F7;
+  // background-color: #F7F7F7;
 }
 
 .route-main {

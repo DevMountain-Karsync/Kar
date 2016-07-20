@@ -39,5 +39,4 @@ $scope.yearsModel = function(year) {
   }
 
 }
-
 });

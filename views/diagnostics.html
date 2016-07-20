@@ -1,24 +1,26 @@
 <section class="route-main">
   <div class="column1">
     <div class="search-container">
-    <input type="text" placeholder="          Search..." class="makesSearch" ng-model="searchString" ng-class="{'typeSearch': searchString }">
+    <input type="text" placeholder="          Search..." class="makesSearch" ng-model="searchString"  ng-class="{'typeSearch': searchString }">
     </div>
       <section class="make-list">
       <section ng-repeat="make in makes | searchFor:searchString">
-        <div class="make-click" ng-click="makeList(make.name)">{{make.name}}</div>
+        <div class="make-click" ng-click="makeList(make.name)"><button class="cars-button">{{make.name}}</button></div>
       </section>
     </section>
     <div class="search-container">
-
-   <input type="text" placeholder="          Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelslist': searchString }">
+   <input type="text" placeholder="          Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelsList': searchString }">
     </div>
     <section class="model-list">
-      <section ng-repeat="model in models | searchFor:searchString1"><div class="model-click" ng-click="yearOption(model)">{{model.name}}</div></section>
+      <section ng-repeat="model in models | searchFor:searchString1">
+        <div class="model-click" ng-click="yearOption(model)"><button class="cars-button">{{model.name}}</button></div></section>
     </section>
     <section class="year-list">
-      <section ng-repeat="year in years"><div class="year-click" ng-click="yearsModel(year.year)">{{year.year}}</div></section>
+      <section ng-repeat="year in years">
+        <div class="year-click" ng-click="yearsModel(year.year)"><button class="cars-button">{{year.year}}</button></div></section>
     </section>
   </div>
   <div class="column2">
+
   </div>
 </section>

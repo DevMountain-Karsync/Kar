@@ -1,25 +1,28 @@
+@mainBlue: #21418C;
 
 .search-container {
+  height: 9vh;
   display: flex;
   justify-content: space-around;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+
   background-color: #EEEEEE;
 }
 
 .makesSearch {
   background-color: white;
+  color: grey;
   text-align: justify;
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
-  background-size: 3vh;
-  opacity: .3;
+  background-size: 5vh;
+  background-opacity: .3;
   background-position: left;
   background-position: .5vw;
   align-self: center;
-  height: 4vh;
+  height: 5vh;
   width: 20vw;
   border-radius: 15px 15px 15px 15px;
+  border-color: transparent;
   font-size: 1em;
 }
 
@@ -27,49 +30,87 @@
   background-image: none;
 }
 
-.modelslist {
+.modelsList {
   background-image: none;
 }
 
 .modelSearch {
+  background-color: white;
+  color: grey;
+  text-align: justify;
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
-  background-size: 3vh;
+  background-size: 5vh;
+  background-opacity: .3;
   background-position: left;
-  font-color: black;
-  opacity: .3;
   background-position: .5vw;
   align-self: center;
-  height: 4vh;
+  height: 5vh;
   width: 20vw;
   border-radius: 15px 15px 15px 15px;
+  border-color: transparent;
   font-size: 1em;
 }
+// .modelSearch:focus {
+//   background-image: none;
+// }
 
 section.make-list {
   margin-top: 5%;
   overflow: scroll;
   height: 30%;
   background-color: white;
-}
 
+}
 .make-click {
-  padding: 5px;
-  border-top: solid 1px grey;
-  cursor: pointer;
-}
+  border-bottom: solid 1px grey;
 
+}
+.cars-button {
+  background-color: white;
+  height: 8vh;
+  width: 100%;
+  border-color: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+.cars-button:focus {
+  background-image: url('../IMG/check.png');
+  background-size: 3vh;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: @mainBlue;
+   color: white;
+
+}
+.cars-button:focus {
+   background-color: @mainBlue;
+    color: white;
+
+}
+.cars-button:active {
+  background-color: @mainBlue;
+  color: white;
+}
 section.model-list {
   margin-top: 5%;
   overflow: scroll;
   height: 30%;
   background-color: white;
+  cursor: pointer;
+  :hover {
+    background-color: @mainBlue;
+    color: white;
+    :focus {
+      background-color: @mainBlue;
+      color: white;
+    }
+  }
 }
 
-#model-click {
-  padding: 5px;
-  border-top: solid 1px grey;
+.model-click {
   cursor: pointer;
+  border-bottom: solid 1px grey;
 }
 
 section.year-list {
@@ -77,25 +118,28 @@ section.year-list {
   overflow: scroll;
   height: 18%;
   background-color: white;
+
 }
 
-#year-click {
+.year-click {
   padding: 5px;
   border-top: solid 1px grey;
   cursor: pointer;
+
 }
 
 .maintenance-schedule{
   overflow: scroll;
   height: 100%;
-
 }
+
 .maint-container {
   padding-bottom: 4vh;
   margin-top: 2vh;
   margin-bottom: 1vh;
   border-bottom: solid 1px grey;
 }
+
 .no-maint {
   text-align:center;
   padding-top: 50vh;
