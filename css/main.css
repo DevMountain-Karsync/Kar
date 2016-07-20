@@ -29,6 +29,24 @@
   border-radius: 15px 15px 15px 15px;
   font-size: 1em;
 }
+.display-view-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.display-view-container h3 {
+  color: #21418C;
+}
+.display-view-container strong {
+  color: black;
+}
+.customer-info-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
 
 
 /*LESS*/
@@ -67,6 +85,10 @@ body {
       align-items: center;
 }
 #nav-logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
   width: 100%;
   height: auto;
   -ms-flex-order: 1;
