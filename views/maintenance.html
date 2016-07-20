@@ -4,7 +4,9 @@
     <input type="text" placeholder="          Search..." class="makesSearch" ng-model="searchString"  ng-class="{'typeSearch': searchString }">
     </div>
       <section class="make-list">
-      <section ng-repeat="make in makes | searchFor:searchString"><div class="make-click" ng-click="makeList(make.name)">{{make.name}}</div></section>
+      <section ng-repeat="make in makes | searchFor:searchString">
+        <div class="make-click" ng-click="makeList(make.name)">{{make.name}}</div>
+      </section>
     </section>
     <div class="search-container">
    <input type="text" placeholder="          Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelslist': searchString }">
