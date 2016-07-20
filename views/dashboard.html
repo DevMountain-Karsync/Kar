@@ -6,7 +6,7 @@
   <section class="user-list">
   <section ng-repeat="user in userList | searchUserList:searchString2">
 
-    <div class="users-div"><button class="user-button"> {{user.first_name}} {{user.last_name}}</button>
+    <div class="users-div" ui-sref="dashboardDisplay" ng-click="customerClicked(user)"><button class="user-button"> {{user.first_name}} {{user.last_name}}</button>
 
           </div>
     </section>

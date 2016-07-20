@@ -9,15 +9,16 @@
 }
 .user-button {
   border: transparent;
+  color: #21418C;
+  font-size: 1em;
   background-color: white;
   height: 80px;
-  width: 280px;
+  width: 360px;
   cursor: pointer;
   text-align: left;
 }
 .user-button:focus {
-  background-color: #21418C;
-  color: white;
+  background-color: #EEEEEE;
 }
 .usersSearch {
   background-color: white;
