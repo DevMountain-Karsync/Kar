@@ -2,6 +2,9 @@
 @mainGreen: #6FC17F;
 @mainOrange: #F46868;
 @mainGrey: #727476;
+@mainRed: #F46868;
+
+@mainPink: rgba(244, 104, 104, 0.15);
 
 .users-dashboard {
   height: 100%;
@@ -53,6 +56,16 @@
   display: flex;
   flex-direction: column;
 }
+.blue{
+  background: @mainBlue;
+  color: white;
+}
+
+.red{
+  background: @mainRed;
+  color: white;
+
+}
 
 .display-view-container h3 {
 color: @mainBlue;
@@ -65,4 +78,10 @@ color: black;
 .customer-info-container{
   display: flex;
   justify-content: space-around;
+}
+
+.alert-box-container{
+  background: @mainPink;
+
+  border: 1px solid @mainRed;
 }

@@ -43,6 +43,14 @@
   -ms-flex-direction: column;
       flex-direction: column;
 }
+.blue {
+  background: #21418C;
+  color: white;
+}
+.red {
+  background: #F46868;
+  color: white;
+}
 .display-view-container h3 {
   color: #21418C;
 }
@@ -54,6 +62,10 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+.alert-box-container {
+  background: rgba(244, 104, 104, 0.15);
+  border: 1px solid #F46868;
 }
 
 
@@ -70,6 +82,9 @@ body {
   background-color: #F7F7F7;
   margin: 0;
   padding: 0;
+}
+button {
+  border: none;
 }
 /*MAIN*/
 .main-container {
