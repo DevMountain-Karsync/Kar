@@ -28,7 +28,9 @@ gulp.task('css', function(){
     .pipe(gulp.dest('css'));
 })
 
-gulp.task('default', function (){
+gulp.task('watch', function() {
   gulp.watch('styles/*.less', ['css']);
   gulp.watch('./js/**/*.js', ['js']);
-});
+})
+
+gulp.task('default', ['js', 'css', 'watch']);
