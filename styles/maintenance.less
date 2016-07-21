@@ -13,7 +13,7 @@
   text-align: justify;
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
-  background-size: 5vh;
+  background-size: 3vh;
   background-opacity: .3;
   background-position: left;
   background-position: .5vw;
@@ -39,7 +39,7 @@
   text-align: justify;
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
-  background-size: 5vh;
+  background-size: 3vh;
   background-opacity: .3;
   background-position: left;
   background-position: .5vw;
@@ -57,38 +57,35 @@ section.make-list {
   overflow: scroll;
   height: 30%;
   background-color: white;
+  :hover {
+     background-color: @mainBlue;
+      color: white;
+  }
 
 }
 .make-click {
   border-bottom: solid 1px grey;
-
-}
-.cars-button {
   background-color: white;
   height: 8vh;
   width: 100%;
   border-color: transparent;
   cursor: pointer;
   text-align: left;
+
 }
-.cars-button:focus {
+.cars-button {
+
+}
+.selected {
   background-image: url('../IMG/check.png');
   background-size: 3vh;
   background-repeat: no-repeat;
   background-position: right;
   background-color: @mainBlue;
-   color: white;
-
-}
-.cars-button:focus {
-   background-color: @mainBlue;
-    color: white;
-
-}
-.cars-button:active {
-  background-color: @mainBlue;
   color: white;
+
 }
+
 section.model-list {
   margin-top: 5%;
   overflow: scroll;
@@ -98,10 +95,7 @@ section.model-list {
   :hover {
     background-color: @mainBlue;
     color: white;
-    :focus {
-      background-color: @mainBlue;
-      color: white;
-    }
+
   }
 }
 
@@ -115,6 +109,10 @@ section.year-list {
   overflow: scroll;
   height: 18%;
   background-color: white;
+  :hover {
+     background-color: @mainBlue;
+      color: white;
+  }
 
 }
 

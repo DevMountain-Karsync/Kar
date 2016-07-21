@@ -2,7 +2,7 @@ angular.module('karSync')
 .controller('maintCtrl', function($scope, edmundService){
   edmundService.getMake().then(function(res){
     $scope.makes = res.data.makes;
-  })
+  });
 
   edmundService.getModel().then(function(res){
     $scope.models = res.data.models;
@@ -11,12 +11,24 @@ angular.module('karSync')
  $scope.makeList = function(make){
   edmundService.getModel(make).then(function(res){
     $scope.models = res.data.models;
+
+
+      $scope.makeList = function(idSelectedMake){
+      $scope.idSelectedMake = idSelectedMake;
+      console.log(idSelectedMake);
+
+    }
+
   })
-  }
+}
 $scope.yearOption = function(model) {
 
   $scope.years = model.years;
-
+  $scope.yearOption = function(modelSelect) {
+    console.log('yearOption')
+    $scope.modelSelect = modelSelect;
+    console.log(modelSelect)
+  }
   }
 $scope.yearsModel = function(year) {
 
@@ -37,6 +49,10 @@ $scope.yearsModel = function(year) {
       })
     }
   }
+  $scope.yearsModel = function(yearSelect) {
+    $scope.yearSelect = yearSelect;
 
+  }
 }
+
 });

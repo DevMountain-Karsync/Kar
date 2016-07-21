@@ -7,18 +7,15 @@
 .users-list {
   overflow: scroll;
 }
-.user-button {
+.users-div {
   border: transparent;
   color: #21418C;
   font-size: 1em;
   background-color: white;
   height: 80px;
-  width: 360px;
+  width: 100;
   cursor: pointer;
   text-align: left;
-}
-.user-button:focus {
-  background-color: #EEEEEE;
 }
 .usersSearch {
   background-color: white;
@@ -198,7 +195,7 @@ iframe {
   text-align: justify;
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
-  background-size: 5vh;
+  background-size: 3vh;
   background-opacity: .3;
   background-position: left;
   background-position: .5vw;
@@ -222,7 +219,7 @@ iframe {
   text-align: justify;
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
-  background-size: 5vh;
+  background-size: 3vh;
   background-opacity: .3;
   background-position: left;
   background-position: .5vw;
@@ -240,10 +237,12 @@ section.make-list {
   height: 30%;
   background-color: white;
 }
+section.make-list :hover {
+  background-color: #21418C;
+  color: white;
+}
 .make-click {
   border-bottom: solid 1px grey;
-}
-.cars-button {
   background-color: white;
   height: 8vh;
   width: 100%;
@@ -251,19 +250,11 @@ section.make-list {
   cursor: pointer;
   text-align: left;
 }
-.cars-button:focus {
+.selected {
   background-image: url('../IMG/check.png');
   background-size: 3vh;
   background-repeat: no-repeat;
   background-position: right;
-  background-color: #21418C;
-  color: white;
-}
-.cars-button:focus {
-  background-color: #21418C;
-  color: white;
-}
-.cars-button:active {
   background-color: #21418C;
   color: white;
 }
@@ -278,10 +269,6 @@ section.model-list :hover {
   background-color: #21418C;
   color: white;
 }
-section.model-list :hover :focus {
-  background-color: #21418C;
-  color: white;
-}
 .model-click {
   cursor: pointer;
   border-bottom: solid 1px grey;
@@ -291,6 +278,10 @@ section.year-list {
   overflow: scroll;
   height: 18%;
   background-color: white;
+}
+section.year-list :hover {
+  background-color: #21418C;
+  color: white;
 }
 .year-click {
   padding: 5px;

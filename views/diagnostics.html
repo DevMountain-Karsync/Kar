@@ -5,7 +5,7 @@
     </div>
       <section class="make-list">
       <section ng-repeat="make in makes | searchFor:searchString">
-        <div class="make-click" ng-click="makeList(make.name)"><button class="cars-button">{{make.name}}</button></div>
+        <div class="make-click" ng-click="makeList(make.name)">{{make.name}}</div>
       </section>
     </section>
     <div class="search-container">
@@ -13,11 +13,11 @@
     </div>
     <section class="model-list">
       <section ng-repeat="model in models | searchFor:searchString1">
-        <div class="model-click" ng-click="yearOption(model)"><button class="cars-button">{{model.name}}</button></div></section>
+        <div class="model-click" ng-click="yearOption(model)">{{model.name}}</div></section>
     </section>
     <section class="year-list">
       <section ng-repeat="year in years">
-        <div class="year-click" ng-click="yearsModel(year.year)"><button class="cars-button">{{year.year}}</button></div></section>
+        <div class="year-click" ng-click="yearsModel(year.year)">{{year.year}}</div></section>
     </section>
   </div>
   <div class="column2">

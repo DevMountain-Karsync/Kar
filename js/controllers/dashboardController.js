@@ -2,6 +2,7 @@ angular.module('karSync')
 .controller('dashCtrl', function($scope, userServ,$state){
   userServ.getUser().then(function(user){
     $scope.userList = user;
+
   })
 
   $scope.customerClicked = function(user){
@@ -19,6 +20,12 @@ angular.module('karSync')
 
       $scope.user.userPlan = "Gold"
       $scope.user.userPlanPrice = "15.00"
+
+      $scope.customerClicked = function(userId) {
+        $scope.userId = userId;
+        console.log(userId);
+
+      }
   }
 
 
