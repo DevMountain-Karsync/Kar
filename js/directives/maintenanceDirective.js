@@ -31,19 +31,4 @@ angular.module('karSync')
   };
 
 
-//users
-//   return function(arr, searchString2){
-//   if(!searchString2){
-//       return arr;
-//   };
-//   var result = [];
-//   searchString2 = searchString2.toLowerCase();
-//   angular.forEach(arr, function(item){
-//     console.log(item)
-//       if(item.name.toLowerCase().indexOf(searchString2) !== -1){
-//       result.push(item);
-//   }
-// });
-//   return result;
-// };
 });
