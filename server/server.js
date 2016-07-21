@@ -37,7 +37,7 @@ app.use(
     },'request')
 );
 
-// SESSION AND passport
+
 app.use(session({
   secret: config.session_secret,
   saveUninitialized: false,
@@ -61,6 +61,7 @@ app.use(passport.session());
 //   }
 //   console.log("success");
 // });
+
 
 // CONTROLLERS //
 var selectUser = require("./controllers/selectUser")

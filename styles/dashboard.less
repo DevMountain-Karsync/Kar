@@ -5,6 +5,9 @@
 @mainRed: #F46868;
 
 @mainPink: rgba(244, 104, 104, 0.15);
+.white {
+  color: white;
+}
 
 .users-dashboard {
   height: 100%;
@@ -84,6 +87,31 @@ color: black;
 
 .alert-box-container{
   background: @mainPink;
-
+  width: 50%;
   border: 1px solid @mainRed;
+}
+
+.alert-box-head{
+  color: white;
+  font-weight: 100;
+}
+
+.alert {
+  padding: 1em;
+  border-bottom: 1px solid rgba(244, 104, 104, 0.20);
+}
+
+.select-car-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5vh;
+  border-top: 1px solid  @mainGrey ;
+  border-bottom:  1px solid  @mainGrey;
+}
+
+.car-info-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
 }

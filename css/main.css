@@ -1,5 +1,8 @@
 
 
+.white {
+  color: white;
+}
 .users-dashboard {
   height: 100%;
   width: 100%;
@@ -71,7 +74,34 @@
 }
 .alert-box-container {
   background: rgba(244, 104, 104, 0.15);
+  width: 50%;
   border: 1px solid #F46868;
+}
+.alert-box-head {
+  color: white;
+  font-weight: 100;
+}
+.alert {
+  padding: 1em;
+  border-bottom: 1px solid rgba(244, 104, 104, 0.2);
+}
+.select-car-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 5vh;
+  border-top: 1px solid #727476;
+  border-bottom: 1px solid #727476;
+}
+.car-info-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 2em;
 }
 
 .login-container {
@@ -87,7 +117,7 @@
 }
 
 /*LESS*/
-@import 'https://fonts.googleapis.com/css?family=Roboto';
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,100italic,100';
 /*@mainbackground: #F7F7F7*/
 /*HTML*/
 * {
