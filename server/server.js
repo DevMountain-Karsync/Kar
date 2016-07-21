@@ -63,11 +63,11 @@ app.use(passport.session());
 // });
 
 // CONTROLLERS //
-var selectUser = require("./controllers/selectUser");
-var getCustomers = require("./controllers/getCustomers");
+var selectUser = require("./controllers/selectUser")
+var getCustomers = require("./controllers/getCustomers")
 var UserCtrl = require("./controllers/UserCtrl");
-
-
+var getDTC = require('./controllers/getDTC')
+var getDTCbyCode = require('./controllers/getDTCbyCode')
 
 // POLICIES //
 var isAuthed = function(req, res, next) {
@@ -94,6 +94,10 @@ app.get( '/auth/google/callback',
     successRedirect: '/me',
     failureRedirect: '/login'
   }));
+
+app.get('/api/dtc/', getDTC.queryDTC)
+
+app.get('/api/dtc/:code', getDTCbyCode.queryDTCbyCode)
 
 var port = 3000;
 
