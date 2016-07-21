@@ -2,9 +2,18 @@ angular.module('karSync')
 .controller('dashCtrl', function($scope, userServ,$state){
   userServ.getUser().then(function(user){
     $scope.userList = user;
-
   })
 
+    $scope.select = function(item) {
+      $scope.selected = item;
+
+    }
+
+    $scope.isActive = function(item) {
+      
+      return $scope.selected === item;
+
+    }
   $scope.customerClicked = function(user){
     // this will need changes once db more flushed out
       user.primaryAccount = true
@@ -21,11 +30,6 @@ angular.module('karSync')
       $scope.user.userPlan = "Gold"
       $scope.user.userPlanPrice = "15.00"
 
-      $scope.customerClicked = function(userId) {
-        $scope.userId = userId;
-        console.log(userId);
-
-      }
   }
 
 
