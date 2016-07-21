@@ -74,10 +74,13 @@
   border: 1px solid #F46868;
 }
 
-.login-field {
+.login-container {
+  position: absolute;
+  left: 80vw;
+  top: 0;
   text-align: center;
   z-index: 2;
-  width: 100;
+  width: 100%;
 }
 .login-button {
   text-align: center;
@@ -120,7 +123,7 @@ button {
   background-color: white;
   -ms-flex-align: center;
       align-items: center;
-  z-index: -1;
+  z-index: 1;
 }
 #nav-logo {
   display: -ms-flexbox;
@@ -166,6 +169,7 @@ ul {
 .route-container {
   display: -ms-flexbox;
   display: flex;
+  left: 20vw;
   -ms-flex-order: 2;
       order: 2;
   height: auto;
@@ -176,6 +180,8 @@ ul {
   height: 100%;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-order: 2;
+      order: 2;
 }
 .column1 {
   width: 30%;
