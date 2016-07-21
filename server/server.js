@@ -48,13 +48,16 @@ app.use(
 
 var selectUser = require("./controllers/selectUser")
 var getCustomers = require("./controllers/getCustomers")
+var getDTC = require('./controllers/getDTC')
+var getDTCbyCode = require('./controllers/getDTCbyCode')
 
 app.get('/api/user/:id', selectUser.queryUser)
 
 app.get('/api/customers/:id', getCustomers.queryCutomers)
 
+app.get('/api/dtc/', getDTC.queryDTC)
 
-
+app.get('/api/dtc/:code', getDTCbyCode.queryDTCbyCode)
 var port = 3000;
 
 app.listen(port, function(){
