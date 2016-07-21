@@ -1,9 +1,11 @@
 angular.module('karSync', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider){
   $stateProvider
-    .state('index', {
-      url: '/'
-    })
+  .state('home', {
+    templateUrl: './views/login.html',
+    url: '/',
+    controller: 'loginCtrl'
+  })
     .state('dashboard', {
     templateUrl: './views/dashboard.html',
     url: '/dashboard/',
@@ -26,11 +28,7 @@ angular.module('karSync', ['ui.router'])
       url: '/current/',
       controller: 'currentCtrl'
     })
-    .state('login', {
-      templateUrl: './views/login.html',
-      url: '/login/',
-      controller: 'loginCtrl'
-    })
+
     .state('maintenance', {
       templateUrl: './views/maintenance.html',
       url: '/maintenance/',

@@ -5,26 +5,18 @@
     <title>KarSync</title>
     <link rel ="stylesheet" type="text/css" href="./css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
   </head>
   <body>
-    <section class="main-container">
-      <section class="nav-bar">
-        <nav-dir></nav-dir>
-        <!-- <div id="nav-logo"><img src="./styles/imgs/logo.png"></div>
-        <div class="nav-links">
-        <ul>
-          <li><a ui-sref="dashboard"><button class="nav-button">Dashboard</button></a></li>
-          <li><a ui-sref="addCust"><button class="nav-button">Add New Customer</button></a></li>
-          <li><a ui-sref="schedule"><button class="nav-button">My Schedule</button></a></li>
-          <li><a ui-sref="maintenance"><button class="nav-button">Car Maintenance Schedule</button></a></li>
-          <li><a ui-sref="diagnostics"><button class="nav-button">Diagnostic Lookup</button></a></li>
-        </ul>
-        </div> -->
-      </section>
-      <section class="route-container">
+    <section class="nav-location"></section>
+  <section class="route-container">
+
         <ui-view></ui-view>
+
+      </section>
+
     </section>
-    </section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
     <script src="./gulped/all.min.js"></script>
