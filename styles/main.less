@@ -27,20 +27,31 @@ button {
 
 /*MAIN*/
 .main-container {
+  // left: 20vw;
   display: flex;
   height: auto;
   width: auto;
 }
-
 /*NAVBAR*/
+// .nav-location{
+//   display: flex;
+//   height: 100vh;
+//   width: 20vw;
+//   z-index: -1;
+// }
+
 .nav-bar{
+  // position: fixed;
+  // left: 0px;
   display: flex;
   flex-direction: column;
   order: 1;
   height: 100vh;
-  width: 22%;
+  width: 20vw;
   background-color: white;
   align-items: center;
+  z-index: 1;
+
 }
 
 #nav-logo {
@@ -55,17 +66,27 @@ button {
 
 .nav-links {
   width: 100%;
-  height: auto;
   order: 2;
 }
 
 .nav-links> ul> li {
   list-style-type: none;
-  margin-top: 25px;
+
   padding-left: 0px;
   border-top: solid 1px #F7F7F7;
 }
-
+.nav-button {
+  height: 7vh;
+  width:  100%;
+  background-color: white;
+  font-size: 1rem;
+  border-color: transparent;
+    text-align: left;
+}
+.nav-button:focus{
+  background-color: @mainGreen;
+  color: white;
+}
 a:link {
   text-decoration: none;
 }
@@ -77,16 +98,18 @@ ul {
 /*ROUTES*/
 .route-container {
   display: flex;
+  left: 20vw;
   order: 2;
   height: auto;
   width: 78%;
-  background-color: #F7F7F7;
+  // background-color: #F7F7F7;
 }
 
 .route-main {
   width: 78vw;
   height: 100%;
   display: flex;
+  order: 2;
 }
 .column1 {
   width: 30%;

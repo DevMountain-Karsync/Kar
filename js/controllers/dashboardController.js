@@ -4,6 +4,16 @@ angular.module('karSync')
     $scope.userList = user;
   })
 
+    $scope.select = function(item) {
+      $scope.selected = item;
+
+    }
+
+    $scope.isActive = function(item) {
+      
+      return $scope.selected === item;
+
+    }
   $scope.customerClicked = function(user){
     // console.log(user);
     console.log('clicked '+ user.first_name);
@@ -44,6 +54,7 @@ angular.module('karSync')
 
       $scope.user.userPlan = "Gold"
       $scope.user.userPlanPrice = "15.00"
+
   }
 
 
