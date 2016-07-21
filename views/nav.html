@@ -1,12 +1,16 @@
-<section class="navBar">
-  <div id="nav-logo"><img src="./styles/imgs/logo.png"></div>
+
+
+
+
+<section class="nav-bar">
+  <div id="nav-logo"><img src="../IMG/logo.png"></div>
   <div class="nav-links">
   <ul>
-    <li><a ui-sref="dashboard">Dashboard</a></li>
-    <li><a ui-sref="addCust">Add New Customer</a></li>
-    <li><a ui-sref="schedule">My Schedule</a></li>
-    <li><a ui-sref="maintenance">Car Maintenance Schedule</a></li>
-    <li><a ui-sref="diagnostics">Diagnostic Lookup</a></li>
+    <li><button class="links" ui-sref-active="activeNav" ui-sref="dashboard">Dashboard</button></li>
+    <li><button ui-sref-active="activeNav" class="links" ui-sref="addCust">Add New Customer</button></li>
+    <li><button ui-sref-active="activeNav" class="links" ui-sref="schedule">My Schedule</button></li>
+    <li><button ui-sref-active="activeNav" class="links" ui-sref="maintenance">Car Maintenance Schedule</button></li>
+    <li><button ui-sref-active="activeNav" class="links" ui-sref="diagnostics">Diagnostic Lookup</button></li>
   </ul>
   </div>
 </section>
