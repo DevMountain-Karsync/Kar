@@ -11,29 +11,44 @@
   width: 100%;
 }
 
-.users-div{
-  padding-top: 1vh;
-  height: 50px;
-  width: 100%;
-  border: solid 1px #F7F7F7;
+.users-list {
   overflow: scroll;
-  height: 40%;
-  background-color: white;
 }
 
+.users-div {
+  border: transparent;
+  color: @mainBlue;
+  font-size: 1em;
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+.activeUser {
+  background-image: url('../IMG/check.png');
+
+  background-size: 3vh;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #EEEEEE;
+
+}
 .usersSearch {
   background-color: white;
+  color: grey;
   text-align: justify;
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
-  background-size: 3vh;
-  opacity: .3;
+  background-size: 5vh;
+  background-opacity: .3;
   background-position: left;
   background-position: .5vw;
   align-self: center;
-  height: 4vh;
+  height: 5vh;
   width: 20vw;
   border-radius: 15px 15px 15px 15px;
+  border-color: transparent;
   font-size: 1em;
 }
 

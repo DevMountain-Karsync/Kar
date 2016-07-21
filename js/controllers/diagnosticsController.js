@@ -10,6 +10,30 @@ angular.module('karSync')
     $scope.models = res.data.models;
   })
 
+
+    $scope.select = function(itemMake) {
+      $scope.selected = itemMake;
+
+    }
+    $scope.isActive = function(itemMake) {
+
+      return $scope.selected === itemMake;
+    }
+
+    $scope.selectModel = function(itemModel) {
+      $scope.selectedModel = itemModel;
+    }
+    $scope.isActiveModel = function(itemModel) {
+      return $scope.selectedModel === itemModel;
+    }
+
+    $scope.selectYear = function(itemMake) {
+      $scope.selectedYear = itemMake;
+    }
+    $scope.isActiveYear = function(itemMake) {
+      return $scope.selectedYear === itemMake;
+    }
+
  $scope.makeList = function(make){
   edmundService.getModel(make).then(function(res){
     $scope.models = res.data.models;

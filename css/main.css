@@ -4,29 +4,42 @@
   height: 100%;
   width: 100%;
 }
-.users-div {
-  padding-top: 1vh;
-  height: 50px;
-  width: 100%;
-  border: solid 1px #F7F7F7;
+.users-list {
   overflow: scroll;
-  height: 40%;
+}
+.users-div {
+  border: transparent;
+  color: #21418C;
+  font-size: 1em;
   background-color: white;
+  height: 80px;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+.activeUser {
+  background-image: url('../IMG/check.png');
+  background-size: 3vh;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #EEEEEE;
 }
 .usersSearch {
   background-color: white;
+  color: grey;
   text-align: justify;
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
-  background-size: 3vh;
-  opacity: .3;
+  background-size: 5vh;
+  background-opacity: .3;
   background-position: left;
   background-position: .5vw;
   -ms-flex-item-align: center;
       align-self: center;
-  height: 4vh;
+  height: 5vh;
   width: 20vw;
   border-radius: 15px 15px 15px 15px;
+  border-color: transparent;
   font-size: 1em;
 }
 .display-view-container {
@@ -113,15 +126,25 @@ button {
 }
 .nav-links {
   width: 100%;
-  height: auto;
   -ms-flex-order: 2;
       order: 2;
 }
 .nav-links > ul > li {
   list-style-type: none;
-  margin-top: 25px;
   padding-left: 0px;
   border-top: solid 1px #F7F7F7;
+}
+.nav-button {
+  height: 7vh;
+  width: 100%;
+  background-color: white;
+  font-size: 1rem;
+  border-color: transparent;
+  text-align: left;
+}
+.nav-button:focus {
+  background-color: #6FC17F;
+  color: white;
 }
 a:link {
   text-decoration: none;
@@ -137,7 +160,6 @@ ul {
       order: 2;
   height: auto;
   width: 78%;
-  background-color: #F7F7F7;
 }
 .route-main {
   width: 78vw;
@@ -167,72 +189,98 @@ iframe {
 }
 
 .search-container {
+  height: 9vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
   background-color: #EEEEEE;
 }
 .makesSearch {
   background-color: white;
+  color: grey;
   text-align: justify;
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
   background-size: 3vh;
-  opacity: .3;
+  background-opacity: .3;
   background-position: left;
   background-position: .5vw;
   -ms-flex-item-align: center;
       align-self: center;
-  height: 4vh;
+  height: 5vh;
   width: 20vw;
   border-radius: 15px 15px 15px 15px;
+  border-color: transparent;
   font-size: 1em;
 }
 .typeSearch {
   background-image: none;
 }
-.modelslist {
+.modelsList {
   background-image: none;
 }
 .modelSearch {
+  background-color: white;
+  color: grey;
+  text-align: justify;
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
   background-size: 3vh;
+  background-opacity: .3;
   background-position: left;
-  font-color: black;
-  opacity: .3;
   background-position: .5vw;
   -ms-flex-item-align: center;
       align-self: center;
-  height: 4vh;
+  height: 5vh;
   width: 20vw;
   border-radius: 15px 15px 15px 15px;
+  border-color: transparent;
   font-size: 1em;
 }
 section.make-list {
   margin-top: 5%;
   overflow: scroll;
-  height: 30%;
+  height: 18%;
   background-color: white;
 }
+section.make-list :hover {
+  background-color: #21418C;
+  color: white;
+}
 .make-click {
-  padding: 5px;
-  border-top: solid 1px grey;
+  border-bottom: solid 1px grey;
+  background-color: white;
+  width: 100%;
+  border-color: transparent;
   cursor: pointer;
+  text-align: left;
+}
+.active {
+  background-image: url('../IMG/check.png');
+  background-size: 2.5vh;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #21418C;
+  color: white;
+}
+.activeModel {
+  color: white;
 }
 section.model-list {
   margin-top: 5%;
   overflow: scroll;
   height: 30%;
   background-color: white;
-}
-#model-click {
-  padding: 5px;
-  border-top: solid 1px grey;
   cursor: pointer;
+}
+section.model-list :hover {
+  background-color: #21418C;
+  color: white;
+}
+.model-click {
+  cursor: pointer;
+  border-bottom: solid 1px grey;
 }
 section.year-list {
   margin-top: 5%;
@@ -240,7 +288,11 @@ section.year-list {
   height: 18%;
   background-color: white;
 }
-#year-click {
+section.year-list :hover {
+  background-color: #21418C;
+  color: white;
+}
+.year-click {
   padding: 5px;
   border-top: solid 1px grey;
   cursor: pointer;
