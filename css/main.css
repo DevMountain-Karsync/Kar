@@ -21,7 +21,7 @@
   background-image: url('../IMG/check.png');
   background-size: 3vh;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-color: #EEEEEE;
 }
 .usersSearch {
@@ -241,7 +241,7 @@ iframe {
 section.make-list {
   margin-top: 5%;
   overflow: scroll;
-  height: 30%;
+  height: 18%;
   background-color: white;
 }
 section.make-list :hover {
@@ -251,7 +251,6 @@ section.make-list :hover {
 .make-click {
   border-bottom: solid 1px grey;
   background-color: white;
-  height: 8vh;
   width: 100%;
   border-color: transparent;
   cursor: pointer;
@@ -259,7 +258,7 @@ section.make-list :hover {
 }
 .active {
   background-image: url('../IMG/check.png');
-  background-size: 3vh;
+  background-size: 2.5vh;
   background-repeat: no-repeat;
   background-position: right;
   background-color: #21418C;
