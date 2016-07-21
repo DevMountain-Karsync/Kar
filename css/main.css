@@ -1,5 +1,8 @@
 
 
+.white {
+  color: white;
+}
 .users-dashboard {
   height: 100%;
   width: 100%;
@@ -58,6 +61,24 @@
 .alert-box-container {
   background: rgba(244, 104, 104, 0.15);
   border: 1px solid #F46868;
+}
+.select-car-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 5vh;
+  border-top: 1px solid #727476;
+  border-bottom: 1px solid #727476;
+}
+.car-info-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 2em;
 }
 
 

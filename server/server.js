@@ -32,19 +32,6 @@ app.use(
     },'request')
 );
 
-// var connection = mysql.createConnection({
-//   host     : config.host,
-//   user     : config.user,
-//   password : config.password,
-//   database: config.database,
-// });
-//
-// connection.connect(function(err){
-//   if (err) {
-//     console.log(err);
-//   }
-//   console.log("success");
-// });
 
 var selectUser = require("./controllers/selectUser")
 var getCustomers = require("./controllers/getCustomers")

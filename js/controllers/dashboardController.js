@@ -1,10 +1,34 @@
 angular.module('karSync')
-.controller('dashCtrl', function($scope, userServ,$state){
+.controller('dashCtrl', function($scope, userServ,$state, vehicleService){
   userServ.getUser().then(function(user){
     $scope.userList = user;
   })
 
   $scope.customerClicked = function(user){
+    // console.log(user);
+    console.log('clicked '+ user.first_name);
+  vehicleService.getCar(user.account_id).then(function(res){
+
+
+
+    // console.log(res);
+    var array = res;
+
+    for (var i = 0; i < array.length; i++) {
+      if (array[i].vin === user.primary_vehicle) {
+        array.unshift(array[i])
+        array.splice(i,1)
+      }
+    }
+
+
+    $scope.data = {
+      vehicles: array,
+      selectedCar: 0,
+    }
+
+  })
+
     // this will need changes once db more flushed out
       user.primaryAccount = true
       $scope.user = user;
@@ -12,6 +36,7 @@ angular.module('karSync')
       $scope.user.secondary_phone = "(801)-915-1515"
       $scope.user.streetAddress = "12345 South State"
       $scope.user.cityAndState = "Salt Lake City, UT 84020"
+
 
       if (user.primaryAccount === true) {
         $scope.primaryUser = user;
