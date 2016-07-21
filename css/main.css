@@ -60,7 +60,16 @@
 }
 .alert-box-container {
   background: rgba(244, 104, 104, 0.15);
+  width: 50%;
   border: 1px solid #F46868;
+}
+.alert-box-head {
+  color: white;
+  font-weight: 100;
+}
+.alert {
+  padding: 1em;
+  border-bottom: 1px solid rgba(244, 104, 104, 0.2);
 }
 .select-car-container {
   display: -ms-flexbox;
@@ -83,7 +92,7 @@
 
 
 /*LESS*/
-@import 'https://fonts.googleapis.com/css?family=Roboto';
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,100italic,100';
 /*@mainbackground: #F7F7F7*/
 /*HTML*/
 * {
