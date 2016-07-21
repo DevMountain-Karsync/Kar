@@ -37,7 +37,7 @@
   text-align: justify;
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
-  background-size: 5vh;
+  background-size: 3vh;
   background-opacity: .3;
   background-position: left;
   background-position: .5vw;
@@ -143,61 +143,6 @@ button {
   height: auto;
   width: auto;
 }
-/*NAVBAR*/
-.nav-bar {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-order: 1;
-      order: 1;
-  height: 100vh;
-  width: 20vw;
-  background-color: white;
-  -ms-flex-align: center;
-      align-items: center;
-  z-index: 1;
-}
-#nav-logo {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  width: 100%;
-  height: auto;
-  -ms-flex-order: 1;
-      order: 1;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-}
-.nav-links {
-  width: 100%;
-  -ms-flex-order: 2;
-      order: 2;
-}
-.nav-links > ul > li {
-  list-style-type: none;
-  padding-left: 0px;
-  border-top: solid 1px #F7F7F7;
-}
-.nav-button {
-  height: 7vh;
-  width: 100%;
-  background-color: white;
-  font-size: 1rem;
-  border-color: transparent;
-  text-align: left;
-}
-.nav-button:focus {
-  background-color: #6FC17F;
-  color: white;
-}
-a:link {
-  text-decoration: none;
-}
-ul {
-  padding: 0;
-}
 /*ROUTES*/
 .route-container {
   display: -ms-flexbox;
@@ -252,7 +197,6 @@ iframe {
   background-image: url('../IMG/mag-glass.png');
   background-repeat: no-repeat;
   background-size: 3vh;
-  background-opacity: .3;
   background-position: left;
   background-position: .5vw;
   -ms-flex-item-align: center;
@@ -264,9 +208,6 @@ iframe {
   font-size: 1em;
 }
 .typeSearch {
-  background-image: none;
-}
-.modelsList {
   background-image: none;
 }
 .modelSearch {
@@ -286,6 +227,9 @@ iframe {
   border-radius: 15px 15px 15px 15px;
   border-color: transparent;
   font-size: 1em;
+}
+.modelsList {
+  background-image: none;
 }
 section.make-list {
   margin-top: 5%;
@@ -321,7 +265,6 @@ section.model-list {
   overflow: scroll;
   height: 30%;
   background-color: white;
-  cursor: pointer;
 }
 section.model-list :hover {
   background-color: #21418C;
@@ -367,4 +310,67 @@ section.year-list :hover {
 ::-webkit-scrollbar-thumb {
   width: 8px;
   background-color: grey;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+/*@mainbackground: #F7F7F7*/
+/*NAVBAR*/
+.nav-bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-order: 1;
+      order: 1;
+  height: 100vh;
+  width: 20vw;
+  background-color: white;
+  -ms-flex-align: center;
+      align-items: center;
+  z-index: 1;
+}
+#nav-logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 100%;
+  height: auto;
+  -ms-flex-order: 1;
+      order: 1;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.nav-links {
+  width: 100%;
+  -ms-flex-order: 2;
+      order: 2;
+}
+.nav-links > ul > li {
+  list-style-type: none;
+  padding-left: 0px;
+  border-top: solid 1px #F7F7F7;
+}
+.links {
+  height: 7vh;
+  width: 100%;
+  background-color: white;
+  font-size: 1rem;
+  border-color: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+.activeNav {
+  background-color: #6FC17F;
+  color: white;
+}
+.links:hover {
+  background-color: #6FC17F;
+  color: white;
+}
+a:link {
+  text-decoration: none;
+}
+ul {
+  padding: 0;
 }
