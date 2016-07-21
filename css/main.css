@@ -64,6 +64,9 @@
 /*LESS*/
 @import 'https://fonts.googleapis.com/css?family=Roboto';
 /*@mainbackground: #F7F7F7*/
+#nav-dir-id {
+  z-index: 9;
+}
 /*HTML*/
 * {
   font-family: 'Roboto', sans-serif;
@@ -94,10 +97,11 @@ button {
   -ms-flex-order: 1;
       order: 1;
   height: 100vh;
-  width: 22%;
+  width: 20vw;
   background-color: white;
   -ms-flex-align: center;
       align-items: center;
+  z-index: .5;
 }
 #nav-logo {
   display: -ms-flexbox;
