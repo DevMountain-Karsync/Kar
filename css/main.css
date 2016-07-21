@@ -250,7 +250,7 @@ section.make-list :hover {
   cursor: pointer;
   text-align: left;
 }
-.selected {
+.active {
   background-image: url('../IMG/check.png');
   background-size: 3vh;
   background-repeat: no-repeat;

@@ -4,8 +4,8 @@ c<section class="route-main">
     <input type="text" placeholder="          Search..." class="makesSearch" ng-model="searchString"  ng-class="{'typeSearch': searchString }">
     </div>
       <section class="make-list">
-      <section ng-repeat="make in makes | searchFor:searchString">
-        <div class="make-click" ng-click="makeList(make.name)" ng-class="{selected : make.name === idSelectedMake}">
+      <section data-ng-repeat="make in makes | searchFor:searchString" data-ng-click="makeList(make.name)">
+        <div class="make-click" data-ng-class="{'active' : isActive}">
           {{make.name}}
       </div></section>
     </section>
