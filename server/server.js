@@ -37,7 +37,7 @@ app.use(
     },'request')
 );
 
-// SESSION AND passport
+
 app.use(session({
   secret: config.session_secret,
   saveUninitialized: false,
@@ -62,12 +62,14 @@ app.use(passport.session());
 //   console.log("success");
 // });
 
+
 // CONTROLLERS //
 var selectUser = require("./controllers/selectUser")
 var getCustomers = require("./controllers/getCustomers")
 var UserCtrl = require("./controllers/UserCtrl");
 var getDTC = require('./controllers/getDTC')
 var getDTCbyCode = require('./controllers/getDTCbyCode')
+var addCustomers= require('./controllers/addCustomers')
 
 // POLICIES //
 var isAuthed = function(req, res, next) {

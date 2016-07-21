@@ -40,11 +40,9 @@
   <section class="select-car-container">
     Select a Car
 
-    <select class="select-car-dropdown" name="">
-      <option value="volvo">the Volvo</option>
-      <option value="saab">the Saab</option>
-      <option value="mercedes"> the Mercedes</option>
-      <option value="audi"> the Audi</option>
+    <select class="select-car-dropdown" name="" ng-model="data.selectedCar">
+      <option ng-repeat = "car in data.vehicles" value="{{$index}}">{{car.year}} {{car.make}} {{car.model}}</option>
+
     </select>
 
     <button type="button" class="blue" name="button"> ADD NEW CAR</button>
@@ -52,18 +50,34 @@
 
   </section>
   <section class="car-info-container">
-    car info and alerts
+
+
+    <section class="car-update-container">
+      <span ng-bind="data.vehicles[data.selectedCar].make"></span>
+      <span ng-bind="data.vehicles[data.selectedCar].model"></span>
+      <br>
+      buttons and such
+    </section>
+
+
     <section class="alert-box-container">
       <section class="alert-box-head red">
         <img src="../IMG/bell.png" alt="bell" /> CAR Name here! or something
+
+        <span class="white" ng-bind="data.vehicles[data.selectedCar].make"></span>
+        <span class="white" ng-bind="data.vehicles[data.selectedCar].model"></span>
       </section>
-      <p>
-        some text here
-      </p>
+      <section class="alert">
+        lorem ipusm there isnt any alert data yet dolor set amin bacon some more text she loves me yeah yeah yeah she loves me yeah yeah yeah
+      </section>
+      <section class="alert">
+        another alert yeah yeah yeah another alert yeah yeah yeah
+      </section>
     </section>
   </section>
   <section class="maintence-user-car-container">
     edmonds api maintenance scehdule
+
   </section>
 
 </section>
