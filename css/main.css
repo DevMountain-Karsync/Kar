@@ -3,6 +3,7 @@
 .users-dashboard {
   height: 100%;
   width: 100%;
+  z-index: -1;
 }
 .users-list {
   overflow: scroll;
@@ -73,13 +74,18 @@
   border: 1px solid #F46868;
 }
 
+.login-field {
+  text-align: center;
+  z-index: 2;
+  width: 100;
+}
+.login-button {
+  text-align: center;
+}
 
 /*LESS*/
 @import 'https://fonts.googleapis.com/css?family=Roboto';
 /*@mainbackground: #F7F7F7*/
-#nav-dir-id {
-  z-index: 9;
-}
 /*HTML*/
 * {
   font-family: 'Roboto', sans-serif;
