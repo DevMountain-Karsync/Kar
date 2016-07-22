@@ -13,7 +13,7 @@ angular.module('karSync')
 
   }
   $scope.isActive = function(itemMake) {
-    
+
     return $scope.selected === itemMake;
   }
 
@@ -43,7 +43,6 @@ $scope.yearOption = function(model) {
   $scope.yearOption = function(modelSelect) {
     console.log('yearOption')
     $scope.modelSelect = modelSelect;
-    console.log(modelSelect)
   }
   }
 $scope.yearsModel = function(year) {
