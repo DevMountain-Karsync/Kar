@@ -1,5 +1,56 @@
-.form-wrap {
-  width: 100%;
+.formColumn1 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+}
+#customer-info {
+  text-align: left;
+  -ms-flex-align: right;
+      -ms-grid-row-align: right;
+      align-items: right;
+}
+p3 {
+  color: #21418C;
+}
+.categories-wrap {
+  padding-top: 3vh;
+}
+.form-title {
+  margin-bottom: 3.3vh;
+}
+.form-field {
+  padding-bottom: 2vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  width: 18vw;
+}
+.addCust-main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  overflow: scroll;
+  height: 85%;
+  width: 60%;
+}
+.formColumn2 {
+  padding-left: 15vw;
+  padding-top: 10vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  border-bottom: 4vh;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.submit-button {
+  margin-right: 35vw;
+  width: 9vw;
+  height: 40px;
+  background-color: #21418C;
+  color: white;
 }
 
 
