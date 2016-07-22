@@ -1,5 +1,6 @@
 /*LESS*/
-@import 'https://fonts.googleapis.com/css?family=Roboto:400,100italic,100';
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100italic,100);
+// @import url(https://fonts.googleapis.com/css?family=Roboto:100);
 
 
 /*@mainbackground: #F7F7F7*/
@@ -27,72 +28,9 @@ button {
 
 /*MAIN*/
 .main-container {
-  // left: 20vw;
   display: flex;
   height: auto;
   width: auto;
-}
-/*NAVBAR*/
-// .nav-location{
-//   display: flex;
-//   height: 100vh;
-//   width: 20vw;
-//   z-index: -1;
-// }
-
-.nav-bar{
-  // position: fixed;
-  // left: 0px;
-  display: flex;
-  flex-direction: column;
-  order: 1;
-  height: 100vh;
-  width: 20vw;
-  background-color: white;
-  align-items: center;
-  z-index: 1;
-
-}
-
-#nav-logo {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  order: 1;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-}
-
-.nav-links {
-  width: 100%;
-  order: 2;
-}
-
-.nav-links> ul> li {
-  list-style-type: none;
-
-  padding-left: 0px;
-  border-top: solid 1px #F7F7F7;
-}
-.nav-button {
-  height: 7vh;
-  width:  100%;
-  background-color: white;
-  font-size: 1rem;
-  border-color: transparent;
-    text-align: left;
-}
-.nav-button:focus{
-  background-color: @mainGreen;
-  color: white;
-}
-a:link {
-  text-decoration: none;
-}
-
-ul {
-  padding: 0;
 }
 
 /*ROUTES*/
@@ -102,7 +40,6 @@ ul {
   order: 2;
   height: auto;
   width: 78%;
-  // background-color: #F7F7F7;
 }
 
 .route-main {

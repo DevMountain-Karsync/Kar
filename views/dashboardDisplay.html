@@ -7,7 +7,7 @@
       <h3>{{user.first_name}} {{user.last_name}}</h3>
       {{user.primary_phone}} <br>
       {{user.secondary_phone}} <br>
-      {{user.email}}<br>
+      <span class="italic">{{user.email}}</span><br>
                     <br>
                     <br>
       {{user.streetAddress}} <br>
@@ -18,7 +18,7 @@
       <h3>{{primaryUser.first_name}} {{primaryUser.last_name}}</h3>
       {{primaryUser.primary_phone}} <br>
       {{primaryUser.secondary_phone}} <br>
-      {{primaryUser.email}}<br>
+      <span class="italic">{{primaryUser.email}}</span><br>
                     <br>
                     <br>
       {{primaryUser.streetAddress}} <br>
@@ -29,10 +29,10 @@
       <h3>Current Service Plan</h3><br>
       {{user.userPlan}} - <strong>$ {{user.userPlanPrice}}</strong>/mo <br>
       <br>
-      NEXT BILL DATE <br>
+      <span id="billing-dates">NEXT BILL DATE</span> <br>
       <strong>08/12/16</strong> <br>
       <br>
-      END BILL DATE <br>
+      <span id="billing-dates">END BILL DATE</span>  <br>
       <strong>12/12/16</strong>
     </section>
 
@@ -45,8 +45,8 @@
 
     </select>
 
-    <button type="button" class="blue" name="button"> ADD NEW CAR</button>
-    <button class="red"type="button" name="button"> DELETE CAR</button>
+    <button type="button" class="blue dash-button" name="button"> ADD NEW CAR</button>
+    <button class="red dash-button"type="button" name="button"> DELETE CAR</button>
 
   </section>
   <section class="car-info-container">
@@ -55,14 +55,41 @@
     <section class="car-update-container">
       <span ng-bind="data.vehicles[data.selectedCar].make"></span>
       <span ng-bind="data.vehicles[data.selectedCar].model"></span>
-      <br>
-      buttons and such
+
+      <section class="top-box">
+        <div class="miles-div">
+          miles
+        </div>
+        <div class="oil-div">
+          last oil change
+        </div>
+      </section>
+
+      <section class="middle-box">
+        <div class="tire-div">
+
+        </div>
+        <div class="empty">
+
+        </div>
+      </section>
+
+      <section class="bottom-box">
+        <div class="save-div">
+            save
+        </div>
+        <div class="empty">
+            empty
+        </div>
+      </section>
+
     </section>
 
 
     <section class="alert-box-container">
       <section class="alert-box-head red">
-        <img src=".//styles/imgs/bell.png" alt="bell" />
+        <img src="../IMG/bell.png" alt="bell" /> CAR Name here! or something
+
         <span class="white" ng-bind="data.vehicles[data.selectedCar].make"></span>
         <span class="white" ng-bind="data.vehicles[data.selectedCar].model"></span>
       </section>

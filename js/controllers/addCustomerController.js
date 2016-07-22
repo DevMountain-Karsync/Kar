@@ -8,4 +8,6 @@ angular.module('karSync')
       console.log(res)
     })
   }
+
+
 });

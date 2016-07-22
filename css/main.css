@@ -1,5 +1,54 @@
-.form-wrap {
-  width: 100%;
+.form-container {
+  width: 30vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+}
+.add-Customer {
+  display: -ms-flexbox;
+  display: flex;
+  height: 8vh;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  border-bottom: solid 1px grey;
+}
+.newcustbutton {
+  height: 4vh;
+  margin-top: 3vh;
+  margin-right: 3vh;
+  border-color: transparent;
+  background-color: #21418C;
+  color: white;
+}
+#customer-info {
+  text-align: left;
+  padding-bottom: 3vh;
+  margin-top: 3vh;
+}
+p3 {
+  color: #21418C;
+}
+.submit-button {
+  width: 8vw;
+  height: 40px;
+  background-color: #21418C;
+  color: white;
+}
+.form-name {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.form-title {
+  margin-top: 2vh;
+}
+.form-field {
+  width: 15vw;
+  height: 4vh;
 }
 
 
@@ -35,9 +84,9 @@
   background-color: white;
   color: grey;
   text-align: justify;
-  background-image: url('../IMG/mag-glass.png');
+  background-image: url('../IMG/search-symbol.png');
   background-repeat: no-repeat;
-  background-size: 5vh;
+  background-size: initial;
   background-opacity: .3;
   background-position: left;
   background-position: .5vw;
@@ -62,6 +111,16 @@
 .red {
   background: #F46868;
   color: white;
+}
+.dash-button {
+  height: 3.5vh;
+  width: 11vw;
+  font-weight: 100;
+}
+.italic {
+  font-size: 70%;
+  color: #21418C;
+  font-style: italic;
 }
 .display-view-container h3 {
   color: #21418C;
@@ -95,9 +154,25 @@
       justify-content: space-around;
   -ms-flex-align: center;
       align-items: center;
-  height: 5vh;
+  height: 7vh;
   border-top: 1px solid #727476;
   border-bottom: 1px solid #727476;
+}
+.select-car-container select {
+  padding: 6px;
+  height: 3.5vh;
+  width: 16vw;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  font-family: 'Roboto', sans-serif;
+  color: #727476;
+  background-image: url('../IMG/scroll-down.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
 }
 .car-info-container {
   display: -ms-flexbox;
@@ -105,6 +180,13 @@
   -ms-flex-pack: justify;
       justify-content: space-between;
   margin: 2em;
+}
+.customer-service-plan-container {
+  font-weight: 100;
+}
+#billing-dates {
+  font-size: 71%;
+  font-weight: 100;
 }
 
 .login-container {
@@ -120,7 +202,7 @@
 }
 
 /*LESS*/
-@import 'https://fonts.googleapis.com/css?family=Roboto:400,100italic,100';
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100italic,100);
 /*@mainbackground: #F7F7F7*/
 /*HTML*/
 * {
@@ -142,61 +224,6 @@ button {
   display: flex;
   height: auto;
   width: auto;
-}
-/*NAVBAR*/
-.nav-bar {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-order: 1;
-      order: 1;
-  height: 100vh;
-  width: 20vw;
-  background-color: white;
-  -ms-flex-align: center;
-      align-items: center;
-  z-index: 1;
-}
-#nav-logo {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  width: 100%;
-  height: auto;
-  -ms-flex-order: 1;
-      order: 1;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-}
-.nav-links {
-  width: 100%;
-  -ms-flex-order: 2;
-      order: 2;
-}
-.nav-links > ul > li {
-  list-style-type: none;
-  padding-left: 0px;
-  border-top: solid 1px #F7F7F7;
-}
-.nav-button {
-  height: 7vh;
-  width: 100%;
-  background-color: white;
-  font-size: 1rem;
-  border-color: transparent;
-  text-align: left;
-}
-.nav-button:focus {
-  background-color: #6FC17F;
-  color: white;
-}
-a:link {
-  text-decoration: none;
-}
-ul {
-  padding: 0;
 }
 /*ROUTES*/
 .route-container {
@@ -249,10 +276,9 @@ iframe {
   background-color: white;
   color: grey;
   text-align: justify;
-  background-image: url('../IMG/mag-glass.png');
+  background-image: url('../IMG/search-symbol.png');
   background-repeat: no-repeat;
   background-size: 3vh;
-  background-opacity: .3;
   background-position: left;
   background-position: .5vw;
   -ms-flex-item-align: center;
@@ -266,14 +292,11 @@ iframe {
 .typeSearch {
   background-image: none;
 }
-.modelsList {
-  background-image: none;
-}
 .modelSearch {
   background-color: white;
   color: grey;
   text-align: justify;
-  background-image: url('../IMG/mag-glass.png');
+  background-image: url('../IMG/search-symbol.png');
   background-repeat: no-repeat;
   background-size: 3vh;
   background-opacity: .3;
@@ -286,6 +309,9 @@ iframe {
   border-radius: 15px 15px 15px 15px;
   border-color: transparent;
   font-size: 1em;
+}
+.modelsList {
+  background-image: none;
 }
 section.make-list {
   margin-top: 5%;
@@ -321,7 +347,6 @@ section.model-list {
   overflow: scroll;
   height: 30%;
   background-color: white;
-  cursor: pointer;
 }
 section.model-list :hover {
   background-color: #21418C;
@@ -367,4 +392,67 @@ section.year-list :hover {
 ::-webkit-scrollbar-thumb {
   width: 8px;
   background-color: grey;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+/*@mainbackground: #F7F7F7*/
+/*NAVBAR*/
+.nav-bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-order: 1;
+      order: 1;
+  height: 100vh;
+  width: 20vw;
+  background-color: white;
+  -ms-flex-align: center;
+      align-items: center;
+  z-index: 1;
+}
+#nav-logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 100%;
+  height: auto;
+  -ms-flex-order: 1;
+      order: 1;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.nav-links {
+  width: 100%;
+  -ms-flex-order: 2;
+      order: 2;
+}
+.nav-links > ul > li {
+  list-style-type: none;
+  padding-left: 0px;
+  border-top: solid 1px #F7F7F7;
+}
+.links {
+  height: 7vh;
+  width: 100%;
+  background-color: white;
+  font-size: 1rem;
+  border-color: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+.activeNav {
+  background-color: #6FC17F;
+  color: white;
+}
+.links:hover {
+  background-color: #6FC17F;
+  color: white;
+}
+a:link {
+  text-decoration: none;
+}
+ul {
+  padding: 0;
 }
