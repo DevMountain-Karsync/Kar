@@ -50,6 +50,22 @@ p3 {
   width: 15vw;
   height: 4vh;
 }
+.form-name select {
+  padding: 6px;
+  height: 3.5vh;
+  width: 15.5vw;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  font-family: 'Roboto', sans-serif;
+  color: #727476;
+  background-image: url('../IMG/scroll-down.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
 
 
 .empty {
