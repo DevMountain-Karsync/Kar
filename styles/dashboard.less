@@ -5,6 +5,7 @@
 @mainRed: #F46868;
 
 @mainPink: rgba(244, 104, 104, 0.15);
+
 .white {
   color: white;
 }
@@ -43,9 +44,9 @@
   background-color: white;
   color: grey;
   text-align: justify;
-  background-image: url('../IMG/mag-glass.png');
+  background-image: url('../IMG/search-symbol.png');
   background-repeat: no-repeat;
-  background-size: 5vh;
+  background-size: initial;
   background-opacity: .3;
   background-position: left;
   background-position: .5vw;
@@ -72,6 +73,17 @@
 
 }
 
+.dash-button {
+  height: 3.5vh;
+  width: 11vw;
+  font-weight: 100;
+}
+
+.italic {
+  font-size: 70%;
+  color: @mainBlue;
+  font-style: italic;
+}
 .display-view-container h3 {
 color: @mainBlue;
 }
@@ -105,13 +117,39 @@ color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 5vh;
+  height: 7vh;
   border-top: 1px solid  @mainGrey ;
   border-bottom:  1px solid  @mainGrey;
+}
+.select-car-container select {
+  padding: 6px;
+  height: 3.5vh;
+  width: 16vw;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+   appearance: none;
+  background: transparent;
+  font-family: 'Roboto', sans-serif;
+  color: @mainGrey;
+  background-image: url('../IMG/scroll-down.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+
 }
 
 .car-info-container{
   display: flex;
   justify-content: space-between;
   margin: 2em;
+}
+
+.customer-service-plan-container {
+    font-weight: 100;
+}
+
+#billing-dates{
+  font-size: 71%;
+  font-weight: 100;
 }
