@@ -52,9 +52,6 @@ p3 {
 }
 
 
-.empty {
-  background: orange;
-}
 .white {
   color: white;
 }
@@ -182,7 +179,7 @@ p3 {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  margin: 2em;
+  margin: 1em;
 }
 .customer-service-plan-container {
   font-weight: 100;
@@ -191,8 +188,49 @@ p3 {
   font-size: 71%;
   font-weight: 100;
 }
-.car-update-container {
-  background: pink;
+.dash-display-input {
+  background: #EEEEEE;
+  border: none;
+  font-size: x-large;
+  width: 10vw;
+}
+.box-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-top: 1em;
+  font-size: smaller;
+}
+#dash-save {
+  width: 10vw;
+}
+.dash-maint-table-container {
+  margin: 1em;
+}
+.dash-maint-table-header {
+  background: #6FC17F;
+}
+.dash-table-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.dash-header {
+  color: white;
+  font-weight: lighter;
+}
+.dash-table-data-container {
+  border: 1px solid #EEEEEE;
+  overflow: scroll;
+  height: 10vh;
+}
+.oddRow {
+  background: white;
+}
+.evenRow {
+  background: #EEEEEE;
 }
 
 .login-container {

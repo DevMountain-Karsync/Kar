@@ -1,5 +1,5 @@
 angular.module('karSync')
-.controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner){
+.controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService){
   $scope.partner = partner[0].partner_id;
 
   userServ.getUser($scope.partner).then(function(user){
@@ -57,7 +57,17 @@ angular.module('karSync')
       $scope.user.userPlan = "Gold"
       $scope.user.userPlanPrice = "15.00"
 
+      edmundService.byYear($scope.data.vehicles[0].edmonds_model_year_id)
+        .then(function(res){
+          $scope.maintenance = res.data.actionHolder
+        })
+
+
   }
+
+  $scope.milesInput = 3500;
+  $scope.oilInput = 30000;
+  $scope.tireInput = 20000;
 
 
 
