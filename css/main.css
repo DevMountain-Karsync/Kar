@@ -1,5 +1,54 @@
-.form-wrap {
-  width: 100%;
+.form-container {
+  width: 30vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+}
+.add-Customer {
+  display: -ms-flexbox;
+  display: flex;
+  height: 8vh;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  border-bottom: solid 1px grey;
+}
+.newcustbutton {
+  height: 4vh;
+  margin-top: 3vh;
+  margin-right: 3vh;
+  border-color: transparent;
+  background-color: #21418C;
+  color: white;
+}
+#customer-info {
+  text-align: left;
+  padding-bottom: 3vh;
+  margin-top: 3vh;
+}
+p3 {
+  color: #21418C;
+}
+.submit-button {
+  width: 8vw;
+  height: 40px;
+  background-color: #21418C;
+  color: white;
+}
+.form-name {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.form-title {
+  margin-top: 2vh;
+}
+.form-field {
+  width: 15vw;
+  height: 4vh;
 }
 
 
@@ -227,7 +276,7 @@ iframe {
   background-color: white;
   color: grey;
   text-align: justify;
-  background-image: url('../IMG/mag-glass.png');
+  background-image: url('../IMG/search-symbol.png');
   background-repeat: no-repeat;
   background-size: 3vh;
   background-position: left;
@@ -247,7 +296,7 @@ iframe {
   background-color: white;
   color: grey;
   text-align: justify;
-  background-image: url('../IMG/mag-glass.png');
+  background-image: url('../IMG/search-symbol.png');
   background-repeat: no-repeat;
   background-size: 3vh;
   background-opacity: .3;

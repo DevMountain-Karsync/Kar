@@ -19,9 +19,14 @@ angular.module('karSync', ['ui.router'])
     })
     .state('addCust', {
       templateUrl: './views/addCustomer.html',
-      url: 'add/',
-      parent: "dashboard",
+      url: '/add/',
+      parent: "newCustomer",
       controller: 'addCtrl'
+    })
+    .state('newCustomer', {
+      templateUrl: './views/newCustomer.html',
+      url: '/newCustomer/',
+      controller: 'newCustCtrl'
     })
     .state('currentCust', {
       templateUrl: './views/currentCustomer.html',
