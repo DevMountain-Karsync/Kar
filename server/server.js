@@ -81,7 +81,7 @@ var isAuthed = function(req, res, next) {
 
 // ENDPOINTS //
 app.get('/api/user/:id', selectUser.queryUser)
-app.get('/api/customers/:id', getCustomers.queryCutomers)
+app.get('/api/customers/:id', getCustomers.queryCustomers)
 app.get('api/partner/:profile_id', getPartner.queryPartner)
 
 app.get('/login', UserCtrl.read);

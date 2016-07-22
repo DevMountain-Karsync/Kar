@@ -1,10 +1,11 @@
 angular.module('karSync')
 .controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService){
   $scope.partner = partner[0].partner_id;
-
   userServ.getUser($scope.partner).then(function(user){
     $scope.userList = user;
   })
+
+  $scope.business = partner[0].business_name;
 
     $scope.select = function(item) {
       $scope.selected = item;
@@ -65,11 +66,12 @@ angular.module('karSync')
 
   }
 
+
   $scope.milesInput = 3500;
   $scope.oilInput = 30000;
   $scope.tireInput = 20000;
 
-
+  $scope.business = partner[0].business_name;
 
 
 });

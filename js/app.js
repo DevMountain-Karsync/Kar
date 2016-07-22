@@ -15,8 +15,7 @@ angular.module('karSync', ['ui.router'])
       partner: function(loginServ) {
         return loginServ.getLogin()
       }
-
-    }
+     }
     })
 
     .state('dashboardDisplay', {
