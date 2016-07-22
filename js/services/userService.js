@@ -1,10 +1,10 @@
 angular.module('karSync')
 .service('userServ', function($http){
 
-this.getUser = function(){
+this.getUser = function(partner_id){
   return $http({
     method: 'GET',
-    url: 'http://localhost:3000/api/customers/1'
+    url: 'http://localhost:3000/api/customers/' + partner_id
   })
   .then(function(response){
     // console.log(response.data[1]);
