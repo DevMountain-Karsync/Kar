@@ -69,6 +69,7 @@ var getCustomers = require("./controllers/getCustomers")
 var UserCtrl = require("./controllers/UserCtrl");
 var getDTC = require('./controllers/getDTC')
 var getDTCbyCode = require('./controllers/getDTCbyCode')
+var addCustomers= require('./controllers/addCustomers')
 
 // POLICIES //
 var isAuthed = function(req, res, next) {
