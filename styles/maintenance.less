@@ -1,6 +1,14 @@
 @mainBlue: #21418C;
+@mainGreen: #6FC17F;
 
 .search-container {
+  height: 9vh;
+  display: flex;
+  justify-content: space-around;
+  background-color: #EEEEEE;
+}
+
+.search-container-diag {
   height: 9vh;
   display: flex;
   justify-content: space-around;
@@ -123,20 +131,57 @@ section.year-list {
 }
 
 .maintenance-schedule{
+  display: flex;
+  flex-flow: column;
   overflow: scroll;
   height: 100%;
 }
 
+.diag-code {
+  flex-flow: row;
+  justify-content: space-around;
+
+}
 .maint-container {
-  padding-bottom: 4vh;
-  margin-top: 2vh;
-  margin-bottom: 1vh;
+
+  display: flex;
+  flex-flow: column;
+
   border-bottom: solid 1px grey;
 }
+p4{
+  margin-top: -2vh;
 
+}
+.maint-sched{
+  width: 12vw;
+  background-color: @mainGreen;
+  color: white;
+}
 .no-maint {
   text-align:center;
   padding-top: 50vh;
+}
+.diagSearch {
+  background-color: white;
+  color: grey;
+  text-align: justify;
+  background-image: url('../IMG/search-symbol.png');
+  background-repeat: no-repeat;
+  background-size: 3vh;
+  background-opacity: .3;
+  background-position: left;
+  background-position: .5vw;
+  align-self: center;
+  height: 5vh;
+  width: 40vw;
+  border-radius: 15px 15px 15px 15px;
+  border-color: transparent;
+  font-size: 1em;
+
+}
+.diagSearchCheck {
+  background-image: none;
 }
 // SCROLLBAR
 ::-webkit-scrollbar {

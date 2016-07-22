@@ -59,6 +59,12 @@ passport.use(new GoogleStrategy({
     request.getConnection(function(err,connection){
             connection.query('select * from partner where profile_id = ?', profile.id, function(err, result) {
 
+
+              //  console.log(result[0].partner_id);
+              //  app.locals.partner = result[0].partner_id;
+              // console.log(profile.id)
+
+
               //  console.log(result[0].business_name);
               //  console.log(profile);
 
