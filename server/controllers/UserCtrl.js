@@ -18,7 +18,7 @@ module.exports = {
     console.log(req.user) //req.user is what is returned in the done(err, user) function. see passport.js file
     if (!req.user) return res.status(401).send('current user not defined');
     req.user.password = null;
-    return res.status(200).json(req.user);
+    return res.status(200).json(req.user[0].partner_id);
   },
 
   update: function(req, res, next) {

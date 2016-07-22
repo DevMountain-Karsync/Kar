@@ -10,7 +10,7 @@ angular.module('karSync')
     }
 
     $scope.isActive = function(item) {
-      
+
       return $scope.selected === item;
 
     }
