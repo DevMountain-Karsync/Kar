@@ -1,11 +1,10 @@
 angular.module('karSync')
-.service('edmundService', function ($http){
+.service('edmundService', function($http){
 
 //sending year I.D. to receive maintanence report. sets description of frequency field.
 this.byYear = function(yId) {
       return $http.get('https://api.edmunds.com/v1/api/maintenance/actionrepository/findbymodelyearid?modelyearid='+yId+'&fmt=json&api_key=ph7zhymwvhhr28wfeqvdpcws').
         then(function(data) {
-        console.log(data)
 
           for (var i = 0; i < data.data.actionHolder.length; i++) {
           var freq =  data.data.actionHolder[i].frequency;

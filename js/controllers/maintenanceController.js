@@ -3,15 +3,13 @@ angular.module('karSync')
   edmundService.getMake().then(function(res){
     $scope.makes = res.data.makes;
   });
-  edmundService.getModel().then(function(res){
-    $scope.models = res.data.models;
-  })
+
 
 
   $scope.select = function(itemMake) {
     $scope.selected = itemMake;
-
   }
+
   $scope.isActive = function(itemMake) {
 
     return $scope.selected === itemMake;
@@ -43,7 +41,7 @@ $scope.yearOption = function(model) {
   $scope.yearOption = function(modelSelect) {
     console.log('yearOption')
     $scope.modelSelect = modelSelect;
-  }
+    }
   }
 $scope.yearsModel = function(year) {
   for (var i = 0; i < $scope.years.length; i++) {
@@ -60,6 +58,7 @@ $scope.yearsModel = function(year) {
   }
   $scope.yearsModel = function(yearSelect) {
     $scope.yearSelect = yearSelect;
+    console.log(yearSelect)
   }
 }
 });

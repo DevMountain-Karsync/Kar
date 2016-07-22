@@ -31,4 +31,19 @@ angular.module('karSync')
   };
 
 
+
+//diagnostics
+return function(arr, searchString3){
+  if(!searchString3){
+    return arr;
+  };
+var result = [];
+searchString3 = searchString3.toLowerCase();
+angular.forEach(arr, function(item){
+    if(item.name.toLowerCase().indexOf(searchString3) !== -1){
+    result.push(item);
+  }
+});
+return result;
+};
 });

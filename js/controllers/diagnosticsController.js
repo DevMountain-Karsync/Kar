@@ -1,5 +1,5 @@
 angular.module('karSync')
-.controller('diagCtrl', function($scope, edmundService){
+.controller('diagCtrl', function($scope, edmundService, diagnosticService){
   edmundService.getMake().then(function(res){
 
     $scope.makes = res.data.makes;
@@ -44,26 +44,17 @@ $scope.yearOption = function(model) {
   $scope.years = model.years;
 
   }
-$scope.yearsModel = function(year) {
+$scope.yearsModel = function() {
 
-  for (var i = 0; i < $scope.years.length; i++) {
-    if($scope.years[i].year === year){
-
-      edmundService.byYear($scope.years[i].id).then(function(res){
-        console.log(res);
-        $scope.showAlert = false;
-
-        $scope.maintArr = res.data.actionHolder;
-          if(res.data.actionHolder.length === 0) {
-            $scope.alert ='no maintanence schedule available';
-            $scope.showAlert = true;
-          }
+  diagnosticService.fromYear().then(function(resp){
+    $scope.test = resp;
+    console.log(resp)
+  })
 
 
-      })
-    }
   }
 
-}
+
+
 
 });

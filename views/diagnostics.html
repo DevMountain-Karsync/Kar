@@ -26,4 +26,17 @@
     </section>
   </div>
   <div class="column2">
+    <div class="search-container">
+    <input type="text" placeholder="          Search..." class="diagSearch" ng-model="searchString3"  ng-class="{'typeSearch': searchString }">
+    </div>
+    <section class="maintenance-schedule">
+    <section class="diag-view" ng-repeat="test in test | searchFor:searchString3">
+      <div class="maint-container">
+    <p><section class="diag-code">Engine Code:</section> {{test.code}}</p>
+    <p><section class="diag-code">Description:</section>{{test.description}}</p>
+    </div>
+  </section>
+  </section>
+    <!-- {{test}} -->
+  </div>
 </section>
