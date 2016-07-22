@@ -1,6 +1,39 @@
 var passport = require('passport');
 var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
 var config = require('../config');
+var getPartner = require('../controllers/getPartner')
+// var express = require("express");
+// // var mysql = require('mysql');
+// //
+// var app = express();
+// var connection = mysql.createConnection({
+//   host     : config.host,
+//   user     : config.user,
+//   password : config.password,
+//   database: config.database,
+// });
+// connection.connect(function(err){
+//   if (err) {
+//     console.log(err);
+//   }
+//   console.log("success");
+// });
+
+
+// var connection  = require('express-myconnection');
+
+// MYSQL CONNECTION //
+// app.use(
+//
+//     connection(mysql,{
+//
+//         host     : config.host,
+//         user     : config.user,
+//         password : config.password,
+//         port     : 3306,
+//         database : config.database,
+//     },'request')
+// );
 
 passport.use(new GoogleStrategy({
     clientID:     config.clientID,
@@ -9,7 +42,7 @@ passport.use(new GoogleStrategy({
     passReqToCallback: true
   },
 
-  function(request, accessToken, refreshToken, profile, done) {
+  function(request, accessToken, refreshToken, profile, done, email, calendar) {
 
     //***SQL CODE HERE***//
     //SQL CODE TO EITHER FIND OR CREATE USER/CLIENT WITH GOOGLE ID ATTACHED
@@ -21,14 +54,24 @@ passport.use(new GoogleStrategy({
     //   return done(err, user)
     //where user is the user found in the SQL database
 
+    // var query =connection.query('select * from partner where profile_id = ?', profile.id, function(err, result){
+    //    console.log('our result is ' + result[0].partner_id);
+    request.getConnection(function(err,connection){
+            connection.query('select * from partner where profile_id = ?', profile.id, function(err, result) {
+               console.log(result[0].partner_id);
+              //  app.locals.partner = result[0].partner_id;
 
-    console.log(profile.id)
+              return done(null, result)
+            })
+      })
 
-    process.nextTick(function() {
-      return done(null, profile);
-    })
-  }
 
+
+    // process.nextTick(function() {
+    //   return done(null, profile);
+    // })
+  // }
+}
 ));
 
 // CREATE SESSIONS //

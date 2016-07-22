@@ -70,6 +70,7 @@ var UserCtrl = require("./controllers/UserCtrl");
 var getDTC = require('./controllers/getDTC')
 var getDTCbyCode = require('./controllers/getDTCbyCode')
 var addCustomers= require('./controllers/addCustomers')
+var getPartner = require('./controllers/getPartner')
 
 // POLICIES //
 var isAuthed = function(req, res, next) {
@@ -81,6 +82,7 @@ var isAuthed = function(req, res, next) {
 // ENDPOINTS //
 app.get('/api/user/:id', selectUser.queryUser)
 app.get('/api/customers/:id', getCustomers.queryCutomers)
+app.get('api/partner/:profile_id', getPartner.queryPartner)
 
 app.get('/login', UserCtrl.read);
 app.get('/me', isAuthed, UserCtrl.me);
@@ -88,13 +90,13 @@ app.get('/me', isAuthed, UserCtrl.me);
 // GOOGLE AUTH ENDPOINTS //
 app.get('/auth/google',
   passport.authenticate('google', { scope:
-    ['email', 'profile']
+    ['email', 'profile', 'https://www.googleapis.com/auth/calendar']
   }));
 
 app.get( '/auth/google/callback',
   passport.authenticate('google', {
-    successRedirect: '/me',
-    failureRedirect: '/login'
+    successRedirect: '/#/dashboard/',
+    failureRedirect: '/'
   }));
 
 app.get('/api/dtc/', getDTC.queryDTC)
