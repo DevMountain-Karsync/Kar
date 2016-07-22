@@ -6,17 +6,26 @@ angular.module('karSync', ['ui.router'])
     url: '/',
     controller: 'loginCtrl'
   })
+
     .state('dashboard', {
     templateUrl: './views/dashboard.html',
     url: '/dashboard/',
-    controller: 'dashCtrl'
+    controller: 'dashCtrl',
+    resolve: {
+      partner: function(loginServ) {
+        return loginServ.getLogin()
+      }
+
+    }
     })
+
     .state('dashboardDisplay', {
     templateUrl: './views/dashboardDisplay.html',
     url: 'display/',
     parent: "dashboard",
     controller: "dashDisplayCtrl"
     })
+
     .state('addCust', {
       templateUrl: './views/addCustomer.html',
       url: 'add/',
