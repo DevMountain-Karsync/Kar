@@ -56,36 +56,36 @@
       <span ng-bind="data.vehicles[data.selectedCar].make"></span>
       <span ng-bind="data.vehicles[data.selectedCar].model"></span>
 
-      <section class="top-box">
+      <section class="top-box box-container">
         <div class="miles-div">
-          miles
+          Miles:
           <br>
-          <input type="button" name="name" value="">
+          <input class = "dash-display-input dash-button" type="text" name="name" value="" ng-model="milesInput">
         </div>
         <div class="oil-div">
-          last oil change
+          Last Oil Change:
           <br>
-          <input type="button" name="name" value="">
+          <input class = "dash-display-input dash-button" type="text" name="name" value="" ng-model="oilInput">
         </div>
       </section>
 
-      <section class="middle-box">
+      <section class="middle-box box-container">
         <div class="tire-div">
-          last tire rotation
+          Last Tire Rotation:
           <br>
-          <input type="button" name="name" value="">
+          <input class = "dash-display-input dash-button" type="text" name="name" value="" ng-model="tireInput">
         </div>
-        <div class="empty">
-          empty
+        <div class="empty dash-button">
+
         </div>
       </section>
 
-      <section class="bottom-box">
+      <section class="bottom-box box-container">
         <div class="save-div">
-          <button class="blue dash-button" type="button" name="button">SAVE</button>
+          <button id='dash-save' class="blue dash-button" type="button" name="button">SAVE</button>
         </div>
-        <div class="empty">
-            empty
+        <div class="empty dash-button">
+
         </div>
       </section>
 
@@ -107,7 +107,52 @@
     </section>
   </section>
   <section class="maintence-user-car-container">
-    edmonds api maintenance scehdule
+   Upcoming Maintenance Schedule
+   <section class="dash-maint-table-container">
+     <section class="dash-maint-table-header dash-table-row">
+       <section class=" dash-table-col1 dash-header">
+         Action
+       </section>
+       <section class=" dash-table-col2 dash-header">
+         Maintenanace Items
+       </section>
+       <section class=" dash-table-col3 dash-header">
+         Frequency
+       </section>
+       <section class=" dash-table-col4 dash-header">
+         Labor Units
+       </section>
+       <section class=" dash-table-col5 dash-header">
+         Part Units
+       </section>
+       <section class=" dash-table-col6 dash-header">
+         Miles
+       </section>
+     </section>
+     <section class="dash-table-data-container">
+       <section class="dash-table-row" ng-repeat="item in maintenance" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
+         <section class=" dash-table-col1">
+           Action {{item.id}}
+         </section>
+         <section class=" dash-table-col2">
+           Maintenanace Items
+         </section>
+         <section class=" dash-table-col3">
+           Frequency
+         </section>
+         <section class=" dash-table-col4">
+           Labor Units
+         </section>
+         <section class=" dash-table-col5">
+           Part Units
+         </section>
+         <section class=" dash-table-col6">
+           Miles
+         </section>
+
+       </section>
+     </section>
+   </section>
 
   </section>
 
