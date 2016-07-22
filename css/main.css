@@ -52,6 +52,9 @@ p3 {
 }
 
 
+.empty {
+  background: orange;
+}
 .white {
   color: white;
 }
@@ -187,6 +190,9 @@ p3 {
 #billing-dates {
   font-size: 71%;
   font-weight: 100;
+}
+.car-update-container {
+  background: pink;
 }
 
 .login-container {

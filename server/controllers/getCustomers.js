@@ -1,5 +1,3 @@
-
-
 exports.queryCutomers = function(req, res){
       req.getConnection(function(err,connection){
         connection.query('select * from user where partner_id = ?', req.params.id, function(err, result) {
@@ -8,5 +6,4 @@ exports.queryCutomers = function(req, res){
           res.send(result)
         })
   })
-
 }
