@@ -18,7 +18,7 @@ angular.module('karSync')
     }
   $scope.customerClicked = function(user){
     // console.log(user);
-    console.log('clicked '+ user.first_name);
+    // console.log('clicked '+ user.first_name);
   vehicleService.getCar(user.account_id).then(function(res){
 
 
