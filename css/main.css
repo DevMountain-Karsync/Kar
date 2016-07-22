@@ -66,6 +66,9 @@ p3 {
   background-position: right;
   background-size: contain;
 }
+.addcolumn2 {
+  padding-left: 15px;
+}
 
 
 .white {
@@ -80,14 +83,19 @@ p3 {
   overflow: scroll;
 }
 .users-div {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   border: transparent;
   color: #21418C;
   font-size: 1em;
   background-color: white;
-  height: 80px;
+  height: 7vh;
   width: 100%;
   cursor: pointer;
   text-align: left center;
+  border-bottom: solid 1px #F7F7F7;
 }
 .activeUser {
   background-image: url('../IMG/check.png');
@@ -471,4 +479,8 @@ a:link {
 }
 ul {
   padding: 0;
+}
+#logout {
+  margin-left: 10px;
+  margin-top: 30vh;
 }
