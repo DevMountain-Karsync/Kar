@@ -48,7 +48,7 @@ $scope.yearsModel = function() {
 
   diagnosticService.fromYear().then(function(resp){
     $scope.test = resp;
-    console.log(resp)
+    // console.log(resp)
   })
 
 

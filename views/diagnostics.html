@@ -8,16 +8,16 @@
     <input type="text" placeholder="          Search..." class="makesSearch" ng-model="searchString"  ng-class="{'typeSearch': searchString }">
     </div>
       <section class="make-list">
-      <section data-ng-repeat="make in makes | searchFor:searchString" ng-click="makeList(make.name); select(make)">
+      <section data-ng-repeat="make in makes | filter: {name: searchString}" ng-click="makeList(make.name); select(make)">
         <div class="make-click" ng-class="{'active' : isActive(make)}">
           {{make.name}}
       </div></section>
     </section>
     <div class="search-container">
-   <input type="text" placeholder="          Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelsList': searchString }">
+   <input type="text" placeholder="          Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelsList': searchString1 }">
     </div>
     <section class="model-list">
-      <section ng-repeat="model in models | searchFor:searchString1" ng-class="{'active' : isActiveModel(model)}">
+      <section ng-repeat="model in models | filter: {name: searchString1}" ng-class="{'active' : isActiveModel(model)}">
         <div class="model-click" ng-click="yearOption(model); selectModel(model)">{{model.name}}</div></section>
     </section>
     <section class="year-list">
@@ -26,14 +26,14 @@
     </section>
   </div>
   <div class="column2">
-    <div class="search-container">
-    <input type="text" placeholder="          Search..." class="diagSearch" ng-model="searchString3"  ng-class="{'typeSearch': searchString }">
+    <div class="search-container-diag">
+    <input type="text" placeholder="          Search..." class="diagSearch" ng-model="search3"  ng-class="{'diagSearchCheck': search3 }">
     </div>
     <section class="maintenance-schedule">
-    <section class="diag-view" ng-repeat="test in test | searchFor:searchString3">
+    <section class="diag-view" ng-repeat="test in test | filter:{code:search3}">
       <div class="maint-container">
-    <p><section class="diag-code">Engine Code:</section> {{test.code}}</p>
-    <p><section class="diag-code">Description:</section>{{test.description}}</p>
+    <p><div class="diag-code">Engine Code:</div> {{test.code}}</p>
+    <p><div class="diag-code">Description:</div>{{test.description}}</p>
     </div>
   </section>
   </section>
