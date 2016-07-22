@@ -58,9 +58,15 @@ passport.use(new GoogleStrategy({
     //    console.log('our result is ' + result[0].partner_id);
     request.getConnection(function(err,connection){
             connection.query('select * from partner where profile_id = ?', profile.id, function(err, result) {
+
+              //  console.log(result[0].partner_id);
+              //  app.locals.partner = result[0].partner_id;
+              // console.log(profile.id)
+
               //  console.log(result[0].business_name);
               //  console.log(profile);
-            
+
+
               return done(null, result)
             })
       })
