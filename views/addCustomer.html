@@ -1,15 +1,16 @@
 
 <section class="display-view-container">
-    <!-- <div class="column2">
-    </div> -->
-    <div class="column1">
+  <div class="addcolumn1">
+    <div class="add-Customer">
+        <button class='newcustbutton'>Add New Customer</button></div>
+</div>
+    <div class="addcolumn2">
         <div id="customer-info">
             <p3> Customer Information </p>
-        </div>
+
         <div class="form-wrap">
             <form class="form-container" ng-submit="processForm(user)">
-                <!-- <div class="form-title">
-                    <h2>Sign up</h2></div> -->
+
                     <div class="form-name">
                 <div class="form-title">Name</div>
                 <input class="form-field" type="text" name="first_name" ng-model="user.first_name" placeholder="John Doe" />
@@ -67,9 +68,12 @@
                 <br />
                 <div class=form-name>
                 <div class="submit-container">
-                    <input class="submit-button" type="submit" value="Submit" />
+                    <input class="submit-button" type="submit" value="Save" />
                 </div>
             </form>
         </div>
+    </div>
+
+
     </div>
 </section>
