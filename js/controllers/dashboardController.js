@@ -57,6 +57,7 @@ angular.module('karSync')
 
   }
 
-  $scope.partner = partner;
+  $scope.partner = partner[0].partner_id;
+
 
 });
