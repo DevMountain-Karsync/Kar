@@ -129,7 +129,7 @@
          Miles
        </section>
      </section>
-     <section class="dash-table-data-container">
+     <section class="dash-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll">
        <section class="dash-table-row" ng-repeat="item in maintenance" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
          <section class=" dash-table-col1">
            {{item.action}}
@@ -138,7 +138,7 @@
            {{item.item}}
          </section>
          <section class=" dash-table-col3">
-           {{item.frequency.breakyBreak}} 4
+           {{item.frequency}}
          </section>
          <section class=" dash-table-col4">
            {{item.laborUnits}}

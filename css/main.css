@@ -247,7 +247,7 @@ p3 {
 }
 .dash-table-data-container {
   border: 1px solid #EEEEEE;
-  overflow: scroll;
+  overflow: auto;
   height: 10vh;
 }
 .oddRow {
@@ -276,13 +276,13 @@ p3 {
 }
 .dash-table-col4 {
   text-align: left;
-  width: 10%;
+  width: 20%;
   margin: 0;
   padding: 0;
 }
 .dash-table-col5 {
   text-align: left;
-  width: 10%;
+  width: 20%;
   margin: 0;
   padding: 0;
 }
