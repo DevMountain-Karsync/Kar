@@ -6,7 +6,6 @@ angular.module('karSync', ['ui.router'])
     url: '/',
     controller: 'loginCtrl'
   })
-
     .state('dashboard', {
     templateUrl: './views/dashboard.html',
     url: '/dashboard/',
@@ -17,20 +16,16 @@ angular.module('karSync', ['ui.router'])
       }
      }
     })
-
     .state('dashboardDisplay', {
     templateUrl: './views/dashboardDisplay.html',
     url: 'display/',
     parent: "dashboard",
-    controller: "dashDisplayCtrl",
-
+    controller: "dashDisplayCtrl"
     })
-
     .state('addCust', {
       templateUrl: './views/addCustomer.html',
-      url: '/add/',
+      url: 'add/',
       parent: "newCustomer",
-      controller: 'addCtrl',
       resolve: {
         partner: function(loginServ) {
           return loginServ.getLogin()
@@ -52,7 +47,6 @@ angular.module('karSync', ['ui.router'])
       url: '/current/',
       controller: 'currentCtrl',
     })
-
     .state('maintenance', {
       templateUrl: './views/maintenance.html',
       url: '/maintenance/',
