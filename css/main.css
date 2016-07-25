@@ -257,13 +257,17 @@ p3 {
   background: #EEEEEE;
 }
 
-.login-container {
-  position: absolute;
-  left: 80vw;
+#login-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
   top: 0;
-  text-align: center;
-  z-index: 2;
-  width: 100%;
+  width: 100vw;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 .login-button {
   text-align: center;
@@ -579,23 +583,32 @@ ul {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-top: 37vh;
+  margin-top: 39vh;
   -ms-flex-flow: column;
       flex-flow: column;
+  margin-left: .8vw;
 }
 .welcome {
   width: 20vw;
-  display: -ms-flexbox;
-  display: flex;
+  font-size: .7rem;
+  opacity: .5;
 }
 .business-name {
+  display: -ms-flexbox;
+  display: flex;
   width: 20vw;
   color: #21418C;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 #logout {
   height: 3vh;
-  width: 6vw;
+  width: 7vw;
   background-color: #21418C;
-  color: grey;
   cursor: pointer;
+  margin-right: 1.5vw;
+  margin-bottom: 1vh;
+}
+#logout-text {
+  color: white;
 }
