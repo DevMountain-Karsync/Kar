@@ -585,12 +585,14 @@ ul {
 }
 .welcome {
   width: 20vw;
-  display: -ms-flexbox;
-  display: flex;
 }
 .business-name {
+  display: -ms-flexbox;
+  display: flex;
   width: 20vw;
   color: #21418C;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 #logout {
   height: 3vh;
