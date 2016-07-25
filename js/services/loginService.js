@@ -10,4 +10,5 @@ this.getLogin = function(id){
     return response.data;
   })
  }
+
 });

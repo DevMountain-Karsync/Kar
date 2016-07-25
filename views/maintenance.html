@@ -6,7 +6,7 @@
 <section class="route-main">
   <div class="column1">
     <div class="search-container">
-    <input type="text" placeholder="          Search..." class="makesSearch" ng-model="searchString" ng-class="{'typeSearch': searchString }">
+    <input type="text" placeholder="Search..." class="makesSearch" ng-model="searchString" ng-class="{'typeSearch': searchString }">
     </div>
       <section class="make-list">
       <section data-ng-repeat="make in makes | searchFor:searchString" ng-click="makeList(make.name); select(make)">
@@ -15,7 +15,7 @@
       </div></section>
     </section>
     <div class="search-container">
-   <input type="text" placeholder="          Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelsList': searchString1 }">
+   <input type="text" placeholder="Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelsList': searchString1 }">
     </div>
     <section class="model-list">
       <section ng-repeat="model in models | searchFor:searchString1" ng-class="{'active' : isActiveModel(model)}">

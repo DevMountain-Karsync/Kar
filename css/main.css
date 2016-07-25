@@ -360,10 +360,11 @@ iframe {
   -ms-flex-item-align: center;
       align-self: center;
   height: 5vh;
-  width: 20vw;
+  width: 18vw;
   border-radius: 15px 15px 15px 15px;
   border-color: transparent;
   font-size: 1em;
+  padding-left: 4vw;
 }
 .typeSearch {
   background-image: none;
@@ -381,10 +382,11 @@ iframe {
   -ms-flex-item-align: center;
       align-self: center;
   height: 5vh;
-  width: 20vw;
+  width: 18vw;
   border-radius: 15px 15px 15px 15px;
   border-color: transparent;
   font-size: 1em;
+  padding-left: 4vw;
 }
 .modelsList {
   background-image: none;
@@ -497,6 +499,7 @@ p4 {
   border-radius: 15px 15px 15px 15px;
   border-color: transparent;
   font-size: 1em;
+  padding-left: 4vw;
 }
 .diagSearchCheck {
   background-image: none;
@@ -572,7 +575,26 @@ a:link {
 ul {
   padding: 0;
 }
+.welcome-container {
+  margin-top: 34vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+h2 {
+  margin-top: -0.3vh;
+  margin-bottom: -5vh;
+  color: #21418C;
+}
+.welcome {
+  margin-left: .5vw;
+  margin-bottom: -10vh;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
 #logout {
-  margin-left: 10px;
-  margin-top: 30vh;
+  height: 3vh;
+  width: 6vw;
+  margin-left: 13vw;
+  background-color: #21418C;
+  color: grey;
 }
