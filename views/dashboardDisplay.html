@@ -27,7 +27,7 @@
     </section>
     <section class="customer-service-plan-container">
       <h3>Current Service Plan</h3><br>
-      {{user.userPlan}} - <strong>$ {{user.userPlanPrice}}</strong>/mo <br>
+      {{user.service_plan}} - <strong>$ {{user.userPlanPrice}}</strong>/mo <br>
       <br>
       <span id="billing-dates">NEXT BILL DATE</span> <br>
       <strong>08/12/16</strong> <br>
@@ -41,7 +41,7 @@
     Select a Car
 
     <select class="select-car-dropdown" name="" ng-model="data.selectedCar">
-      <option ng-repeat = "car in data.vehicles" value="{{$index}}">{{car.year}} {{car.make}} {{car.model}}</option>
+      <option ng-repeat = "car in data.vehicles track by $index" value="{{$index}}">{{car.year}} {{car.make}} {{car.model}}</option>
 
     </select>
 
@@ -114,7 +114,7 @@
          Action
        </section>
        <section class=" dash-table-col2 dash-header">
-         Maintenanace Items
+         Maintenace Items
        </section>
        <section class=" dash-table-col3 dash-header">
          Frequency
@@ -132,22 +132,22 @@
      <section class="dash-table-data-container">
        <section class="dash-table-row" ng-repeat="item in maintenance" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
          <section class=" dash-table-col1">
-           Action {{item.id}}
+           {{item.action}}
          </section>
          <section class=" dash-table-col2">
-           Maintenanace Items
+           {{item.item}}
          </section>
          <section class=" dash-table-col3">
-           Frequency
+           {{item.frequency.breakyBreak}} 4
          </section>
          <section class=" dash-table-col4">
-           Labor Units
+           {{item.laborUnits}}
          </section>
          <section class=" dash-table-col5">
-           Part Units
+           {{item.partUnits}}
          </section>
          <section class=" dash-table-col6">
-           Miles
+           {{item.intervalMileage}}
          </section>
 
        </section>

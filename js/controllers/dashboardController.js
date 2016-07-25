@@ -17,30 +17,52 @@ angular.module('karSync')
       return $scope.selected === item;
 
     }
+
+
+    var getMaintenance = function(yearID){
+      edmundService.byYear(yearID)
+      .then(function(res){
+
+        $scope.maintenance = res.data.actionHolder
+
+      })
+
+    }
+
+
   $scope.customerClicked = function(user){
     // console.log(user);
     // console.log('clicked '+ user.first_name);
+      // $scope.data = {}
+
+
+
   vehicleService.getCar(user.account_id).then(function(res){
 
 
 
-    // console.log(res);
+    // console.log("response: ", res);
     var array = res;
 
     for (var i = 0; i < array.length; i++) {
       if (array[i].vin === user.primary_vehicle) {
+        // console.log(array);
         array.unshift(array[i])
-        array.splice(i,1)
+        array.splice(i+1,1)
       }
     }
 
+    // console.log("after: ", array);
 
     $scope.data = {
       vehicles: array,
       selectedCar: 0,
     }
 
-  })
+    getMaintenance($scope.data.vehicles[0].edmonds_model_year_id);
+
+})
+
 
     // this will need changes once db more flushed out
       user.primaryAccount = true
@@ -55,14 +77,10 @@ angular.module('karSync')
         $scope.primaryUser = user;
       }
 
-      $scope.user.userPlan = "Gold"
+    
       $scope.user.userPlanPrice = "15.00"
 
-      edmundService.byYear($scope.data.vehicles[0].edmonds_model_year_id)
-        .then(function(res){
-          $scope.maintenance = res.data.actionHolder
-        })
-
+      // console.log($scope.data.vehicles);
 
   }
 
@@ -72,6 +90,14 @@ angular.module('karSync')
   $scope.tireInput = 20000;
 
   $scope.business = partner[0].business_name;
+
+  $scope.$watch("data.vehicles[data.selectedCar]",function(newValue, oldValue){
+    if (newValue && oldValue) {
+      getMaintenance(newValue.edmonds_model_year_id)
+    }
+
+  })
+
 
 
 });
