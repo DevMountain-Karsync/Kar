@@ -8,9 +8,6 @@ angular.module('karSync')
 
   $scope.business = partner[0].business_name;
 
-  userServ.getUser().then(function(user){
-    $scope.userList = user;
-  })
 
     $scope.select = function(item) {
       $scope.selected = item;
