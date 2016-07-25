@@ -579,23 +579,35 @@ ul {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-top: 37vh;
+  margin-top: 39vh;
   -ms-flex-flow: column;
       flex-flow: column;
+  margin-left: .8vw;
 }
 .welcome {
   width: 20vw;
-  display: -ms-flexbox;
-  display: flex;
+  font-size: .7rem;
+  opacity: .5;
 }
 .business-name {
+  display: -ms-flexbox;
+  display: flex;
   width: 20vw;
   color: #21418C;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 #logout {
-  height: 3vh;
-  width: 6vw;
+  font-size: .5rem;
+  padding-left: 1.4vw;
+  padding-top: .8vh;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 2.3vh;
+  width: 4vw;
   background-color: #21418C;
-  color: grey;
+  color: white;
   cursor: pointer;
+  margin-right: 1.5vw;
+  margin-bottom: 1vh;
 }
