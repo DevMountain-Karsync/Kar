@@ -87,6 +87,12 @@ app.get('api/partner/:profile_id', getPartner.queryPartner)
 app.get('/login', UserCtrl.read);
 app.get('/me', isAuthed, UserCtrl.me);
 
+app.get('/logout', function(req, res){
+  console.log('logging out');
+  req.logout();
+  res.redirect('/');
+});
+
 // GOOGLE AUTH ENDPOINTS //
 app.get('/auth/google',
   passport.authenticate('google', { scope:

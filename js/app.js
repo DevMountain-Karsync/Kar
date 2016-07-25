@@ -22,7 +22,8 @@ angular.module('karSync', ['ui.router'])
     templateUrl: './views/dashboardDisplay.html',
     url: 'display/',
     parent: "dashboard",
-    controller: "dashDisplayCtrl"
+    controller: "dashDisplayCtrl",
+
     })
 
     .state('addCust', {
@@ -39,28 +40,48 @@ angular.module('karSync', ['ui.router'])
     .state('newCustomer', {
       templateUrl: './views/newCustomer.html',
       url: '/newCustomer/',
-      controller: 'newCustCtrl'
+      controller: 'newCustCtrl',
+      resolve: {
+        partner: function(loginServ) {
+          return loginServ.getLogin()
+        }
+       }
     })
     .state('currentCust', {
       templateUrl: './views/currentCustomer.html',
       url: '/current/',
-      controller: 'currentCtrl'
+      controller: 'currentCtrl',
     })
 
     .state('maintenance', {
       templateUrl: './views/maintenance.html',
       url: '/maintenance/',
-      controller: 'maintCtrl'
+      controller: 'maintCtrl',
+      resolve: {
+        partner: function(loginServ) {
+          return loginServ.getLogin()
+        }
+       }
     })
     .state('diagnostics', {
       templateUrl: './views/diagnostics.html',
       url: '/diagnostics/',
-      controller: 'diagCtrl'
+      controller: 'diagCtrl',
+      resolve: {
+        partner: function(loginServ) {
+          return loginServ.getLogin()
+        }
+       }
     })
     .state('schedule', {
       templateUrl: './views/schedule.html',
       url: '/schedule/',
-      controller: 'scheduleCtrl'
+      controller: 'scheduleCtrl',
+      resolve: {
+        partner: function(loginServ) {
+          return loginServ.getLogin()
+        }
+       }
     })
   $urlRouterProvider
   .otherwise('/')
