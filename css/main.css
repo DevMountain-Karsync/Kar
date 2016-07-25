@@ -82,11 +82,15 @@ p3 {
 .users-list {
   overflow: scroll;
 }
+.primary-vehicles {
+  font-size: .7em;
+  opacity: .5;
+}
 .users-div {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
+  -ms-flex-flow: column;
+      flex-flow: column;
   border: transparent;
   color: #21418C;
   font-size: 1em;
@@ -96,6 +100,7 @@ p3 {
   cursor: pointer;
   text-align: left center;
   border-bottom: solid 1px #F7F7F7;
+  padding-top: 2vh;
 }
 .activeUser {
   background-image: url('../IMG/check.png');
@@ -117,10 +122,11 @@ p3 {
   -ms-flex-item-align: center;
       align-self: center;
   height: 5vh;
-  width: 20vw;
+  width: 18vw;
   border-radius: 15px 15px 15px 15px;
   border-color: transparent;
   font-size: 1em;
+  padding-left: 4vw;
 }
 .display-view-container {
   display: -ms-flexbox;
@@ -394,7 +400,6 @@ iframe {
   text-align: justify;
   background-image: url('../IMG/search-symbol.png');
   background-repeat: no-repeat;
-  background-size: 3vh;
   background-position: left;
   background-position: .5vw;
   -ms-flex-item-align: center;
@@ -415,7 +420,6 @@ iframe {
   text-align: justify;
   background-image: url('../IMG/search-symbol.png');
   background-repeat: no-repeat;
-  background-size: 3vh;
   background-opacity: .3;
   background-position: left;
   background-position: .5vw;
@@ -528,7 +532,6 @@ p4 {
   text-align: justify;
   background-image: url('../IMG/search-symbol.png');
   background-repeat: no-repeat;
-  background-size: 3vh;
   background-opacity: .3;
   background-position: left;
   background-position: .5vw;
