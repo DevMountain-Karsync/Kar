@@ -239,8 +239,8 @@ p3 {
 .dash-table-row {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .dash-header {
   color: white;
@@ -256,6 +256,42 @@ p3 {
 }
 .evenRow {
   background: #EEEEEE;
+}
+.dash-table-col1 {
+  text-align: left;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}
+.dash-table-col2 {
+  text-align: left;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}
+.dash-table-col3 {
+  text-align: left;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}
+.dash-table-col4 {
+  text-align: left;
+  width: 10%;
+  margin: 0;
+  padding: 0;
+}
+.dash-table-col5 {
+  text-align: left;
+  width: 10%;
+  margin: 0;
+  padding: 0;
+}
+.dash-table-col6 {
+  text-align: left;
+  width: 20%;
+  margin: 0;
+  padding: 0;
 }
 
 #login-container {
