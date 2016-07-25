@@ -11,31 +11,31 @@ this.byYear = function(yId) {
           var freq =  data.data.actionHolder[i].frequency;
 
           if(freq === 1){
-            data.data.actionHolder[i].frequency = '1 = A-service schedule. This is the basic 1-year maintenance service that most cars get.'
+            data.data.actionHolder[i].frequencyDisc = '1 - A-service schedule. This is the basic 1-year maintenance service that most cars get.'
           }
           if(freq === 2) {
-            data.data.actionHolder[i].frequency = '2 - B-service schedule. This is the extended maintenance service that comes after #1.'
+            data.data.actionHolder[i].frequencyDisc = '2 - B-service schedule. This is the extended maintenance service that comes after #1.'
           }
           if(freq === 3) {
-            data.data.actionHolder[i].frequency = '3 - This maintenance service takes place once at the exact value of the Interval Mileage or Interval Month, whichever comes first.'
+            data.data.actionHolder[i].frequencyDisc = '3 - This maintenance service takes place once at the exact value of the Interval Mileage or Interval Month, whichever comes first.'
           }
           if(freq === 4) {
-            data.data.actionHolder[i].frequency = '4 - This maintenance service takes place every Interval Mileage or Interval Month value, whichever comes first.'
+            data.data.actionHolder[i].frequencyDisc = '4 - This maintenance service takes place every Interval Mileage or Interval Month value, whichever comes first.'
           }
           if(freq === 5) {
-            data.data.actionHolder[i].frequency = '5 - This maintenance service takes place more frequently.'
+            data.data.actionHolder[i].frequencyDisc = '5 - This maintenance service takes place more frequently.'
           }
           if(freq === 6) {
-            data.data.actionHolder[i].frequency = '6 - This maintenance service takes place when the warning light indicates.'
+            data.data.actionHolder[i].frequencyDisc = '6 - This maintenance service takes place when the warning light indicates.'
           }
           if(freq === 7) {
-            data.data.actionHolder[i].frequency = '7 - Inspection I as recommended by the vehicle manufacturer.'
+            data.data.actionHolder[i].frequencyDisc = '7 - Inspection I as recommended by the vehicle manufacturer.'
           }
           if(freq === 8) {
-            data.data.actionHolder[i].frequency = '8 - Inspection II as recommended by the vehicle manufacturer.'
+            data.data.actionHolder[i].frequencyDisc = '8 - Inspection II as recommended by the vehicle manufacturer.'
           }
           if(freq === 9) {
-            data.data.actionHolder[i].frequency = '9 - Second Inspection II.'
+            data.data.actionHolder[i].frequencyDisc = '9 - Second Inspection II.'
           }
 
           }
