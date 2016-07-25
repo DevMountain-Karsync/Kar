@@ -5,7 +5,10 @@ angular.module('karSync')
     $scope.userList = user;
   })
 
+
   $scope.business = partner[0].business_name;
+
+
   $scope.user = {};
 
   $scope.processForm = function(user){
