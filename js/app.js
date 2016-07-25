@@ -31,6 +31,11 @@ angular.module('karSync', ['ui.router'])
       url: '/add/',
       parent: "newCustomer",
       controller: 'addCtrl',
+      resolve: {
+        partner: function(loginServ) {
+          return loginServ.getLogin()
+        }
+       }
     })
     .state('newCustomer', {
       templateUrl: './views/newCustomer.html',
