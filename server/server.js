@@ -88,7 +88,7 @@ app.get('/login', UserCtrl.read);
 app.get('/me', isAuthed, UserCtrl.me);
 
 app.get('/logout', function(req, res){
-  console.log('logging out');
+  console.log('aaaannnnd....your done.');
   req.logout();
   res.redirect('/');
 });
