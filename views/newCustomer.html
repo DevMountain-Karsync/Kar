@@ -6,10 +6,10 @@
 <section class="route-main">
   <div class="column1">
     <div class="search-container">
-      <input type="text" placeholder="          Search..." class="usersSearch" ng-model="searchString2"  ng-class="{'typeSearch': searchString2 }">
+      <input type="text" placeholder="Search..." class="usersSearch" ng-model="searchString2"  ng-class="{'typeSearch': searchString2 }">
   </div>
   <section class="user-list">
-    <section ng-repeat="user in userList | searchUserList:searchString2">
+    <section ng-repeat="user in userList | filter:searchString2">
       <div class="users-div" ng-click="customerClicked(user); select(user)" ng-class="{'activeUser' : isActive(user)}" ui-sref="addCust">
         {{user.first_name}} {{user.last_name}}
       </div>
