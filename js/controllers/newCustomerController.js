@@ -1,8 +1,13 @@
 angular.module('karSync')
-.controller('newCustCtrl', function($scope, userServ,$state, vehicleService){
-  userServ.getUser().then(function(user){
+.controller('newCustCtrl', function($scope, userServ, $state, vehicleService, partner){
+  $scope.partner = partner[0].partner_id;
+  userServ.getUser($scope.partner).then(function(user){
     $scope.userList = user;
   })
+
+
+  $scope.business = partner[0].business_name;
+
 
     $scope.select = function(item) {
       $scope.selected = item;
@@ -56,6 +61,7 @@ angular.module('karSync')
       $scope.user.userPlanPrice = "15.00"
 
   }
+
 
 
 });

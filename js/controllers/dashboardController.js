@@ -1,4 +1,5 @@
 angular.module('karSync')
+
 .controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService){
 
   $scope.config = {
