@@ -82,11 +82,15 @@ p3 {
 .users-list {
   overflow: scroll;
 }
+.primary-vehicles {
+  font-size: .7em;
+  opacity: .5;
+}
 .users-div {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
+  -ms-flex-flow: column;
+      flex-flow: column;
   border: transparent;
   color: #21418C;
   font-size: 1em;
@@ -96,6 +100,7 @@ p3 {
   cursor: pointer;
   text-align: left center;
   border-bottom: solid 1px #F7F7F7;
+  padding-top: 2vh;
 }
 .activeUser {
   background-image: url('../IMG/check.png');
