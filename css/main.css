@@ -576,25 +576,26 @@ ul {
   padding: 0;
 }
 .welcome-container {
-  margin-top: 34vh;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-h2 {
-  margin-top: -0.3vh;
-  margin-bottom: -5vh;
-  color: #21418C;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 37vh;
+  -ms-flex-flow: column;
+      flex-flow: column;
 }
 .welcome {
-  margin-left: .5vw;
-  margin-bottom: -10vh;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
+  width: 20vw;
+  display: -ms-flexbox;
+  display: flex;
+}
+.business-name {
+  width: 20vw;
+  color: #21418C;
 }
 #logout {
   height: 3vh;
   width: 6vw;
-  margin-left: 13vw;
   background-color: #21418C;
   color: grey;
+  cursor: pointer;
 }

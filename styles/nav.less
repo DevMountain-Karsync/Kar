@@ -65,26 +65,28 @@ a:link {
 ul {
   padding: 0;
 }
-.welcome-container {
-  margin-top: 34vh;
-  justify-content: space-around;
-}
-h2 {
-  margin-top: -.3vh;
-  margin-bottom: -5vh;
-  color: #21418C;
+.welcome-container{
+  display: flex;
+  width: 100%;
+  margin-top: 37vh;
+  flex-flow: column;
 }
 .welcome {
-  margin-left: .5vw;
-  margin-bottom: -10vh;
-  justify-content: flex-end;
+  width: 20vw;
+  display: flex;
+
+
 }
+.business-name {
+  width: 20vw;
+  color: #21418C;
+
+}
+
 #logout{
   height: 3vh;
   width: 6vw;
-
-  margin-left: 13vw;
-  // margin-top: 24vh;
   background-color: @mainBlue;
   color: grey;
+  cursor: pointer;
 }
