@@ -20,11 +20,18 @@
 
 .users-list {
   overflow: scroll;
+
 }
 
+.primary-vehicles {
+  font-size: .7em;
+  opacity: .5;
+
+}
 .users-div {
   display: flex;
-  align-items: center;
+  flex-flow:column;
+
   border: transparent;
   color: @mainBlue;
   font-size: 1em;
@@ -34,6 +41,8 @@
   cursor: pointer;
   text-align: left center;
   border-bottom: solid 1px #F7F7F7;
+  padding-top: 2vh;
+
 }
 .activeUser {
   background-image: url('../IMG/check.png');
@@ -56,10 +65,11 @@
   background-position: .5vw;
   align-self: center;
   height: 5vh;
-  width: 20vw;
+  width: 18vw;
   border-radius: 15px 15px 15px 15px;
   border-color: transparent;
   font-size: 1em;
+  padding-left: 4vw;
 }
 
 .display-view-container {
