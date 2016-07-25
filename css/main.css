@@ -579,12 +579,16 @@ ul {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-top: 37vh;
+  margin-top: 39vh;
   -ms-flex-flow: column;
       flex-flow: column;
+  margin-left: .8vw;
 }
 .welcome {
   width: 20vw;
+  font-size: .7rem;
+  color: grey;
+  opacity: .5;
 }
 .business-name {
   display: -ms-flexbox;
@@ -601,4 +605,5 @@ ul {
   color: grey;
   cursor: pointer;
   margin-right: 1vw;
+  margin-bottom: 1vh;
 }
