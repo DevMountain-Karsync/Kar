@@ -1,5 +1,5 @@
 angular.module('karSync')
-.controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService){
+.controller('dashCtrl', function($scope, userServ, $state, vehicleService, partner, edmundService){
   $scope.partner = partner[0].partner_id;
   userServ.getUser($scope.partner).then(function(user){
     $scope.userList = user;
