@@ -30,7 +30,7 @@
     <input type="text" placeholder="Search..." class="diagSearch" ng-model="search3"  ng-class="{'diagSearchCheck': search3 }">
     </div>
     <section class="maintenance-schedule">
-    <section class="diag-view" ng-repeat="test in test | filter:{code:search3}">
+    <section class="diag-view" ng-repeat="test in test | filter:search3">
       <div class="maint-container">
     <p><div class="diag-code">Engine Code:</div> {{test.code}}</p>
     <p><div class="diag-code">Description:</div>{{test.description}}</p>
