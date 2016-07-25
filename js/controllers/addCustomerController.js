@@ -18,7 +18,7 @@ angular.module('karSync')
     {label: 'Platinum', value: 4}
   ];
   //default plan selection
-  $scope.user.service_plan = "3";
+  $scope.user.service_plan = "5";
 
   //saved customer alert
   $scope.savedAlert = function(){
