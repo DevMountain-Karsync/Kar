@@ -8,7 +8,10 @@
     <li><button ui-sref-active="activeNav" class="links" ui-sref="maintenance">Car Maintenance Schedule</button></li>
     <li><button ui-sref-active="activeNav" class="links" ui-sref="diagnostics">Diagnostic Lookup</button></li>
   </ul>
-  <h2 style="color: #21418C; margin-left: 10px;"> {{business}}</h2>
-  <button id="logout" ng-click="auth2.disconnect()"> LOG OUT </button>
+  <div class="welcome-container">
+  <div class="welcome">welcome: </div>
+  <div class="business-name"> {{business}}
+  <a href="/logout"><button id="logout"> Logoff </button></a>
   </div>
+</div>
 </section>

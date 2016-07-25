@@ -360,10 +360,11 @@ iframe {
   -ms-flex-item-align: center;
       align-self: center;
   height: 5vh;
-  width: 20vw;
+  width: 18vw;
   border-radius: 15px 15px 15px 15px;
   border-color: transparent;
   font-size: 1em;
+  padding-left: 4vw;
 }
 .typeSearch {
   background-image: none;
@@ -381,10 +382,11 @@ iframe {
   -ms-flex-item-align: center;
       align-self: center;
   height: 5vh;
-  width: 20vw;
+  width: 18vw;
   border-radius: 15px 15px 15px 15px;
   border-color: transparent;
   font-size: 1em;
+  padding-left: 4vw;
 }
 .modelsList {
   background-image: none;
@@ -497,6 +499,7 @@ p4 {
   border-radius: 15px 15px 15px 15px;
   border-color: transparent;
   font-size: 1em;
+  padding-left: 4vw;
 }
 .diagSearchCheck {
   background-image: none;
@@ -572,7 +575,27 @@ a:link {
 ul {
   padding: 0;
 }
+.welcome-container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 37vh;
+  -ms-flex-flow: column;
+      flex-flow: column;
+}
+.welcome {
+  width: 20vw;
+  display: -ms-flexbox;
+  display: flex;
+}
+.business-name {
+  width: 20vw;
+  color: #21418C;
+}
 #logout {
-  margin-left: 10px;
-  margin-top: 30vh;
+  height: 3vh;
+  width: 6vw;
+  background-color: #21418C;
+  color: grey;
+  cursor: pointer;
 }
