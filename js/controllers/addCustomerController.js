@@ -10,6 +10,7 @@ angular.module('karSync')
       // console.log(res)
     })
   }
+
   //plan selection options in dropdown on add customer view
   $scope.selectables = [
     {label: 'Bronze', value: 1 },
@@ -17,12 +18,13 @@ angular.module('karSync')
     {label: 'Gold', value: 3},
     {label: 'Platinum', value: 4}
   ];
+
   //default plan selection
   $scope.user.service_plan = "5";
 
   //saved customer alert
   $scope.savedAlert = function(){
-    //clears from data after saving
+  //clears form data after sending
     $scope.user.first_name = null;
     $scope.user.phone = null;
     $scope.user.first_name = null;
