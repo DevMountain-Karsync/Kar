@@ -1,5 +1,16 @@
 angular.module('karSync')
 .controller('maintCtrl', function($scope, edmundService, userServ, partner){
+  $scope.configScroll1 = {
+      autoHideScrollbar: false,
+      scrollbarPosition: "inside",
+      axis: "y",
+      theme: 'custom-design',
+      advanced:{
+          updateOnContentResize: true
+      },
+          scrollInertia: 0
+      }
+
   $scope.partner = partner[0].partner_id;
   userServ.getUser($scope.partner).then(function(user){
     $scope.userList = user;

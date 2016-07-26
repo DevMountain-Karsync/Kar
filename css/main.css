@@ -76,6 +76,7 @@ p3 {
 }
 .green {
   background: #6FC17F;
+  color: white;
 }
 .users-dashboard {
   height: 100%;
@@ -305,6 +306,13 @@ p3 {
   margin: 0;
   padding: 0;
 }
+.bottom-button-holder {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-top: 1em;
+}
 
 #login-container {
   display: -ms-flexbox;
@@ -448,7 +456,6 @@ iframe {
   background-image: none;
 }
 section.make-list {
-  margin-top: 5%;
   overflow: scroll;
   height: 18%;
   background-color: white;
@@ -477,7 +484,6 @@ section.make-list :hover {
   color: white;
 }
 section.model-list {
-  margin-top: 5%;
   overflow: scroll;
   height: 30%;
   background-color: white;
@@ -558,14 +564,6 @@ p4 {
 }
 .diagSearchCheck {
   background-image: none;
-}
-::-webkit-scrollbar {
-  width: 25px;
-  background-color: white;
-}
-::-webkit-scrollbar-thumb {
-  width: 8px;
-  background-color: grey;
 }
 
 @import 'https://fonts.googleapis.com/css?family=Roboto';
