@@ -1,5 +1,19 @@
 angular.module('karSync')
-.controller('dashCtrl', function($scope, userServ, $state, vehicleService, partner, edmundService){
+
+.controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService){
+
+  $scope.configScroll = {
+      autoHideScrollbar: false,
+      scrollbarPosition: "inside",
+      axis: "y",
+      theme: 'light',
+      advanced:{
+          updateOnContentResize: true
+      },
+          scrollInertia: 0
+      }
+
+
   $scope.partner = partner[0].partner_id;
   userServ.getUser($scope.partner).then(function(user){
     $scope.userList = user;
@@ -77,7 +91,7 @@ angular.module('karSync')
         $scope.primaryUser = user;
       }
 
-    
+
       $scope.user.userPlanPrice = "15.00"
 
       // console.log($scope.data.vehicles);
@@ -99,5 +113,5 @@ angular.module('karSync')
   })
 
 
-
+ // console.log($scope.user);
 });
