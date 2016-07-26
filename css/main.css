@@ -143,16 +143,16 @@ p3 {
   text-align: left center;
   border-bottom: solid 1px #F7F7F7;
   padding-top: 2vh;
-  background-image: url('../IMG/info-grey.png');
+  background-image: url('../IMG/bell-grey.png'), url('../IMG/info-grey.png');
   background-size: 3vh;
   background-repeat: no-repeat;
-  background-position: 20vw;
+  background-position: 17vw, 20vw;
 }
 .activeUser {
-  background-image: url('../IMG/info-blue.png');
+  background-image: url('../IMG/bell-red.png'), url('../IMG/info-blue.png');
   background-size: 3vh;
   background-repeat: no-repeat;
-  background-position: 20vw;
+  background-position: 17vw, 20vw;
   background-color: #EEEEEE;
 }
 .usersSearch {
@@ -712,7 +712,9 @@ ul {
 }
 
 .sched-appoint {
-  width: 49vw;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 48vw;
   height: 8vh;
   display: -ms-flexbox;
   display: flex;
