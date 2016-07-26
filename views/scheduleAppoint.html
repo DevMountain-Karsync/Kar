@@ -1,0 +1,82 @@
+<section class="display-view-container">
+    <div class="addcolumn1">
+        <div class="add-Customer">
+          <div class="sched-appoint">Schedule Appointment
+            <button class='add-appoint'>ADD APPOINTMENT</button>
+        </div></div>
+    </div>
+    <div class="addcolumn2">
+        <div id="customer-info">
+            <p3>{{user.primary_vehicle_year}} {{user.primary_vehicle_make}} {{user.primary_vehicle_model}}</p>
+                <div class="form-wrap">
+                    <form class="form-container" ng-submit="processForm(user)">
+                        <div class="form-name">
+                            <div class="form-title">Name</div>
+                            <input class="form-field" type="text" name="first_name" ng-model="user.first_name" placeholder="John Doe" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Phone Number</div>
+                            <input class="form-field" type="text" name="phone" ng-model="user.phone" placeholder="(801)-785-1234" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Email</div>
+                            <input class="form-field" type="text" name="email" ng-model="user.email" placeholder="john.doe@gmails.com" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Address</div>
+                            <input class="form-field" type="text" name="address" ng-model="user.address" placeholder="123 North Temple Drive" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">City</div>
+                            <input class="form-field" type="text" name="city" ng-model="user.city" placeholder="Salt Lake City" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Postal Code</div>
+                            <input class="form-field" type="text" name="postal_code" ng-model="user.postal_code" placeholder="84062" />
+                        </div>
+                        <div class=form-name>
+                            <input class="form-field" type="hidden" name="partner_id" ng-model="user.partner_id" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Choose Plan</div>
+                            <select class="select-plan-dropdown" ng-model="user.service_plan">
+                                <option value="5"> --Select-- </option>
+                                <option ng-repeat="sel in selectables" ng-selected="user.service_plan == sel.value" value="{{sel.label}}">{{sel.label}}</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Vehicle Name</div>
+                            <input class="form-field" type="text" name="vehicle_name1" placeholder="Honda Civic" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Vehicle ID</div>
+                            <input class="form-field" type="text" name="vehicle_id_1" placeholder="6GR853" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Vehicle Name</div>
+                            <input class="form-field" type="text" name="vehicle_name2" placeholder="Toyota Camry" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Vehicle ID</div>
+                            <input class="form-field" type="text" name="vehicle_id_2" placeholder="8TU234" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="submit-container">
+                                <input class="submit-button" type="submit" value="Save" ng-click="savedAlert()" />
+                            </div>
+                    </form>
+                    </div>
+                </div>
+        </div>
+</section>
