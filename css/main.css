@@ -712,8 +712,6 @@ ul {
 }
 
 .sched-appoint {
-  -ms-flex-align: center;
-      align-items: center;
   width: 49vw;
   height: 8vh;
   display: -ms-flexbox;
@@ -722,7 +720,6 @@ ul {
       flex-flow: row;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  border-bottom: 1px solid grey;
 }
 .vehicles-info {
   height: 5vh;
@@ -732,7 +729,6 @@ ul {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  border-bottom: 1px grey solid;
 }
 .mech-cont {
   margin-top: 3vh;
@@ -753,7 +749,24 @@ ul {
   display: flex;
   -ms-flex-flow: column;
       flex-flow: column;
-  width: 25vw;
+  width: 30vw;
+  height: 14vh;
+}
+.sched-container select {
+  padding: 6px;
+  height: 3.5vh;
+  width: 16vw;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  font-family: 'Roboto', sans-serif;
+  color: #727476;
+  background-image: url('../IMG/scroll-down.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
 }
 .appoin-con {
   height: 8vh;

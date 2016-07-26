@@ -9,9 +9,9 @@
     <div class="addcolumn2">
         <div id="schedule-info">
 
-            <div class="vehicles-info">Scheduled Vehicle here
+            <div class="select-car-container">Scheduled Vehicle here
               <!-- {{user.primary_vehicle_year}} {{user.primary_vehicle_make}} {{user.primary_vehicle_model}} -->
-              <select class="select-sched-dropdown" name="" ng-model="data.selectedCar">
+              <select class="select-car-dropdown" name="" ng-model="data.selectedCar">
                 <option ng-repeat = "car in data.vehicles track by $index" value="{{$index}}">Change Car
                   <!-- {{car.year}} {{car.make}} {{car.model}} -->
                 </option>
