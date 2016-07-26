@@ -845,12 +845,14 @@ ul {
       align-items: center;
   width: 48vw;
   height: 8vh;
+  margin-left: 1vw;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row;
       flex-flow: row;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  color: #21418C;
 }
 .users-car {
   margin-left: -5vw;
@@ -878,6 +880,7 @@ ul {
 .select-sched-dropdown {
   width: 10vw;
   height: 7vh;
+  padding-top: 2vh;
 }
 .add-appointment {
   height: 5vh;

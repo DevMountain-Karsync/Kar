@@ -37,8 +37,9 @@ angular.module('karSync', ['ui.router','ngScrollbars', 'angularModalService', 'n
     templateUrl:'./views/scheduleAppoint.html',
     url: 'appointSched/',
     parent: 'dashboard',
-    controller: 'addAppointCrl'
+    controller: 'dashCtrl'
   })
+
     .state('newCustomer', {
       templateUrl: './views/newCustomer.html',
       url: '/newCustomer/',
