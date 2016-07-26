@@ -74,6 +74,9 @@ p3 {
 .white {
   color: white;
 }
+.green {
+  background: #6FC17F;
+}
 .users-dashboard {
   height: 100%;
   width: 100%;
@@ -258,7 +261,7 @@ p3 {
 .dash-table-data-container {
   border: 1px solid #EEEEEE;
   overflow: auto;
-  height: 10vh;
+  height: 40vh;
 }
 .oddRow {
   background: white;
