@@ -102,13 +102,14 @@ app.get('/auth/google',
 app.get( '/auth/google/callback',
   passport.authenticate('google', {
     successRedirect: '/#/dashboard/',
-    failureRedirect: '/'
+    failureRedirect: '/',
+
   }));
 
 app.get('/api/dtc/', getDTC.queryDTC)
 
 app.get('/api/dtc/:code', getDTCbyCode.queryDTCbyCode)
-
+// app.get('/api/report:id', getReportbyId.queryReportbyId)
 var port = 3000;
 
 app.listen(port, function(){

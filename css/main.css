@@ -842,12 +842,25 @@ ul {
       align-items: center;
   width: 48vw;
   height: 8vh;
+  margin-left: 1vw;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row;
       flex-flow: row;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  color: #21418C;
+}
+.users-car {
+  margin-left: -5vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #6FC17F;
+}
+.user-vehicle-menu {
+  border-right: -15vw;
 }
 .vehicles-info {
   height: 5vh;
@@ -864,6 +877,7 @@ ul {
 .select-sched-dropdown {
   width: 10vw;
   height: 7vh;
+  padding-top: 2vh;
 }
 .add-appointment {
   height: 5vh;
