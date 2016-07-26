@@ -98,7 +98,7 @@
         <span class="white" ng-bind="data.vehicles[data.selectedCar].make"></span>
         <span class="white" ng-bind="data.vehicles[data.selectedCar].model"></span>
       </section>
-      <section class="alert-body-container" ng-scrollbars ng-scrollbars-config="configScroll">
+      <section class="alert-body-container" ng-scrollbars ng-scrollbars-config="configScroll1">
 
 
         <section class="alert">
@@ -146,7 +146,7 @@
          Miles
        </section>
      </section>
-     <section class="dash-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll">
+     <section class="dash-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll2">
        <section class="dash-table-row" ng-repeat="item in maintenance" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
          <section class=" dash-table-col1">
            {{item.action}}
@@ -171,6 +171,10 @@
      </section>
    </section>
 
+  </section>
+  <section class="bottom-button-holder">
+    <button class="blue dash-button"type="button" name="button">REVIEW </button>
+    <button class="dash-button green"type="button" name="button">SCHEDULE APPOINTMENT</button>
   </section>
 
 </section>
