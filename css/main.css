@@ -74,6 +74,9 @@ p3 {
 .white {
   color: white;
 }
+.green {
+  background: #6FC17F;
+}
 .users-dashboard {
   height: 100%;
   width: 100%;
@@ -169,6 +172,10 @@ p3 {
   width: 50%;
   border: 1px solid #F46868;
 }
+.alert-body-container {
+  overflow: auto;
+  height: 17vh;
+}
 .alert-box-head {
   color: white;
   font-weight: 100;
@@ -253,8 +260,8 @@ p3 {
 }
 .dash-table-data-container {
   border: 1px solid #EEEEEE;
-  overflow: scroll;
-  height: 10vh;
+  overflow: auto;
+  height: 40vh;
 }
 .oddRow {
   background: white;
@@ -282,13 +289,13 @@ p3 {
 }
 .dash-table-col4 {
   text-align: left;
-  width: 10%;
+  width: 20%;
   margin: 0;
   padding: 0;
 }
 .dash-table-col5 {
   text-align: left;
-  width: 10%;
+  width: 20%;
   margin: 0;
   padding: 0;
 }

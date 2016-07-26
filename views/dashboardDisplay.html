@@ -90,52 +90,94 @@
             </section>
         </section>
     </section>
-    <section class="maintence-user-car-container">
-        Upcoming Maintenance Schedule
-        <section class="dash-maint-table-container">
-            <section class="dash-maint-table-header dash-table-row">
-                <section class=" dash-table-col1 dash-header">
-                    Action
-                </section>
-                <section class=" dash-table-col2 dash-header">
-                    Maintenace Items
-                </section>
-                <section class=" dash-table-col3 dash-header">
-                    Frequency
-                </section>
-                <section class=" dash-table-col4 dash-header">
-                    Labor Units
-                </section>
-                <section class=" dash-table-col5 dash-header">
-                    Part Units
-                </section>
-                <section class=" dash-table-col6 dash-header">
-                    Miles
-                </section>
-            </section>
-            <section class="dash-table-data-container">
-                <section class="dash-table-row" ng-repeat="item in maintenance" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
-                    <section class=" dash-table-col1">
-                        {{item.action}}
-                    </section>
-                    <section class=" dash-table-col2">
-                        {{item.item}}
-                    </section>
-                    <section class=" dash-table-col3">
-                        {{item.frequency.breakyBreak}} 4
-                    </section>
-                    <section class=" dash-table-col4">
-                        {{item.laborUnits}}
-                    </section>
-                    <section class=" dash-table-col5">
-                        {{item.partUnits}}
-                    </section>
-                    <section class=" dash-table-col6">
-                        {{item.intervalMileage}}
-                    </section>
-                </section>
-            </section>
+
+
+
+    <section class="alert-box-container">
+      <section class="alert-box-head red">
+        <img src="../IMG/bell.png" alt="bell" />
+        <span class="white" ng-bind="data.vehicles[data.selectedCar].make"></span>
+        <span class="white" ng-bind="data.vehicles[data.selectedCar].model"></span>
+      </section>
+      <section class="alert-body-container" ng-scrollbars ng-scrollbars-config="configScroll1">
+
+
+        <section class="alert">
+          lorem ipusm there isnt any alert data yet dolor set amin bacon some more text she loves me yeah yeah yeah she loves me yeah yeah yeah
         </section>
+        <section class="alert">
+          another alert yeah yeah yeah another alert yeah yeah yeah
+        </section>
+        <section class="alert">
+          another alert yeah yeah yeah another alert yeah yeah yeah
+        </section>
+        <section class="alert">
+          another alert yeah yeah yeah another alert yeah yeah yeah
+        </section>
+        <section class="alert">
+          another alert yeah yeah yeah another alert yeah yeah yeah
+        </section>
+        <section class="alert">
+          another alert yeah yeah yeah another alert yeah yeah yeah
+        </section>
+
+      </section>
     </section>
+  </section>
+  <section class="maintence-user-car-container">
+   Upcoming Maintenance Schedule
+   <section class="dash-maint-table-container">
+     <section class="dash-maint-table-header dash-table-row">
+       <section class=" dash-table-col1 dash-header">
+         Action
+       </section>
+       <section class=" dash-table-col2 dash-header">
+         Maintenace Items
+       </section>
+       <section class=" dash-table-col3 dash-header">
+         Frequency
+       </section>
+       <section class=" dash-table-col4 dash-header">
+         Labor Units
+       </section>
+       <section class=" dash-table-col5 dash-header">
+         Part Units
+       </section>
+       <section class=" dash-table-col6 dash-header">
+         Miles
+       </section>
+     </section>
+     <section class="dash-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll2">
+       <section class="dash-table-row" ng-repeat="item in maintenance" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
+         <section class=" dash-table-col1">
+           {{item.action}}
+         </section>
+         <section class=" dash-table-col2">
+           {{item.item}}
+         </section>
+         <section class=" dash-table-col3">
+           {{item.frequency}}
+         </section>
+         <section class=" dash-table-col4">
+           {{item.laborUnits}}
+         </section>
+         <section class=" dash-table-col5">
+           {{item.partUnits}}
+         </section>
+         <section class=" dash-table-col6">
+           {{item.intervalMileage}}
+         </section>
+
+       </section>
+     </section>
+   </section>
+
+  </section>
+  <section class="bottom-button-holder">
+    <button class="blue dash-button"type="button" name="button">REVIEW </button>
+    <button class="dash-button green"type="button" name="button">SCHEDULE APPOINTMENT</button>
+  </section>
+
+
 </section>
 </section>

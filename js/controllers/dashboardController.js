@@ -1,5 +1,32 @@
 angular.module('karSync')
-.controller('dashCtrl', function($scope, userServ, $state, vehicleService, partner, edmundService){
+
+.controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService){
+  $scope.configScroll1 = {
+      autoHideScrollbar: false,
+      scrollbarPosition: "inside",
+      axis: "y",
+      theme: 'custom-red',
+      advanced:{
+          updateOnContentResize: true
+      },
+          scrollInertia: 0
+      }
+
+  $scope.configScroll2 = {
+      autoHideScrollbar: false,
+      scrollbarPosition: "inside",
+      axis: "y",
+      theme: 'custom-grey',
+      alwaysShowScrollbar: 1,
+      advanced:{
+          updateOnContentResize: true
+      },
+          scrollInertia: 0
+      }
+
+
+
+
   $scope.partner = partner[0].partner_id;
   userServ.getUser($scope.partner).then(function(user){
     $scope.userList = user;
@@ -97,6 +124,7 @@ angular.module('karSync')
     }
 
   })
+
   // Add Car Modal
   // $scope.show = function() {
   //       ModalService.showModal({
@@ -109,4 +137,5 @@ angular.module('karSync')
   //           });
   //       });
   //   };
+ // console.log($scope.user);
 });
