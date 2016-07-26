@@ -1355,6 +1355,9 @@ yx-axis
 
 
 			/* theme "custom-design" */
+			.mCSB_scrollTools .mCS-custom-design .mCSB_scrollTools_vertical {
+				background: white;
+			}
 
 
 				.mCS-custom-design.	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {

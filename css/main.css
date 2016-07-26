@@ -677,7 +677,7 @@ section.year-list {
   height: 18%;
   background-color: white;
 }
-section.year-list :hover {
+.make-click :hover {
   background-color: #21418C;
   color: white;
 }

@@ -64,9 +64,6 @@ section.make-list {
   overflow: scroll;
   height: 18%;
   background-color: white;
-  :hover {
-     background-color: @mainBlue;
-      color: white;
   }
 
 }
@@ -78,6 +75,10 @@ section.make-list {
   cursor: pointer;
   text-align: left;
 
+}
+.make-click :hover {
+   background-color: @mainBlue;
+    color: white;
 }
 
 .active {
@@ -97,16 +98,17 @@ section.model-list {
   overflow: scroll;
   height: 30%;
   background-color: white;
-  :hover {
-    background-color: @mainBlue;
-    color: white;
-
-  }
 }
+
 
 .model-click {
   cursor: pointer;
   border-bottom: solid 1px grey;
+}
+
+section.model-click :hover{
+  background-color: @mainBlue;
+  color: white;
 }
 
 section.year-list {
@@ -114,12 +116,13 @@ section.year-list {
   overflow: scroll;
   height: 18%;
   background-color: white;
-  :hover {
-     background-color: @mainBlue;
-      color: white;
-  }
-
 }
+
+.year-list :hover {
+  background-color: @mainBlue;
+   color: white;
+}
+
 
 .year-click {
   padding: 5px;
