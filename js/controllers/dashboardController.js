@@ -124,7 +124,8 @@ angular.module('karSync')
     }
 
   })
+//Add car modal
 
 
- // console.log($scope.user);
+
 });
