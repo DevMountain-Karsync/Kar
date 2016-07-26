@@ -6,10 +6,7 @@
     </div>
     <div class="addcolumn2">
         <div id="customer-info">
-
             <p3> Customer Information {{business}} </p>
-
-
                 <div class="form-wrap">
                     <form class="form-container" ng-submit="processForm(user)">
                         <div class="form-name">
@@ -47,41 +44,38 @@
                         <br />
                         <div class=form-name>
                             <div class="form-title">Choose Plan</div>
-                                <select class="select-plan-dropdown" ng-model="user.service_plan">
-                                    <option value="5">  --Select--  </option>
-                                    <option ng-repeat="sel in selectables" ng-selected="user.service_plan == sel.value" value="{{sel.label}}">{{sel.label}}</option>
-                                </select>
+                            <select class="select-plan-dropdown" ng-model="user.service_plan">
+                                <option value="5"> --Select-- </option>
+                                <option ng-repeat="sel in selectables" ng-selected="user.service_plan == sel.value" value="{{sel.label}}">{{sel.label}}</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Vehicle Name</div>
+                            <input class="form-field" type="text" name="vehicle_name1" placeholder="Honda Civic" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Vehicle ID</div>
+                            <input class="form-field" type="text" name="vehicle_id_1" placeholder="6GR853" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Vehicle Name</div>
+                            <input class="form-field" type="text" name="vehicle_name2" placeholder="Toyota Camry" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="form-title">Vehicle ID</div>
+                            <input class="form-field" type="text" name="vehicle_id_2" placeholder="8TU234" />
+                        </div>
+                        <br />
+                        <div class=form-name>
+                            <div class="submit-container">
+                                <input class="submit-button" type="submit" value="Save" ng-click="savedAlert()" />
                             </div>
-                            <br />
-                            <div class=form-name>
-                                <div class="form-title">Vehicle Name</div>
-                                <input class="form-field" type="text" name="vehicle_name1" placeholder="Honda Civic" />
-                            </div>
-                            <br />
-                            <div class=form-name>
-                                <div class="form-title">Vehicle ID</div>
-                                <input class="form-field" type="text" name="vehicle_id_1" placeholder="6GR853" />
-                            </div>
-                            <br />
-                            <div class=form-name>
-                                <div class="form-title">Vehicle Name</div>
-                                <input class="form-field" type="text" name="vehicle_name2" placeholder="Toyota Camry" />
-                            </div>
-                            <br />
-                            <div class=form-name>
-                                <div class="form-title">Vehicle ID</div>
-                                <input class="form-field" type="text" name="vehicle_id_2" placeholder="8TU234" />
-                            </div>
-                            <br />
-                            <div class=form-name>
-                                <div class="submit-container">
-                                    <input class="submit-button" type="submit" value="Save" ng-click="savedAlert()"/>
-                                </div>
                     </form>
                     </div>
-                    </div>
-
-
                 </div>
-
+        </div>
 </section>
