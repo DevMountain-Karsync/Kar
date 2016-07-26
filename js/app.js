@@ -6,7 +6,6 @@ angular.module('karSync', ['ui.router'])
     url: '/',
     controller: 'loginCtrl'
   })
-
     .state('dashboard', {
     templateUrl: './views/dashboard.html',
     url: '/dashboard/',
@@ -16,27 +15,23 @@ angular.module('karSync', ['ui.router'])
         return loginServ.getLogin()
       }
      }
-    })
-
+  })
     .state('dashboardDisplay', {
     templateUrl: './views/dashboardDisplay.html',
     url: 'display/',
     parent: "dashboard",
-    controller: "dashDisplayCtrl",
-
+    controller: "dashDisplayCtrl"
     })
-
     .state('addCust', {
       templateUrl: './views/addCustomer.html',
       url: 'add/',
       parent: "newCustomer",
-      controller: 'addCtrl',
       resolve: {
         partner: function(loginServ) {
           return loginServ.getLogin()
         }
        }
-    })
+  })
     .state('newCustomer', {
       templateUrl: './views/newCustomer.html',
       url: '/newCustomer/',
@@ -46,13 +41,12 @@ angular.module('karSync', ['ui.router'])
           return loginServ.getLogin()
         }
        }
-    })
+  })
     .state('currentCust', {
       templateUrl: './views/currentCustomer.html',
       url: '/current/',
       controller: 'currentCtrl',
-    })
-
+  })
     .state('maintenance', {
       templateUrl: './views/maintenance.html',
       url: '/maintenance/',
@@ -62,7 +56,7 @@ angular.module('karSync', ['ui.router'])
           return loginServ.getLogin()
         }
        }
-    })
+  })
     .state('diagnostics', {
       templateUrl: './views/diagnostics.html',
       url: '/diagnostics/',
@@ -72,7 +66,7 @@ angular.module('karSync', ['ui.router'])
           return loginServ.getLogin()
         }
        }
-    })
+  })
     .state('schedule', {
       templateUrl: './views/schedule.html',
       url: '/schedule/',
@@ -82,7 +76,7 @@ angular.module('karSync', ['ui.router'])
           return loginServ.getLogin()
         }
        }
-    })
+  })
   $urlRouterProvider
   .otherwise('/')
 });

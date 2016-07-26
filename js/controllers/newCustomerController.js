@@ -5,63 +5,66 @@ angular.module('karSync')
     $scope.userList = user;
   })
 
-
   $scope.business = partner[0].business_name;
-
 
     $scope.select = function(item) {
       $scope.selected = item;
-
     }
 
     $scope.isActive = function(item) {
-
       return $scope.selected === item;
-
-    }
-  $scope.customerClicked = function(user){
-    // console.log(user);
-    console.log('clicked '+ user.first_name);
-  vehicleService.getCar(user.account_id).then(function(res){
-
-
-
-    // console.log(res);
-    var array = res;
-
-    for (var i = 0; i < array.length; i++) {
-      if (array[i].vin === user.primary_vehicle) {
-        array.unshift(array[i])
-        array.splice(i,1)
-      }
     }
 
-
-    $scope.data = {
-      vehicles: array,
-      selectedCar: 0,
-    }
-
+  $scope.partner = partner[0].partner_id;
+  userServ.getUser($scope.partner).then(function(user){
+    $scope.userList = user;
   })
 
-    // this will need changes once db more flushed out
-      user.primaryAccount = true
-      $scope.user = user;
-      $scope.user.primary_phone = "(801)-999-8888"
-      $scope.user.secondary_phone = "(801)-915-1515"
-      $scope.user.streetAddress = "12345 South State"
-      $scope.user.cityAndState = "Salt Lake City, UT 84020"
+  //adds business_name to the scope based on partner authentication object
+  $scope.business = partner[0].business_name;
 
+  $scope.user = {};
+  //adds partner_id from logged in partner to hidden field on customer form
+  $scope.user.partner_id = partner[0].partner_id;
 
-      if (user.primaryAccount === true) {
-        $scope.primaryUser = user;
-      }
+  $scope.customerClicked = function(user){
+    $scope.user.first_name = user.first_name;
+    $scope.user.phone = user.phone;
+    $scope.user.email = user.email;
+    $scope.user.address = user.address;
+    $scope.user.city = user.city;
+    $scope.user.postal_code = user.postal_code;
+}
 
-      $scope.user.userPlan = "Gold"
-      $scope.user.userPlanPrice = "15.00"
-
+  $scope.processForm = function(user){
+    userServ.postUser(user)
+    .then (function(res) {
+      //clears form data after sending
+        $scope.user.first_name = null;
+        $scope.user.phone = null;
+        $scope.user.first_name = null;
+        $scope.user.email = null;
+        $scope.user.address = null;
+        $scope.user.city = null;
+        $scope.user.postal_code = null;
+      // console.log(res)
+    })
   }
 
+  //plan selection options in dropdown on add customer view
+  $scope.selectables = [
+    {label: 'Bronze', value: 1 },
+    {label: 'Silver', value: 2},
+    {label: 'Gold', value: 3},
+    {label: 'Platinum', value: 4}
+  ];
 
+  //default plan selection
+  $scope.user.service_plan = "5";
 
+  //saved customer alert
+  $scope.savedAlert = function(){
+    //alert customer that customer saved successfully
+    alert('Customer Saved!')
+  }
 });
