@@ -40,7 +40,7 @@
         <select class="select-car-dropdown" name="" ng-model="data.selectedCar">
             <option ng-repeat="car in data.vehicles track by $index" value="{{$index}}">{{car.year}} {{car.make}} {{car.model}}</option>
         </select>
-        <button type="button" class="blue dash-button" name="button" ng-click="show()"> ADD NEW CAR</button>
+        <button type="button" class="blue dash-button" name="button" ng-click="showCustom()"> ADD NEW CAR</button>
         <button class="red dash-button" type="button" name="button"> DELETE CAR</button>
     </section>
     <section class="car-info-container">
@@ -76,20 +76,7 @@
                 </div>
             </section>
         </section>
-        <section class="alert-box-container">
-            <section class="alert-box-head red">
-                <img src="../IMG/bell.png" alt="bell" />
-                <span class="white" ng-bind="data.vehicles[data.selectedCar].make"></span>
-                <span class="white" ng-bind="data.vehicles[data.selectedCar].model"></span>
-            </section>
-            <section class="alert">
-                lorem ipusm there isnt any alert data yet dolor set amin bacon some more text she loves me yeah yeah yeah she loves me yeah yeah yeah
-            </section>
-            <section class="alert">
-                another alert yeah yeah yeah another alert yeah yeah yeah
-            </section>
-        </section>
-    </section>
+
 
 
 
