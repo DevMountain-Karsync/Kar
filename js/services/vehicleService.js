@@ -15,6 +15,7 @@ this.getCar = function(id){
 
  this.postCar = function(vehicle){
    var vin = vehicle.vin;
+   console.log(vin)
    delete vehicle.vin;
    console.log(JSON.stringify(vehicle))
    return $http({

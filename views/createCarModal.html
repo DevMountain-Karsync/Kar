@@ -5,6 +5,10 @@
         <div class="form-wrap">
           <form class="form-container" ng-submit="processCarForm(vehicle)">
             <div class="form-name">
+              <div class="form-title">VIN</div>
+              <input class="form-field" type="text" name="vin" ng-model="vehicle.vin" placeholder="JH4CL96834C030859" />
+            </div>
+            <div class="form-name">
             <div class="form-title">Make</div>
             <input class="form-field" type="text" name="make" ng-model="vehicle.make" placeholder="Toyota" />
             </div>
@@ -20,8 +24,8 @@
             </div>
             <br />
             <div class="form-name">
-              <div class="form-title">VIN</div>
-              <input class="form-field" type="text" name="vin" ng-model="vehicle.vin" placeholder="JH4CL96834C030859" />
+              <div class="form-title">Mileage</div>
+              <input class="form-field" type="text" name="mileage" ng-model="vehicle.mileage" placeholder="JH4CL96834C030859" />
             </div>
             <br />
             <!-- <div class=form-name>
