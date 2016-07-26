@@ -26,7 +26,4 @@ this.getUser = function(partner_id){
      return response.data;
    })
   }
-
-
-
 });

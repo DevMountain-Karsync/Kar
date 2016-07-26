@@ -3,7 +3,7 @@
       <div id="car-info">
         <p> Car Information </p>
         <div class="form-wrap">
-          <form class="form-container" ng-submit="">
+          <form class="form-container" ng-submit="processCarForm(vehicle)">
             <div class="form-name">
             <div class="form-title">Make</div>
             <input class="form-field" type="text" name="make" ng-model="vehicle.make" placeholder="Toyota" />
@@ -24,12 +24,12 @@
               <input class="form-field" type="text" name="vin" ng-model="vehicle.vin" placeholder="JH4CL96834C030859" />
             </div>
             <br />
-            <div class=form-name>
+            <!-- <div class=form-name>
                 <input class="form-field" type="hidden" name="account_id" ng-model="vehicle.account_id" />
-            </div>
+            </div> -->
             <div class="form-name">
               <div class="submit-container">
-                <input class="submit-button" type="submit" value="Save" ng-click="savedAlert()"/>
+                <input class="submit-button" type="submit" value="Save" ng-click="savedAlert2()"/>
               </div>
             </form>
           </div>
@@ -40,4 +40,6 @@
     </div>
   </div>
   <div id="fade"></div>
+</div>
+/div>
 </div>
