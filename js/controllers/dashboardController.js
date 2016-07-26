@@ -2,8 +2,10 @@ angular.module('karSync')
 
 .controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService){
 
-  $scope.config = {
+  $scope.configScroll = {
       autoHideScrollbar: false,
+      scrollbarPosition: "inside",
+      axis: "y",
       theme: 'light',
       advanced:{
           updateOnContentResize: true
@@ -111,5 +113,5 @@ angular.module('karSync')
   })
 
 
- console.log($scope.user);
+ // console.log($scope.user);
 });

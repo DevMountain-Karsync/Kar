@@ -169,6 +169,10 @@ p3 {
   width: 50%;
   border: 1px solid #F46868;
 }
+.alert-body-container {
+  overflow: auto;
+  height: 17vh;
+}
 .alert-box-head {
   color: white;
   font-weight: 100;
