@@ -111,6 +111,9 @@ angular.module('karSync')
 
   }
 
+  // vehicleReport.reportFromId(report_id).then(function(res){
+  //   $scope.report.data
+  // })
 
   $scope.milesInput = 3500;
   $scope.oilInput = 30000;
@@ -124,8 +127,7 @@ angular.module('karSync')
     }
 
   })
-//Add car modal
 
 
-
+ // console.log($scope.user);
 });

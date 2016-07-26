@@ -112,7 +112,7 @@ y-axis
 		width: 4px;
 		height: 100%;
 		margin: 0 auto;
-		-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
+		/*-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;*/
 		text-align: center;
 	}
 
@@ -368,7 +368,9 @@ yx-axis
 	.mCSB_scrollTools .mCSB_buttonDown,
 	.mCSB_scrollTools .mCSB_buttonLeft,
 	.mCSB_scrollTools .mCSB_buttonRight{
+
 		/*background-image: url(mCSB_buttons.png); /* css sprites */
+
 		background-repeat: no-repeat;
 		opacity: 0.4; filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)";
 	}
@@ -383,7 +385,7 @@ yx-axis
 	}
 
 	.mCSB_scrollTools .mCSB_buttonDown{
-		background-position: 0 -20px;
+		/*background-position: 0 -20px;*/
 		/*
 		sprites locations
 		light: 0 -20px, -16px -20px, -32px -20px, -48px -20px, 0 -92px, -16px -92px, -32px -92px
@@ -1303,17 +1305,8 @@ yx-axis
 			.mCS-custom-red.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
 			.mCS-custom-red.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: #F46868; }
 
+/* theme "custom-grey" */
 
-			.mCS-custom-red.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }
-
-			.mCS-custom-red.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }
-
-			.mCS-custom-red.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }
-
-			.mCS-custom-red.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }
-
-
-/* theme "custom-red" */
 	.mCS-custom-grey.mCSB_inside > .mCSB_container {
 	    margin-right: 15px;
 	}
@@ -1358,10 +1351,139 @@ yx-axis
 			.mCS-custom-grey.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: #727476; }
 
 
-			.mCS-custom-grey.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }
 
-			.mCS-custom-grey.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }
 
-			.mCS-custom-grey.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }
 
-			.mCS-custom-grey.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }
+
+
+			/* theme "custom-design" */
+			.mCSB_scrollTools .mCS-custom-design .mCSB_scrollTools_vertical {
+				background: white;
+			}
+
+
+				.mCS-custom-design.	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+
+					background-image: url(../IMG/scrollBar.png);
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
+
+
+				}
+
+			.mCS-custom-design.mCSB_dragger_bar {
+				background-image: url(../IMG/scrollBar.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+
+
+
+
+			.mCS-custom-design.mCSB_scrollTools .mCSB_dragger{
+				height: 14px;
+				background-image: url(../IMG/scrollBar.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+
+
+			.mCS-custom-design.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+				width: 14px;
+				background: none;
+				/*background-image: url(../IMG/scrollBar.png);
+				background-repeat: no-repeat;
+				background-position: center;*/
+
+
+			}
+
+			.mCS-custom-design.mCSB_scrollTools_horizontal .mCSB_dragger,
+			.mCS-custom-design.mCSB_scrollTools_horizontal .mCSB_dragger,
+			.mCS-custom-design.mCSB_scrollTools_horizontal .mCSB_dragger,
+			.mCS-custom-design.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 14px; }
+
+			.mCS-custom-design.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+			.mCS-custom-design.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+			.mCS-custom-design.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+			.mCS-custom-design.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+				height: 14px;
+				margin: 1px 0;
+				background-image: url(../IMG/scrollBar.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+
+			}
+
+			.mCS-custom-design.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+			.mCS-custom-design.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,
+			.mCS-custom-design.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+			.mCS-custom-design.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
+				width: 16px; /* auto-expanded scrollbar */
+				height: 16px;
+				background-image: url(../IMG/scrollBar.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+
+			}
+
+			.mCS-custom-design.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+			.mCS-custom-design.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+			.mCS-custom-design.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+		.mCS-custom-design.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+				width: 4px; /* auto-expanded scrollbar */
+				background-image: url(../IMG/scrollBar.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.mCS-custom-design.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+			.mCS-custom-design.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,
+			.mCS-custom-design.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+			.mCS-custom-design.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
+				height: 16px; /* auto-expanded scrollbar */
+				width: 16px;
+
+				background-image: url(../IMG/scrollBar.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.mCS-custom-design.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+			.mCS-custom-design.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+			.mCS-custom-design.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+			.mCS-custom-design.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+				height: 4px; /* auto-expanded scrollbar */
+				margin: 6px 0;
+			}
+
+			.mCS-custom-design.mCSB_scrollTools .mCSB_buttonUp
+			{
+					background-image: url(../IMG/upArrow.png);
+					background-repeat: no-repeat;
+					background-position: center;
+			}
+
+			.mCS-custom-design.mCSB_scrollTools .mCSB_buttonDown
+			{
+				background-image: url(../IMG/downArrow.png);
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+
+
+
+				.mCS-custom-design.mCSB_scrollTools_vertical {
+						border: 1px solid #EEEEEE;
+						width: 3vw;
+				}
+
+			.mCS-custom-design.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(0,0,0,0); }
