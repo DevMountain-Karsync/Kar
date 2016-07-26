@@ -723,6 +723,17 @@ ul {
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
+.users-car {
+  margin-left: -5vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #6FC17F;
+}
+.user-vehicle-menu {
+  border-right: -15vw;
+}
 .vehicles-info {
   height: 5vh;
   -ms-flex-align: center;

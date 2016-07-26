@@ -42,7 +42,7 @@ angular.module('karSync', ['ui.router','ngScrollbars', 'angularModalService', 'n
     .state('newCustomer', {
       templateUrl: './views/newCustomer.html',
       url: '/newCustomer/',
-      controller: 'newCustCtrl',
+      controller: 'dashCtrl',
       resolve: {
         partner: function(loginServ) {
           return loginServ.getLogin()
