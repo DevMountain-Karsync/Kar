@@ -77,7 +77,7 @@ angular.module('karSync')
         $scope.primaryUser = user;
       }
 
-    
+
       $scope.user.userPlanPrice = "15.00"
 
       // console.log($scope.data.vehicles);
@@ -97,7 +97,16 @@ angular.module('karSync')
     }
 
   })
-
-
-
+  // Add Car Modal
+  // $scope.show = function() {
+  //       ModalService.showModal({
+  //           templateUrl: 'modal.html',
+  //           controller: "ModalController"
+  //       }).then(function(modal) {
+  //           modal.element.modal();
+  //           modal.close.then(function(result) {
+  //               $scope.message = "You said " + result;
+  //           });
+  //       });
+  //   };
 });
