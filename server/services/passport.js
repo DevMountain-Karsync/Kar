@@ -1,5 +1,6 @@
 var passport = require('passport');
 var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
+var localStrategy = require('passport-local');
 var config = require('../config');
 var getPartner = require('../controllers/getPartner')
 // var express = require("express");

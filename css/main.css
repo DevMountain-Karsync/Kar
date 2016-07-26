@@ -71,6 +71,44 @@ p3 {
 }
 
 
+#overlay {
+  position: fixed;
+  left: 25%;
+  top: 25%;
+  padding: 25px;
+  border: 2px solid black;
+  background-color: #ffffff;
+  width: 50%;
+  height: 50%;
+  z-index: 100;
+}
+#fade {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  background-color: black;
+  -moz-opacity: 0.7;
+  opacity: .70;
+  filter: alpha(opacity=70);
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+}
+#custom-modal.ng-enter {
+  transition: opacity 0.5s ease-out;
+  opacity: 0;
+}
+#custom-modal.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+#custom-modal.ng-leave {
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+}
+#custom-modal.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
 .white {
   color: white;
 }
@@ -105,12 +143,16 @@ p3 {
   text-align: left center;
   border-bottom: solid 1px #F7F7F7;
   padding-top: 2vh;
-}
-.activeUser {
-  background-image: url('../IMG/check.png');
+  background-image: url('../IMG/bell-grey.png'), url('../IMG/info-grey.png');
   background-size: 3vh;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 17vw, 20vw;
+}
+.activeUser {
+  background-image: url('../IMG/bell-red.png'), url('../IMG/info-blue.png');
+  background-size: 3vh;
+  background-repeat: no-repeat;
+  background-position: 17vw, 20vw;
   background-color: #EEEEEE;
 }
 .usersSearch {
@@ -314,25 +356,158 @@ p3 {
   margin-top: 1em;
 }
 
+@charset "UTF-8";
+@font-face {
+  font-family: "karsync-icons";
+  src: url("../fonts/karsync-icons.eot");
+  src: url("../fonts/karsync-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/karsync-icons.woff") format("woff"), url("../fonts/karsync-icons.ttf") format("truetype"), url("../fonts/karsync-icons.svg#karsync-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "karsync-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "karsync-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-bell:before {
+  content: "\61";
+}
+.icon-check:before {
+  content: "\62";
+}
+.icon-edit:before {
+  content: "\63";
+}
+.icon-trash-1:before {
+  content: "\64";
+}
+.icon-calendar:before {
+  content: "\65";
+}
+.icon-calendar-1:before {
+  content: "\66";
+}
+.icon-comment-discussion:before {
+  content: "\67";
+}
+.icon-comment:before {
+  content: "\68";
+}
+.icon-plus-circled:before {
+  content: "\69";
+}
+.icon-print:before {
+  content: "\6a";
+}
+.icon-user-add:before {
+  content: "\6b";
+}
+.icon-user:before {
+  content: "\6c";
+}
+.icon-users:before {
+  content: "\6d";
+}
+.icon-google:before {
+  content: "\6e";
+}
+.icon-facebook-alt:before {
+  content: "\6f";
+}
+.icon-file-add:before {
+  content: "\70";
+}
+.icon-cancel:before {
+  content: "\71";
+}
+.icon-cancel-squared:before {
+  content: "\72";
+}
+.icon-rent-car-front:before {
+  content: "\73";
+}
+.icon-rent-car-side:before {
+  content: "\74";
+}
+.icon-car-side:before {
+  content: "\75";
+}
+.icon-car-front:before {
+  content: "\76";
+}
+.icon-mail:before {
+  content: "\77";
+}
+.icon-gear:before {
+  content: "\78";
+}
+.icon-wrench:before {
+  content: "\79";
+}
+.icon-calendar-check-o:before {
+  content: "\7a";
+}
+.icon-calendar-plus-o:before {
+  content: "\41";
+}
+.icon-calendar-times-o:before {
+  content: "\42";
+}
+.icon-calendar-o:before {
+  content: "\43";
+}
+.icon-calendar-minus-o:before {
+  content: "\44";
+}
+.icon-tools:before {
+  content: "\45";
+}
+.icon-pencil:before {
+  content: "\46";
+}
+
 #login-container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column;
       flex-flow: column;
-  top: 0;
+  top: 60vh;
+  text-align: center;
   width: 100vw;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
 }
+.top-div-container {
+  height: 30vh;
+}
 .login-button {
   text-align: center;
   height: 20px;
 }
 .login-button > a > img {
-  height: 1000px;
-  width: 2000px;
+  height: 10vh;
+  width: 20vw;
 }
 
 /*LESS*/
@@ -659,5 +834,97 @@ ul {
   margin-bottom: 1vh;
 }
 #logout-text {
+  color: white;
+}
+
+.sched-appoint {
+  -ms-flex-align: center;
+      align-items: center;
+  width: 48vw;
+  height: 8vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.vehicles-info {
+  height: 5vh;
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.mech-cont {
+  margin-top: 3vh;
+}
+.select-sched-dropdown {
+  width: 10vw;
+  height: 7vh;
+}
+.add-appointment {
+  height: 5vh;
+  margin-left: 2vw;
+  background-color: #21418C;
+  color: white;
+}
+.sched-container {
+  margin-top: 3vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  width: 30vw;
+  height: 14vh;
+}
+.sched-container select {
+  padding: 6px;
+  height: 3.5vh;
+  width: 16vw;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  font-family: 'Roboto', sans-serif;
+  color: #727476;
+  background-image: url('../IMG/scroll-down.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.appoin-con {
+  height: 8vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+#add-appointment-button {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  background-color: #21418C;
+  color: white;
+}
+#today-app {
+  height: 3vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  border-bottom: 1px solid grey;
+  background-color: #6FC17F;
+}
+.today-wahoo {
+  color: white;
+}
+.today-date {
   color: white;
 }

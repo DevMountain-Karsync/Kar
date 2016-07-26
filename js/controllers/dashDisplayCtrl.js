@@ -1,6 +1,16 @@
 angular.module('karSync')
-.controller('dashDisplayCtrl', function($scope, userServ,$state,$stateParams, vehicleService){
-//may actually remove it agian
+.controller('dashDisplayCtrl', ['$scope', 'ModalService', function($scope, ModalService) {
 
-// console.log($scope.user);
-});
+    $scope.customResult = null;
+    $scope.showCustom = function() {
+
+      ModalService.showModal({
+        templateUrl: "../views/createCarModal.html",
+        controller: "modalCtrl"
+      }).then(function(modal) {
+        modal.close.then(function(result) {
+          $scope.customResult = "All good!";
+        });
+      });
+    };
+  }]);

@@ -1,4 +1,4 @@
-angular.module('karSync', ['ui.router','ngScrollbars'])
+angular.module('karSync', ['ui.router','ngScrollbars', 'angularModalService', 'ngAnimate'])
 
 .config(function($stateProvider, $urlRouterProvider){
   $stateProvider
@@ -32,6 +32,12 @@ angular.module('karSync', ['ui.router','ngScrollbars'])
           return loginServ.getLogin()
         }
        }
+  })
+  .state('addAppoint', {
+    templateUrl:'./views/scheduleAppoint.html',
+    url: 'appointSched/',
+    parent: 'dashboard',
+    controller: 'addAppointCrl'
   })
     .state('newCustomer', {
       templateUrl: './views/newCustomer.html',
