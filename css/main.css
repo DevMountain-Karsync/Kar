@@ -143,12 +143,16 @@ p3 {
   text-align: left center;
   border-bottom: solid 1px #F7F7F7;
   padding-top: 2vh;
-}
-.activeUser {
-  background-image: url('../IMG/check.png');
+  background-image: url('../IMG/info-grey.png');
   background-size: 3vh;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 20vw;
+}
+.activeUser {
+  background-image: url('../IMG/info-blue.png');
+  background-size: 3vh;
+  background-repeat: no-repeat;
+  background-position: 20vw;
   background-color: #EEEEEE;
 }
 .usersSearch {
@@ -350,20 +354,24 @@ p3 {
   display: flex;
   -ms-flex-flow: column;
       flex-flow: column;
-  top: 0;
+  top: 60vh;
+  text-align: center;
   width: 100vw;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
 }
+.top-div-container {
+  height: 30vh;
+}
 .login-button {
   text-align: center;
   height: 20px;
 }
 .login-button > a > img {
-  height: 1000px;
-  width: 2000px;
+  height: 10vh;
+  width: 20vw;
 }
 
 /*LESS*/
@@ -700,5 +708,95 @@ ul {
   margin-bottom: 1vh;
 }
 #logout-text {
+  color: white;
+}
+
+.sched-appoint {
+  width: 49vw;
+  height: 8vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.vehicles-info {
+  height: 5vh;
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.mech-cont {
+  margin-top: 3vh;
+}
+.select-sched-dropdown {
+  width: 10vw;
+  height: 7vh;
+}
+.add-appointment {
+  height: 5vh;
+  margin-left: 2vw;
+  background-color: #21418C;
+  color: white;
+}
+.sched-container {
+  margin-top: 3vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  width: 30vw;
+  height: 14vh;
+}
+.sched-container select {
+  padding: 6px;
+  height: 3.5vh;
+  width: 16vw;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  font-family: 'Roboto', sans-serif;
+  color: #727476;
+  background-image: url('../IMG/scroll-down.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.appoin-con {
+  height: 8vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+#add-appointment-button {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  background-color: #21418C;
+  color: white;
+}
+#today-app {
+  height: 3vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  border-bottom: 1px solid grey;
+  background-color: #6FC17F;
+}
+.today-wahoo {
+  color: white;
+}
+.today-date {
   color: white;
 }

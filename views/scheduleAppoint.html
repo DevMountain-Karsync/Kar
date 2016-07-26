@@ -1,0 +1,79 @@
+<section class="display-view-container">
+    <div class="schedcolumn1">
+        <div class="add-Appoint">
+          <div class="sched-appoint">Schedule Appointment
+            <button class='add-appointment'>ADD APPOINTMENT</button>
+        </div>
+      </div>
+    </div>
+    <div class="addcolumn2">
+        <div id="schedule-info">
+
+            <div class="select-car-container">Scheduled Vehicle here
+              <!-- {{user.primary_vehicle_year}} {{user.primary_vehicle_make}} {{user.primary_vehicle_model}} -->
+              <select class="select-car-dropdown" name="" ng-model="data.selectedCar">
+                <option ng-repeat = "car in data.vehicles track by $index" value="{{$index}}">Change Car
+                  <!-- {{car.year}} {{car.make}} {{car.model}} -->
+                </option>
+              </select>
+            </div>
+
+              <div class="mech-cont">Schedule an Appointment with
+                <div class="mech-name">(Mechanic Name)
+                  </div>
+                <!-- {{partner.first_name}} -->
+              </div>
+
+              <div class="sched-container">
+                <div class="appoin-con">Appointment For
+
+                <select class="select-sched-dropdown" name="" ng-model="">(pulling from vehicle alerts here)
+                  <option ng-repeat = "optionsgohere" value=""> </option>
+                </select>
+                </div>
+
+              <div class="appoin-con">Requested Date
+                <select class="select-sched-dropdown" name="" ng-model="data.selectedCar">Requested Date
+                  <option ng-repeat = "car in data.vehicles track by $index" value="{{$index}}">(google calender)
+                    <!-- {{car.year}} {{car.make}} {{car.model}} -->
+                  </option>
+                </select>
+              </div>
+
+                <div class="appoin-con">Available Times
+                  <select class="select-sched-dropdown" name="" ng-model="data.selectedCar">Available Times
+                    <option ng-repeat = "car in data.vehicles track by $index" value="{{$index}}">(google calender)</option>
+                  </select>
+                </div>
+              </div>
+        </div>
+          <button id='add-appointment-button'>SCHEDULE APPOINTMENT</button>
+          <section class="dash-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll2">
+            <div id="today-app">
+              <div class="today-wahoo">Today's Appointments</div>
+              <div class="today-date">July 26, 2016 </div>
+            </div>
+            <section class="dash-table-row" ng-repeat="item in maintenance" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
+              <section class=" dash-table-col1">
+                {{item.action}}
+              </section>
+              <section class=" dash-table-col2">
+                {{item.item}}
+              </section>
+              <section class=" dash-table-col3">
+                {{item.frequency}}
+              </section>
+              <section class=" dash-table-col4">
+                {{item.laborUnits}}
+              </section>
+              <section class=" dash-table-col5">
+                {{item.partUnits}}
+              </section>
+              <section class=" dash-table-col6">
+                {{item.intervalMileage}}
+              </section>
+
+            </section>
+          </section>
+      </div>
+</section>
