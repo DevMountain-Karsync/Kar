@@ -33,6 +33,12 @@ angular.module('karSync', ['ui.router','ngScrollbars'])
         }
        }
   })
+  .state('addAppoint', {
+    templateUrl:'./views/scheduleAppoint.html',
+    url: 'appointSched/',
+    parent: 'dashboard',
+    controller: 'addAppointCrl'
+  })
     .state('newCustomer', {
       templateUrl: './views/newCustomer.html',
       url: '/newCustomer/',

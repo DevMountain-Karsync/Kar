@@ -76,6 +76,7 @@ p3 {
 }
 .green {
   background: #6FC17F;
+  color: white;
 }
 .users-dashboard {
   height: 100%;
@@ -669,5 +670,82 @@ ul {
   margin-bottom: 1vh;
 }
 #logout-text {
+  color: white;
+}
+
+.sched-appoint {
+  -ms-flex-align: center;
+      align-items: center;
+  width: 49vw;
+  height: 8vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  border-bottom: 1px solid grey;
+}
+.vehicles-info {
+  height: 5vh;
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  border-bottom: 1px grey solid;
+}
+.mech-cont {
+  margin-top: 3vh;
+}
+.select-sched-dropdown {
+  width: 10vw;
+  height: 7vh;
+}
+.add-appointment {
+  height: 5vh;
+  margin-left: 2vw;
+  background-color: #21418C;
+  color: white;
+}
+.sched-container {
+  margin-top: 3vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  width: 25vw;
+}
+.appoin-con {
+  height: 8vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+#add-appointment-button {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  background-color: #21418C;
+  color: white;
+}
+#today-app {
+  height: 3vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  border-bottom: 1px solid grey;
+  background-color: #6FC17F;
+}
+.today-wahoo {
+  color: white;
+}
+.today-date {
   color: white;
 }
