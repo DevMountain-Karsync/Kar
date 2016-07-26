@@ -1,4 +1,4 @@
-angular.module('karSync', ['ui.router','ngScrollbars'])
+angular.module('karSync', ['ui.router','ngScrollbars', 'angularModalService', 'ngAnimate'])
 
 .config(function($stateProvider, $urlRouterProvider){
   $stateProvider
