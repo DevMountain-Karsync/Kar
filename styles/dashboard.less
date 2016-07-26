@@ -4,7 +4,6 @@
 @mainGrey: #727476;
 @mainRed: #F46868;
 @secondGrey: #EEEEEE;
-
 @mainPink: rgba(244, 104, 104, 0.15);
 
 
@@ -36,7 +35,6 @@
 .users-div {
   display: flex;
   flex-flow:column;
-
   border: transparent;
   color: @mainBlue;
   font-size: 1em;
@@ -47,14 +45,23 @@
   text-align: left center;
   border-bottom: solid 1px #F7F7F7;
   padding-top: 2vh;
-
-}
-.activeUser {
-  background-image: url('../IMG/check.png');
-
+  background-image: url('../IMG/bell-grey.png'), url('../IMG/info-grey.png');
   background-size: 3vh;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 17vw, 20vw;
+
+}
+// .usersappear {
+//   background-image: ;
+//   background-repeat: no-repeat;
+//   background-position: 16vw ;
+//
+// }
+.activeUser {
+  background-image: url('../IMG/bell-red.png'), url('../IMG/info-blue.png');
+  background-size: 3vh;
+  background-repeat: no-repeat;
+  background-position: 17vw, 20vw;
   background-color: #EEEEEE;
 
 }
