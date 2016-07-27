@@ -11,7 +11,7 @@ angular.module('karSync')
   //console.log(user.account_id)
 
       $scope.processCarForm = function(vehicle){
-        edmundService.getYearID(vehicle.make.toLowerCase(), vehicle.model.toLowerCase(), vehicle.year
+        edmundService.getYearID(vehicle.make.toLowerCase(), vehicle.model.toLowerCase(), vehicle.year)
         .then(function(res){
           // console.log(res);
           console.log(res.data.id);
