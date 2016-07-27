@@ -669,10 +669,6 @@ section.make-list {
   height: 18%;
   background-color: white;
 }
-section.make-list :hover {
-  background-color: #21418C;
-  color: white;
-}
 .make-click {
   border-bottom: solid 1px grey;
   background-color: white;
@@ -680,6 +676,10 @@ section.make-list :hover {
   border-color: transparent;
   cursor: pointer;
   text-align: left;
+}
+.make-click :hover {
+  background-color: #21418C;
+  color: white;
 }
 .active {
   background-image: url('../IMG/check.png');
@@ -697,13 +697,13 @@ section.model-list {
   height: 30%;
   background-color: white;
 }
-section.model-list :hover {
-  background-color: #21418C;
-  color: white;
-}
 .model-click {
   cursor: pointer;
   border-bottom: solid 1px grey;
+}
+section.model-click :hover {
+  background-color: #21418C;
+  color: white;
 }
 section.year-list {
   margin-top: 5%;
@@ -711,7 +711,7 @@ section.year-list {
   height: 18%;
   background-color: white;
 }
-.make-click :hover {
+.year-list :hover {
   background-color: #21418C;
   color: white;
 }
