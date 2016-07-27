@@ -335,9 +335,21 @@ p3 {
   margin: 0;
   padding: 0;
 }
+.diag-table-col1 {
+  text-align: left;
+  width: 30%;
+  margin: 0;
+  padding: 0;
+}
+.diag-table-col3 {
+  text-align: left;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+}
 .dash-table-col3 {
   text-align: left;
-  width: 25%;
+  width: 20%;
   margin: 0;
   padding: 0;
 }
@@ -621,7 +633,7 @@ iframe {
 .sched-table-data-container {
   border: 1px solid #EEEEEE;
   overflow: auto;
-  height: 70vh;
+  height: 70%;
 }
 .makesSearch {
   background-color: white;
@@ -645,6 +657,9 @@ iframe {
 }
 .maint-table-data-container {
   height: 90vh;
+}
+.diag-maint-table-container {
+  height: 89vh;
 }
 .modelSearch {
   background-color: white;
