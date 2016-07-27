@@ -366,17 +366,6 @@ p3 {
       justify-content: space-between;
   margin-top: 1em;
 }
-#frequency:hover:after {
-  content: attr(data-tooltip);
-  color: white;
-  padding: 5px;
-  position: absolute;
-  width: 250px;
-  height: 120px;
-  padding: 0px;
-  background: #242526;
-  border-radius: 10px;
-}
 
 @charset "UTF-8";
 @font-face {
