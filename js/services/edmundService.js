@@ -60,4 +60,11 @@ this.getModel = function(make) {
 
   });
 }
+this.getYearID = function(make,model,year) {
+  return $http.get('https://api.edmunds.com/api/vehicle/v2/'+make+'/'+model+'/'+year+'?category=Sedan&view=full&fmt=json&api_key=ph7zhymwvhhr28wfeqvdpcws').
+  success(function(data){
+    return data;
+
+  });
+}
 })
