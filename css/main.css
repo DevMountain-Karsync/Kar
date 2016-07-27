@@ -335,9 +335,21 @@ p3 {
   margin: 0;
   padding: 0;
 }
+.diag-table-col1 {
+  text-align: left;
+  width: 30%;
+  margin: 0;
+  padding: 0;
+}
+.diag-table-col3 {
+  text-align: left;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+}
 .dash-table-col3 {
   text-align: left;
-  width: 25%;
+  width: 20%;
   margin: 0;
   padding: 0;
 }
