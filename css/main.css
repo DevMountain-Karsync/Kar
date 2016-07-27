@@ -325,19 +325,19 @@ p3 {
 }
 .dash-table-col1 {
   text-align: left;
-  width: 20%;
+  width: 25%;
   margin: 0;
   padding: 0;
 }
 .dash-table-col2 {
   text-align: left;
-  width: 20%;
+  width: 30%;
   margin: 0;
   padding: 0;
 }
 .dash-table-col3 {
   text-align: left;
-  width: 20%;
+  width: 25%;
   margin: 0;
   padding: 0;
 }
@@ -355,7 +355,7 @@ p3 {
 }
 .dash-table-col6 {
   text-align: left;
-  width: 20%;
+  width: 15%;
   margin: 0;
   padding: 0;
 }
