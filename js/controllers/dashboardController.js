@@ -51,7 +51,7 @@ angular.module('karSync')
       .then(function(res){
 
         $scope.maintenance = res.data.actionHolder
-
+        console.log(res.data.actionHolder);
       })
 
     }

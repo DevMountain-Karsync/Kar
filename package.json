@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "angular-less": "^1.0.0",
+    "balloon-css": "^0.3.0",
     "bcryptjs": "^2.3.0",
     "better-js-class": "*",
     "body-parser": "^1.15.2",
