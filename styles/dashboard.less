@@ -6,7 +6,10 @@
 @secondGrey: #EEEEEE;
 @mainPink: rgba(244, 104, 104, 0.15);
 
+.display-view-container {
+  color: @mainGrey;
 
+}
 .white {
   color: white;
 }
@@ -51,17 +54,12 @@
   background-position: 17vw, 20vw;
 
 }
-// .usersappear {
-//   background-image: ;
-//   background-repeat: no-repeat;
-//   background-position: 16vw ;
-//
-// }
+
 .activeUser {
   background-image: url('../IMG/bell-red.png'), url('../IMG/info-blue.png');
   background-size: 3vh;
   background-repeat: no-repeat;
-  background-position: 17vw, 20vw;
+  background-position: 1720vw;
   background-color: #EEEEEE;
 
 }
@@ -216,6 +214,10 @@ color: black;
 .dash-table-row{
   display: flex;
   justify-content: space-between;
+  height: 4vh;
+  overflow: hidden;
+  align-items: center;
+  margin-bottom: 1vh;
 }
 .dash-header {
   color: white;
@@ -224,7 +226,7 @@ color: black;
 .dash-table-data-container{
   border: 1px solid @secondGrey;
   overflow: auto;
-  height: 40vh;
+  height: 27vh;
 }
 
 .oddRow{

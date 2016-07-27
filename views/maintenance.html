@@ -29,9 +29,57 @@
   <div class="column2">
     <div class="no-maint" ng-show="showAlert">{{alert}}</div>
     <section class="maintenance-schedule">
-    <section ng-repeat="item in maintArr">
-      <div class="maint-container">
-    <p><section class="maint-sched">Service:</section> {{item.item}}</p>
+
+        <section class="maintence-user-car-cont">
+         Upcoming Maintenance Schedule
+         <section class="sched-maint-table-container">
+           <section class="dash-maint-table-header dash-table-row">
+             <section class=" dash-table-col1 dash-header">
+               Action
+             </section>
+             <section class=" dash-table-col2 dash-header">
+               Maintenace Items
+             </section>
+             <section class=" dash-table-col3 dash-header">
+               Frequency
+             </section>
+             <section class=" dash-table-col4 dash-header">
+               Labor Units
+             </section>
+             <section class=" dash-table-col5 dash-header">
+               Part Units
+             </section>
+             <section class=" dash-table-col6 dash-header">
+               Miles
+             </section>
+           </section>
+           <section class="maint-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll2">
+             <section class="dash-table-row" ng-repeat="item in maintArr" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
+               <section class=" dash-table-col1">
+                 {{item.action}}
+               </section>
+               <section class=" dash-table-col2">
+                 {{item.item}}
+               </section>
+               <section class=" dash-table-col3">
+                 {{item.frequency}}
+               </section>
+               <section class=" dash-table-col4">
+                 {{item.laborUnits}}
+               </section>
+               <section class=" dash-table-col5">
+                 {{item.partUnits}}
+               </section>
+               <section class=" dash-table-col6">
+                 {{item.intervalMileage}}
+               </section>
+
+             </section>
+           </section>
+         </section>
+
+        </section>
+    <!-- <p><section class="maint-sched">Service:</section> {{item.item}}</p>
     <p><section class="maint-sched">Engine Code:</section> {{item.engineCode}}</p>
     <p><section class="maint-sched">Interval Mileage:</section> {{item.intervalMileage}}</p>
     <p><section class="maint-sched">Interval Month:</section>  {{item.intervalMonth}}</p>
@@ -39,8 +87,8 @@
     <p><section class="maint-sched">Labor Units:</section>  {{item.laborUnits}}</p>
     <p><section class="maint-sched">Part Units:</section> {{item.partUnits}}</p>
     <p><section class="maint-sched">maintenance Type:</section> {{item.action}}</p>
-    <p><section class="maint-sched">Description:</section> {{item.itemDescription}}</p>
-    </div>
+    <p><section class="maint-sched">Description:</section> {{item.itemDescription}}</p> -->
+
   </section>
 
   </div>

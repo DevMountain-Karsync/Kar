@@ -109,6 +109,9 @@ p3 {
   opacity: 0;
 }
 
+.display-view-container {
+  color: #727476;
+}
 .white {
   color: white;
 }
@@ -152,7 +155,7 @@ p3 {
   background-image: url('../IMG/bell-red.png'), url('../IMG/info-blue.png');
   background-size: 3vh;
   background-repeat: no-repeat;
-  background-position: 17vw, 20vw;
+  background-position: 1720vw;
   background-color: #EEEEEE;
 }
 .usersSearch {
@@ -296,6 +299,11 @@ p3 {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  height: 4vh;
+  overflow: hidden;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 1vh;
 }
 .dash-header {
   color: white;
@@ -304,7 +312,7 @@ p3 {
 .dash-table-data-container {
   border: 1px solid #EEEEEE;
   overflow: auto;
-  height: 40vh;
+  height: 27vh;
 }
 .oddRow {
   background: white;
@@ -478,6 +486,10 @@ p3 {
   content: "\46";
 }
 
+.logo-karsync {
+  text-align: center;
+  background-size: 20vw 10vh;
+}
 #login-container {
   display: -ms-flexbox;
   display: flex;
@@ -491,16 +503,31 @@ p3 {
   -ms-flex-pack: center;
       justify-content: center;
 }
+.login-field {
+  height: 12vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
 .top-div-container {
   height: 30vh;
 }
 .login-button {
   text-align: center;
   height: 20px;
+  width: 20vw;
 }
 .login-button > a > img {
   height: 10vh;
   width: 20vw;
+}
+.login-cont {
+  height: 5vh;
+  width: 18.5vw;
+  margin-left: .5vw;
 }
 
 /*LESS*/
@@ -509,7 +536,6 @@ p3 {
 /*HTML*/
 * {
   font-family: 'Roboto', sans-serif;
-  color: #727476;
 }
 html,
 body {
@@ -582,6 +608,11 @@ iframe {
       justify-content: space-around;
   background-color: #EEEEEE;
 }
+.sched-table-data-container {
+  border: 1px solid #EEEEEE;
+  overflow: auto;
+  height: 70vh;
+}
 .makesSearch {
   background-color: white;
   color: grey;
@@ -601,6 +632,9 @@ iframe {
 }
 .typeSearch {
   background-image: none;
+}
+.maint-table-data-container {
+  height: 90vh;
 }
 .modelSearch {
   background-color: white;
@@ -760,6 +794,7 @@ p4 {
   -ms-flex-align: center;
       align-items: center;
   z-index: 1;
+  color: #727476;
 }
 #nav-logo {
   display: -ms-flexbox;
@@ -791,6 +826,7 @@ p4 {
   border-color: transparent;
   text-align: left;
   cursor: pointer;
+  color: #727476;
 }
 .activeNav {
   background-color: #6FC17F;
@@ -860,6 +896,9 @@ ul {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  color: #6FC17F;
+}
+.users-car1 {
   color: #6FC17F;
 }
 .user-vehicle-menu {
