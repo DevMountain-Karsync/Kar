@@ -108,6 +108,9 @@ p3 {
 #custom-modal.ng-leave.ng-leave-active {
   opacity: 0;
 }
+#car-info {
+  margin-bottom: 5px;
+}
 
 .display-view-container {
   color: #727476;
@@ -677,10 +680,6 @@ section.make-list {
   cursor: pointer;
   text-align: left;
 }
-.make-click :hover {
-  background-color: #21418C;
-  color: white;
-}
 .active {
   background-image: url('../IMG/check.png');
   background-size: 2.5vh;
@@ -701,19 +700,11 @@ section.model-list {
   cursor: pointer;
   border-bottom: solid 1px grey;
 }
-section.model-click :hover {
-  background-color: #21418C;
-  color: white;
-}
 section.year-list {
   margin-top: 5%;
   overflow: scroll;
   height: 18%;
   background-color: white;
-}
-.year-list :hover {
-  background-color: #21418C;
-  color: white;
 }
 .year-click {
   padding: 5px;
