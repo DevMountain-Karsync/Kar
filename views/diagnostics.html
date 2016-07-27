@@ -3,6 +3,8 @@
        <nav-dir></nav-dir>
      </section>
 <section class="route-main">
+
+  <!-- do you actually read these Jessica? -->
   <div class="column1">
     <div class="search-container">
     <input type="text" placeholder="Search..." class="makesSearch" ng-model="searchString"  ng-class="{'typeSearch': searchString }">
@@ -34,7 +36,7 @@
       <div class="maint-container">
         <section class="maintence-user-car-cont">
          Diagnostic Code Look-up
-         <section class="sched-maint-table-container">
+         <section class="diag-maint-table-container">
            <section class="dash-maint-table-header dash-table-row">
              <section class=" diag-table-col1 dash-header">
                Engine Code
@@ -45,7 +47,7 @@
              </section>
 
            </section>
-           <section class="maint-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll2">
+           <section class="diag-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll2">
              <section class="dash-table-row" ng-repeat="test in test | filter: search3" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
                <section class=" diag-table-col1">
                 {{test.code}}
