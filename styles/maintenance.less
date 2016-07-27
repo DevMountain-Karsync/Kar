@@ -1,5 +1,6 @@
 @mainBlue: #21418C;
 @mainGreen: #6FC17F;
+@secondGrey: #EEEEEE;
 
 .search-container {
   height: 9vh;
@@ -14,7 +15,11 @@
   justify-content: space-around;
   background-color: #EEEEEE;
 }
-
+.sched-table-data-container {
+  border: 1px solid @secondGrey;
+  overflow: auto;
+  height: 70vh;
+}
 .makesSearch {
   background-color: white;
   color: grey;
@@ -35,7 +40,9 @@
 .typeSearch {
   background-image: none;
 }
-
+.maint-table-data-container{
+  height: 90vh;
+}
 
 .modelSearch {
   background-color: white;
@@ -104,6 +111,7 @@ section.model-list {
 .model-click {
   cursor: pointer;
   border-bottom: solid 1px grey;
+
 }
 
 // section.model-click :hover{

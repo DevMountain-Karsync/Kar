@@ -41,7 +41,8 @@
             <option ng-repeat="car in data.vehicles track by $index" value="{{$index}}">{{car.year}} {{car.make}} {{car.model}}</option>
         </select>
         <button type="button" class="blue dash-button" name="button" ng-click="showCustom()"> ADD NEW CAR</button>
-        <button class="red dash-button" type="button" name="button"> DELETE CAR</button>
+        <button class="dash-button green"type="button" name="button" ui-sref="addAppoint">SCHEDULE APPT</button>
+
     </section>
     <section class="car-info-container">
         <section class="car-update-container">
@@ -161,7 +162,7 @@
   </section>
   <section class="bottom-button-holder">
     <button class="blue dash-button"type="button" name="button">REVIEW </button>
-    <button class="dash-button green"type="button" name="button" ui-sref="addAppoint">SCHEDULE APPOINTMENT</button>
+    <button class="red dash-button" type="button" name="button"> DELETE CAR</button>
   </section>
 
 </section>
