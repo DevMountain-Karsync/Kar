@@ -358,6 +358,18 @@ p3 {
       justify-content: space-between;
   margin-top: 1em;
 }
+#frequency:hover:after {
+  content: 'This is your custom tooltip text';
+  border: 1px solid #cccccc;
+  background-color: #efefef;
+  position: absolute;
+  padding: 3px 8px;
+  font-size: 12px;
+  z-index: 9999;
+  margin-left: -80px;
+  margin-top: 30px;
+  width: 130px;
+}
 
 @charset "UTF-8";
 @font-face {
