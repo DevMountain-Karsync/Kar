@@ -46,7 +46,7 @@ angular.module('karSync')
   }
 
     $scope.customerClicked = function(user){
-      console.log("this is the user" + user.first_name)
+      // console.log("this is the user" + user.first_name)
       $scope.user.first_name = user.first_name;
   }
 });
