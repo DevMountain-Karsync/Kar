@@ -286,18 +286,45 @@ color: black;
 
 
 #frequency:hover:after{
-content: 'This is your custom tooltip text';
-border: 1px solid #cccccc;
-background-color: #efefef;
-position: absolute;
-padding: 3px 8px;
-font-size: 12px;
-z-index: 9999;
-margin-left: -80px;
-margin-top: 30px;
-width: 130px;
+  content: attr(data-tooltip);
+  color: white;
+  padding: 5px;
+  position: absolute;
+  width: 250px;
+  height: 120px;
+  padding: 0px;
+  background: #242526;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
+
+// .bubble
+// {
+// position: relative;
+// width: 250px;
+// height: 120px;
+// padding: 0px;
+// background: #242526;
+// -webkit-border-radius: 10px;
+// -moz-border-radius: 10px;
+// border-radius: 10px;
+// }
+//
+// .bubble:after
+// {
+// content: '';
+// position: absolute;
+// border-style: solid;
+// border-width: 15px 15px 15px 0;
+// border-color: transparent #242526;
+// display: block;
+// width: 0;
+// z-index: 1;
+// left: -15px;
+// top: 45px;
+// }
 
 // .dash-table-row > section {
 //   text-decoration: none;

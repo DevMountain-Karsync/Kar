@@ -359,16 +359,15 @@ p3 {
   margin-top: 1em;
 }
 #frequency:hover:after {
-  content: 'This is your custom tooltip text';
-  border: 1px solid #cccccc;
-  background-color: #efefef;
+  content: attr(data-tooltip);
+  color: white;
+  padding: 5px;
   position: absolute;
-  padding: 3px 8px;
-  font-size: 12px;
-  z-index: 9999;
-  margin-left: -80px;
-  margin-top: 30px;
-  width: 130px;
+  width: 250px;
+  height: 120px;
+  padding: 0px;
+  background: #242526;
+  border-radius: 10px;
 }
 
 @charset "UTF-8";
