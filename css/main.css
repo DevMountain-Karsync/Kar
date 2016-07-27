@@ -633,7 +633,7 @@ iframe {
 .sched-table-data-container {
   border: 1px solid #EEEEEE;
   overflow: auto;
-  height: 70vh;
+  height: 70%;
 }
 .makesSearch {
   background-color: white;
@@ -657,6 +657,9 @@ iframe {
 }
 .maint-table-data-container {
   height: 90vh;
+}
+.diag-maint-table-container {
+  height: 89vh;
 }
 .modelSearch {
   background-color: white;
