@@ -5,7 +5,10 @@ angular.module('karSync')
     $scope.showCustom = function() {
       ModalService.showModal({
         templateUrl: "../views/createCarModal.html",
-        controller: "modalCtrl"
+        controller: "modalCtrl",
+        inputs: {
+          user: $scope.user,
+        }
       }).then(function(modal) {
         modal.close.then(function(result) {
           $scope.customResult = "All good!";
