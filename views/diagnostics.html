@@ -7,7 +7,7 @@
     <div class="search-container">
     <input type="text" placeholder="Search..." class="makesSearch" ng-model="searchString"  ng-class="{'typeSearch': searchString }">
     </div>
-      <section class="make-list">
+      <section class="make-list" ng-scrollbars ng-scrollbars-config="configScroll1">
       <section data-ng-repeat="make in makes | filter: {name: searchString}" ng-click="makeList(make.name); select(make)">
         <div class="make-click" ng-class="{'active' : isActive(make)}">
           {{make.name}}
@@ -16,11 +16,11 @@
     <div class="search-container">
    <input type="text" placeholder="Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelsList': searchString1 }">
     </div>
-    <section class="model-list">
+    <section class="model-list" ng-scrollbars ng-scrollbars-config="configScroll1">
       <section ng-repeat="model in models | filter: {name: searchString1}" ng-class="{'active' : isActiveModel(model)}">
         <div class="model-click" ng-click="yearOption(model); selectModel(model)">{{model.name}}</div></section>
     </section>
-    <section class="year-list">
+    <section class="year-list" ng-scrollbars ng-scrollbars-config="configScroll1">
       <section ng-repeat="year in years" ng-class="{'active' : isActiveYear(year)}">
         <div class="year-click" ng-click="yearsModel(year.year); selectYear(year)">{{year.year}}</div></section>
     </section>
