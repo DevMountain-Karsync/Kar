@@ -5,7 +5,18 @@
 @mainRed: #F46868;
 @secondGrey: #EEEEEE;
 @mainPink: rgba(244, 104, 104, 0.15);
+.icon-bell{
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-left: 19vw;
+  margin-right: 1vw;
+  color: @mainGrey;
 
+
+
+}
 .display-view-container {
   color: @mainGrey;
 
@@ -48,7 +59,6 @@
   text-align: left center;
   border-bottom: solid 1px #F7F7F7;
   padding-top: 2vh;
-  background-image: url('../IMG/bell-grey.png'), url('../IMG/info-grey.png');
   background-size: 3vh;
   background-repeat: no-repeat;
   background-position: 17vw, 20vw;
@@ -56,11 +66,11 @@
 }
 
 .activeUser {
-  background-image: url('../IMG/bell-red.png'), url('../IMG/info-blue.png');
   background-size: 3vh;
   background-repeat: no-repeat;
   background-position: 1720vw;
   background-color: #EEEEEE;
+  color: @mainBlue;
 
 }
 .usersSearch {
@@ -227,6 +237,7 @@ color: black;
   border: 1px solid @secondGrey;
   overflow: auto;
   height: 27vh;
+  cursor: pointer;
 }
 
 .oddRow{
