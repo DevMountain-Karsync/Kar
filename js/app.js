@@ -37,7 +37,7 @@ angular.module('karSync', ['ui.router','ngScrollbars', 'angularModalService', 'n
     templateUrl:'./views/scheduleAppoint.html',
     url: '/appointSched/',
     parent: 'dashboard',
-    controller: 'addSchedCtrl',
+    controller: 'dashCtrl',
     resolve: {
       partner: function(loginServ) {
         return loginServ.getLogin()
