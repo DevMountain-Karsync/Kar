@@ -29,6 +29,7 @@ this.getCar = function(id){
    })
   }
   this.getAlert = function(vin){
+    // console.log('real vin',vin);
     return $http({
       method: 'GET',
       url: 'https://karsync-1133.appspot.com/api/engine_status_code/all?vehicle_vin='+ vin,

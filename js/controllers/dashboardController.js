@@ -2,7 +2,7 @@ angular.module('karSync')
 
 .controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService,$rootScope,diagnosticService){
 
-
+  $scope.alertData = [];
   $scope.maintenance =[];
 
   $scope.configScroll1 = {
@@ -60,19 +60,44 @@ angular.module('karSync')
 
     }
 
+
+
+
     var getAlerts = function(vin){
+      // console.log(vin);
+      var test;
       vehicleService.getAlert(vin)
       .then(function(res){
-        console.log(res.data);
-        for (var i = 0; i < res.data.length; i++) {
-          diagnosticService.getDTCbyCode(res.data[i].code)
-          .then(function(res){
-            
+        // console.log(res.data);
+        if (res.data.length === 0) {
+          $scope.goodNews = "No Alerts"
+          $scope.news = true;
+        }
+        if (res.data.length > 0) {
+          $scope.goodNews = undefined;
+          $scope.news = false;
+        }
+        var alertArray = res.data;
+        $scope.alerts = alertArray
+        for (var i = 0; i < alertArray.length; i++) {
+        diagnosticService.getDTCbyCode(alertArray[i].code)
+          .then(function(response){
+            // console.log(response);
+            for (var i = 0; i < alertArray.length; i++) {
+              if (response.code === alertArray[i].code) {
+                alertArray[i].description = response.description
+                $scope.alerts = alertArray
+              }
+            }
+            // console.log($scope.alerts);
           })
         }
-        $scope.alerts = res.data
-        console.log(res.data[0]);
+        // console.log(testArray);
+        // $scope.alerts = alertArray
+
+
       })
+
     }
 
 

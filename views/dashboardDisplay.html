@@ -88,7 +88,9 @@
         <span class="white" ng-bind="data.vehicles[data.selectedCar].model"></span>
       </section>
       <section class="alert-body-container" ng-scrollbars ng-scrollbars-config="configScroll1">
-
+          <section class="absolute" ng-show="news">
+            {{goodNews}}
+          </section>
         <section class="alert" ng-repeat="alert in alerts">
           Diagnostic Code: {{alert.code}}
           <p class="smaller">
@@ -96,8 +98,9 @@
           </p>
           <br>
           <p>
-            {{alert.discription}}
+            {{alert.description}}
           </p>
+
         </section>
 
         <!-- <section class="alert">
