@@ -1,5 +1,5 @@
 angular.module('karSync')
-.controller('modalCtrl', ['$scope', 'close', 'vehicleService', "edmundService", 'user', function($scope, close, vehicleService, edmundService, user) {
+.controller('modalCtrl', ['$scope', 'close', 'vehicleService', "edmundService",'user',"$rootScope", function($scope, close, vehicleService, edmundService, user,$rootScope) {
 
   //adds account_id from logged in partner to hidden field on customer form
 //$scope.vehicle.account_id = user.account_id ;
@@ -13,11 +13,13 @@ angular.module('karSync')
       $scope.processCarForm = function(vehicle){
         edmundService.getYearID(vehicle.make.toLowerCase(), vehicle.model.toLowerCase(), vehicle.year)
         .then(function(res){
-          // console.log(res);
-          console.log(res.data.id);
+            $rootScope.$broadcast('vehicle-added',{vehicle: vehicle})
+          // console.log(res.data.id);
           vehicle.edmonds_model_year_id = res.data.id
+          // console.log($scope.maintenance);
           vehicleService.postCar(vehicle)
           .then (function(res) {
+
             //clears form data after sending
               $scope.vehicle.vin = null;
               $scope.vehicle.make = null;

@@ -12,4 +12,12 @@ this.fromYear = function(){
 
 
   }
+
+
+  this.getDTCbyCode = function(code){
+    return $http({
+      method: 'GET',
+      url: 'http://localhost:3000/api/dtc/'+code,
+    })
+  }
 })

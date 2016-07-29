@@ -1,6 +1,10 @@
 angular.module('karSync')
 
-.controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService){
+.controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService,$rootScope,diagnosticService){
+
+
+  $scope.maintenance =[];
+
   $scope.configScroll1 = {
       autoHideScrollbar: false,
       scrollbarPosition: "inside",
@@ -51,9 +55,24 @@ angular.module('karSync')
       .then(function(res){
 
         $scope.maintenance = res.data.actionHolder
-        console.log(res.data.actionHolder);
+        // console.log(res.data.actionHolder);
       })
 
+    }
+
+    var getAlerts = function(vin){
+      vehicleService.getAlert(vin)
+      .then(function(res){
+        console.log(res.data);
+        for (var i = 0; i < res.data.length; i++) {
+          diagnosticService.getDTCbyCode(res.data[i].code)
+          .then(function(res){
+            
+          })
+        }
+        $scope.alerts = res.data
+        console.log(res.data[0]);
+      })
     }
 
 
@@ -87,6 +106,7 @@ angular.module('karSync')
     }
 
     getMaintenance($scope.data.vehicles[0].edmonds_model_year_id);
+    getAlerts($scope.data.vehicles[0].vin)
 
 })
 
@@ -124,10 +144,41 @@ angular.module('karSync')
   $scope.$watch("data.vehicles[data.selectedCar]",function(newValue, oldValue){
     if (newValue && oldValue) {
       getMaintenance(newValue.edmonds_model_year_id)
+      getAlerts(newValue.vin)
     }
 
   })
 
+  $scope.$on('vehicle-added', function(event, args) {
+    console.log("howdy new car");
+    vehicleService.getCar($scope.user.account_id).then(function(res){
+
+
+
+      // console.log("response: ", res);
+      var array = res;
+
+      for (var i = 0; i < array.length; i++) {
+        if (array[i].vin === $scope.user.primary_vehicle) {
+          // console.log(array);
+          array.unshift(array[i])
+          array.splice(i+1,1)
+        }
+      }
+
+      // console.log("after: ", array);
+
+      $scope.data = {
+        vehicles: array,
+        selectedCar: 0,
+      }
+
+      $rootScope.data.vehicles = $scope.data.vehicles;
+
+      getMaintenance($scope.data.vehicles[0].edmonds_model_year_id);
+      console.log($scope.data);
+  })
+});
 
  // console.log($scope.user);
 });
