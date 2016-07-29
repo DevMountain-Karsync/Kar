@@ -12,4 +12,15 @@ this.fromYear = function(){
 
 
   }
+
+
+  this.getDTCbyCode = function(code){
+          // console.log("alert",code);
+    return $http({
+      method: 'GET',
+      url: 'http://localhost:3000/api/dtc/'+code,
+    }).then(function(response){
+      return response.data[0]
+    })
+  }
 })

@@ -8,6 +8,7 @@ angular.module('karSync')
         controller: "modalCtrl",
         inputs: {
           user: $scope.user,
+          chicken: $scope
         }
       }).then(function(modal) {
         modal.close.then(function(result) {

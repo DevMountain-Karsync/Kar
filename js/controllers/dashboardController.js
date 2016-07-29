@@ -1,6 +1,10 @@
 angular.module('karSync')
 
-.controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService){
+.controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService,$rootScope,diagnosticService){
+
+  $scope.alertData = [];
+  $scope.maintenance =[];
+
   $scope.configScroll1 = {
       autoHideScrollbar: false,
       scrollbarPosition: "inside",
@@ -57,6 +61,46 @@ angular.module('karSync')
     }
 
 
+
+
+    var getAlerts = function(vin){
+      // console.log(vin);
+      var test;
+      vehicleService.getAlert(vin)
+      .then(function(res){
+        // console.log(res.data);
+        if (res.data.length === 0) {
+          $scope.goodNews = "No Alerts"
+          $scope.news = true;
+        }
+        if (res.data.length > 0) {
+          $scope.goodNews = undefined;
+          $scope.news = false;
+        }
+        var alertArray = res.data;
+        $scope.alerts = alertArray
+        for (var i = 0; i < alertArray.length; i++) {
+        diagnosticService.getDTCbyCode(alertArray[i].code)
+          .then(function(response){
+            // console.log(response);
+            for (var i = 0; i < alertArray.length; i++) {
+              if (response.code === alertArray[i].code) {
+                alertArray[i].description = response.description
+                $scope.alerts = alertArray
+              }
+            }
+            // console.log($scope.alerts);
+          })
+        }
+        // console.log(testArray);
+        // $scope.alerts = alertArray
+
+
+      })
+
+    }
+
+
   $scope.customerClicked = function(user){
     // console.log(user);
     // console.log('clicked '+ user.first_name);
@@ -81,12 +125,13 @@ angular.module('karSync')
 
     // console.log("after: ", array);
 
-    $scope.data = {
+    $rootScope.data = {
       vehicles: array,
       selectedCar: 0,
     }
 
     getMaintenance($scope.data.vehicles[0].edmonds_model_year_id);
+    getAlerts($scope.data.vehicles[0].vin)
 
 })
 
@@ -124,11 +169,20 @@ angular.module('karSync')
   $scope.$watch("data.vehicles[data.selectedCar]",function(newValue, oldValue){
     if (newValue && oldValue) {
       getMaintenance(newValue.edmonds_model_year_id)
+      getAlerts(newValue.vin)
     }
 
   })
 
+  $scope.$on('vehicle-added', function(event, args) {
+    console.log("howdy new car");
+    vehicleService.getCar($scope.user.account_id).then(function(res){
+     $rootScope.data.vehicles = res;
+  })
+});
+
  $scope.today = new Date();
+
  // console.log($scope.user);
  $scope.datePick = [
    {date: "Monday"},

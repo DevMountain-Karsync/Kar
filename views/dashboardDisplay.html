@@ -88,9 +88,22 @@
         <span class="white" ng-bind="data.vehicles[data.selectedCar].model"></span>
       </section>
       <section class="alert-body-container" ng-scrollbars ng-scrollbars-config="configScroll1">
+          <section class="absolute" ng-show="news">
+            {{goodNews}}
+          </section>
+        <section class="alert" ng-repeat="alert in alerts">
+          Diagnostic Code: {{alert.code}}
+          <p class="smaller">
+            {{alert.time_reported}}
+          </p>
+          <br>
+          <p>
+            {{alert.description}}
+          </p>
 
+        </section>
 
-        <section class="alert">
+        <!-- <section class="alert">
           lorem ipusm there isnt any alert data yet dolor set amin bacon some more text she loves me yeah yeah yeah she loves me yeah yeah yeah
         </section>
         <section class="alert">
@@ -107,7 +120,7 @@
         </section>
         <section class="alert">
           another alert yeah yeah yeah another alert yeah yeah yeah
-        </section>
+        </section> -->
 
       </section>
     </section>

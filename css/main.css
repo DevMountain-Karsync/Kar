@@ -587,6 +587,12 @@ body {
 button {
   border: none;
 }
+.smaller {
+  font-size: 70%;
+}
+.absolute {
+  margin: 20%;
+}
 /*MAIN*/
 .main-container {
   display: -ms-flexbox;

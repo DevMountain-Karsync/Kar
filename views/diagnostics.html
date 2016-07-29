@@ -62,6 +62,7 @@
            </section>
            <section class="diag-table-data-container">
 
+
              <section class="dash-table-row" ng-model="search" ng-repeat="test in test | filter:search3 | startFrom:currentPage * pageSize:pageSize | limitTo:pageSize" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
                <section class=" diag-table-col1">
                 {{test.code}}

@@ -15,17 +15,26 @@ this.getCar = function(id){
 
  this.postCar = function(vehicle){
    var vin = vehicle.vin;
-   console.log(vin)
+  //  console.log(vin)
    delete vehicle.vin;
-   console.log(JSON.stringify(vehicle))
+  //  console.log(JSON.stringify(vehicle))
    return $http({
      method: 'POST',
      url: 'https://karsync-1133.appspot.com/api/vehicle?vin='+vin,
      data: JSON.stringify(vehicle)
    })
    .then(function(response){
-     console.log(response)
+    //  console.log(response)
      return response.data;
    })
   }
+  this.getAlert = function(vin){
+    // console.log('real vin',vin);
+    return $http({
+      method: 'GET',
+      url: 'https://karsync-1133.appspot.com/api/engine_status_code/all?vehicle_vin='+ vin,
+
+    })
+  }
+
 });
