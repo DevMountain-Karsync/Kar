@@ -18,6 +18,7 @@
     "angular-ui-router": "^0.3.1",
     "angular": "^1.5.8",
     "ng-scrollbars": "^0.0.10",
-    "angular-modal-service": "^0.10.1"
+    "angular-modal-service": "^0.10.1",
+    "ngSweetAlert": "angular-sweetalert#^1.1.0"
   }
 }

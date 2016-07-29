@@ -520,6 +520,9 @@ p3 {
 .icon-pencil:before {
   content: "\46";
 }
+.icon-info:before {
+  content: "\47";
+}
 
 .logo-karsync {
   text-align: center;
