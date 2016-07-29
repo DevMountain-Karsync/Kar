@@ -68,8 +68,9 @@
                <section class=" dash-table-col2">
                  {{item.item}}
                </section>
-               <section class=" dash-table-col3">
-                 {{item.frequency}}
+               <section class=" dash-table-col3" data-balloon="{{item.frequencyDisc}}">
+                 <span data-balloon-pos="right" data-balloon-length="large">
+                 {{item.frequency}}</span>
                </section>
                <section class=" dash-table-col4">
                  {{item.laborUnits}}

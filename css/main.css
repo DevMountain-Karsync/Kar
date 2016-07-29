@@ -426,6 +426,8 @@ p3 {
 }
 .icon-bell:before {
   content: "\61";
+  margin-top: .6vh;
+  font-size: 1.3rem;
 }
 .icon-check:before {
   content: "\62";
@@ -519,6 +521,11 @@ p3 {
 }
 .icon-pencil:before {
   content: "\46";
+}
+.icon-info:before {
+  content: "\47";
+  font-size: 1.5rem;
+  margin-bottom: 1vh;
 }
 
 .logo-karsync {
@@ -676,6 +683,7 @@ iframe {
 }
 .maint-table-data-container {
   height: 90vh;
+  width: 55vw;
 }
 .diag-maint-table-container {
   height: 89vh;
