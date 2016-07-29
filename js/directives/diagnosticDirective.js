@@ -1,5 +1,19 @@
 angular.module('karSync')
-.filter('searchFor', function(){
+.filter('startFrom', function(){
+  return function (input, start, pageSize) {
+        start = +start;
+        pageSize = +pageSize;
+        while (start > input.length) {
+          
+            start -= pageSize;
+        }
+        if (start < 0) {
+            start = 0;
+        }
+        return input.slice(start);
+    };
+
+
   return function(arr, searchS3){
     if(!searchS3){
       return arr;
@@ -14,4 +28,5 @@ angular.module('karSync')
     });
     return result;
   };
+
 });

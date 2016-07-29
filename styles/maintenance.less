@@ -2,6 +2,20 @@
 @mainGreen: #6FC17F;
 @secondGrey: #EEEEEE;
 
+.icon-check {
+  color: white;
+
+
+}
+.activeicon{
+  color: @mainGreen;
+}
+// .activeicon1{
+//   color: @mainGreen;
+// }
+// .activeicon2{
+//   color: @mainGreen;
+// }
 .search-container {
   height: 9vh;
   display: flex;
@@ -42,6 +56,7 @@
 }
 .maint-table-data-container{
   height: 90vh;
+  width: 55vw;
 }
 .diag-maint-table-container{
   height: 89vh;
@@ -83,6 +98,9 @@ section.make-list {
   border-color: transparent;
   cursor: pointer;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
+
 
 }
 // .make-click :hover {
@@ -91,7 +109,7 @@ section.make-list {
 // }
 
 .active {
-  background-image: url('../IMG/check.png');
+  // background-image: url('../IMG/check.png');
   background-size: 2.5vh;
   background-repeat: no-repeat;
   background-position: right;
@@ -113,6 +131,8 @@ section.model-list {
 .model-click {
   cursor: pointer;
   border-bottom: solid 1px grey;
+  display: flex;
+  justify-content: space-between;
 
 }
 
@@ -138,6 +158,8 @@ section.year-list {
   padding: 5px;
   border-top: solid 1px grey;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 
 }
 
@@ -194,6 +216,7 @@ p4{
 .diagSearchCheck {
   background-image: none;
 }
+
 // SCROLLBAR
 // ::-webkit-scrollbar {
 //     width: 25px;

@@ -4,8 +4,11 @@
 @mainGrey: #727476;
 @mainRed: #F46868;
 @secondGrey: #EEEEEE;
-
+.icon-calendar-check-o{
+  margin-top: 2vh;
+}
 .sched-appoint {
+  content: "\7a";
   align-items: center;
   width: 48vw;
   height: 8vh;
@@ -17,7 +20,7 @@
 
 }
 .users-car {
-  margin-left: -5vw;
+  // margin-left: -5vw;
   display: flex;
   justify-content: space-around;
   color: @mainGreen;
@@ -36,7 +39,11 @@
 
 }
 .mech-cont {
-  margin-top: 3vh;
+  margin-top: 2vh;
+  height: 4vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 
 }
 .select-sched-dropdown{
@@ -81,7 +88,8 @@
   height: 8vh;
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-right: 8vw;
 
 }
 #add-appointment-button{
@@ -103,4 +111,31 @@
 }
 .today-date {
   color: white;
+}
+.columnsched1 {
+  width: 30%;
+  height: 100vh;
+  background-color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+
+
+}
+.routeAdd-main{
+  position:absolute;
+  left:20vw;
+  width: 78vw;
+  height: 100%;
+  display: flex;
+  order: 2;
+  z-index: 1;
+}
+.users-car2 {
+  font-size: .8em;
+}
+.buttons-section{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin-right: 1vw;
 }

@@ -112,6 +112,19 @@ p3 {
   margin-bottom: 5px;
 }
 
+.icon-bell {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-left: 19vw;
+  margin-right: 1vw;
+  color: #727476;
+}
 .display-view-container {
   color: #727476;
 }
@@ -149,17 +162,16 @@ p3 {
   text-align: left center;
   border-bottom: solid 1px #F7F7F7;
   padding-top: 2vh;
-  background-image: url('../IMG/bell-grey.png'), url('../IMG/info-grey.png');
   background-size: 3vh;
   background-repeat: no-repeat;
   background-position: 17vw, 20vw;
 }
 .activeUser {
-  background-image: url('../IMG/bell-red.png'), url('../IMG/info-blue.png');
   background-size: 3vh;
   background-repeat: no-repeat;
   background-position: 1720vw;
   background-color: #EEEEEE;
+  color: #21418C;
 }
 .usersSearch {
   background-color: white;
@@ -316,6 +328,7 @@ p3 {
   border: 1px solid #EEEEEE;
   overflow: auto;
   height: 27vh;
+  cursor: pointer;
 }
 .oddRow {
   background: white;
@@ -413,6 +426,8 @@ p3 {
 }
 .icon-bell:before {
   content: "\61";
+  margin-top: .3vh;
+  font-size: 1.3rem;
 }
 .icon-check:before {
   content: "\62";
@@ -506,6 +521,10 @@ p3 {
 }
 .icon-pencil:before {
   content: "\46";
+}
+.icon-info:before {
+  content: "\47";
+  font-size: 1.5rem;
 }
 
 .logo-karsync {
@@ -620,6 +639,12 @@ iframe {
   height: 100%;
 }
 
+.icon-check {
+  color: white;
+}
+.activeicon {
+  color: #6FC17F;
+}
 .search-container {
   height: 9vh;
   display: -ms-flexbox;
@@ -663,6 +688,7 @@ iframe {
 }
 .maint-table-data-container {
   height: 90vh;
+  width: 55vw;
 }
 .diag-maint-table-container {
   height: 89vh;
@@ -700,9 +726,12 @@ section.make-list {
   border-color: transparent;
   cursor: pointer;
   text-align: left;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .active {
-  background-image: url('../IMG/check.png');
   background-size: 2.5vh;
   background-repeat: no-repeat;
   background-position: right;
@@ -720,6 +749,10 @@ section.model-list {
 .model-click {
   cursor: pointer;
   border-bottom: solid 1px grey;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 section.year-list {
   margin-top: 5%;
@@ -731,6 +764,10 @@ section.year-list {
   padding: 5px;
   border-top: solid 1px grey;
   cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .maintenance-schedule {
   display: -ms-flexbox;
@@ -885,7 +922,11 @@ ul {
   color: white;
 }
 
+.icon-calendar-check-o {
+  margin-top: 2vh;
+}
 .sched-appoint {
+  content: "\7a";
   -ms-flex-align: center;
       align-items: center;
   width: 48vw;
@@ -900,7 +941,6 @@ ul {
   color: #21418C;
 }
 .users-car {
-  margin-left: -5vw;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
@@ -923,7 +963,14 @@ ul {
       justify-content: space-between;
 }
 .mech-cont {
-  margin-top: 3vh;
+  margin-top: 2vh;
+  height: 4vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .select-sched-dropdown {
   width: 10vw;
@@ -967,8 +1014,9 @@ ul {
   display: flex;
   -ms-flex-flow: row;
       flex-flow: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 8vw;
 }
 #add-appointment-button {
   margin-top: 3vh;
@@ -992,4 +1040,34 @@ ul {
 }
 .today-date {
   color: white;
+}
+.columnsched1 {
+  width: 30%;
+  height: 100vh;
+  background-color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.routeAdd-main {
+  position: absolute;
+  left: 20vw;
+  width: 78vw;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-order: 2;
+      order: 2;
+  z-index: 1;
+}
+.users-car2 {
+  font-size: .8em;
+}
+.buttons-section {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-right: 1vw;
 }

@@ -19,8 +19,18 @@ angular.module('karSync')
           // console.log($scope.maintenance);
           vehicleService.postCar(vehicle)
           .then (function(res) {
+
             var nuevoVehicle = res;
             $rootScope.$broadcast('vehicle-added',{vehicle: nuevoVehicle})
+
+            console.log(res)
+              swal({
+                title: "Your A Pro!",
+                text: "Brandon Salutes You!",
+                type: "success",
+                closeOnConfirm: true
+                })
+                close();
             //clears form data after sending
               // $scope.vehicle.vin = null;
               // $scope.vehicle.make = null;
@@ -29,11 +39,6 @@ angular.module('karSync')
             // console.log(res)
           })
         })
-
       }
-
-  $scope.savedAlert2 = function(){
-      alert('Car Saved!')
-    }
   $scope.close = close;
 }]);

@@ -9,21 +9,28 @@
     <input type="text" placeholder="Search..." class="makesSearch" ng-model="searchString" ng-class="{'typeSearch': searchString }">
     </div>
       <section class="make-list" ng-scrollbars ng-scrollbars-config="configScroll1">
-      <section data-ng-repeat="make in makes | searchFor:searchString" ng-click="makeList(make.name); select(make)">
+        <section data-ng-repeat="make in makes | searchFor:searchString" ng-click="makeList(make.name); select(make)">
         <div class="make-click" ng-class="{'active' : isActive(make)}">
           {{make.name}}
-      </div></section>
+          <div class="icon-check" ng-class="{'activeicon' : isActive(make)}">
+      </div></div></section>
     </section>
     <div class="search-container">
    <input type="text" placeholder="Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelsList': searchString1 }">
     </div>
     <section class="model-list" ng-scrollbars ng-scrollbars-config="configScroll1">
-      <section ng-repeat="model in models | searchFor:searchString1" ng-class="{'active' : isActiveModel(model)}">
-        <div class="model-click" ng-click="yearOption(model); selectModel(model)">{{model.name}}</div></section>
+      <section data-ng-repeat="model in models | searchFor:searchString1" ng-click="yearOption(model); selectModel(model)">
+        <div class="model-click" ng-class="{'active' : isActiveModel(model)}">
+          {{model.name}}
+           <div class="icon-check" ng-class="{'activeicon' : isActiveModel(model)}">
+      </div></div></section>
     </section>
     <section class="year-list" ng-scrollbars ng-scrollbars-config="configScroll1">
       <section ng-repeat="year in years" ng-class="{'active' : isActiveYear(year)}">
-        <div class="year-click" ng-click="yearsModel(year.year); selectYear(year)">{{year.year}}</div></section>
+        <div class="year-click" ng-click="yearsModel(year.year); selectYear(year)">
+          {{year.year}}
+          <div class="icon-check" ng-class="{'activeicon' : isActiveYear(year)}">
+      </div></div></section>
     </section>
   </div>
   <div class="column2">
@@ -62,7 +69,8 @@
                  {{item.item}}
                </section>
                <section class=" dash-table-col3">
-                 {{item.frequency}}
+                 <span  data-balloon="{{item.frequencyDisc}}" data-balloon-pos="right" data-balloon-length="large">
+                 {{item.frequency}}</span>
                </section>
                <section class=" dash-table-col4">
                  {{item.laborUnits}}

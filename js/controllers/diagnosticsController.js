@@ -10,7 +10,7 @@ angular.module('karSync')
       },
           scrollInertia: 0
       }
-      
+
   $scope.partner = partner[0].partner_id;
   userServ.getUser($scope.partner).then(function(user){
     $scope.userList = user;
@@ -73,7 +73,19 @@ $scope.yearsModel = function() {
 
   }
 
-
+  $scope.currentPage = 0;
+  $scope.pageSize = 40;
+//   $scope.numberOfPages = function () {
+//     return Math.ceil($scope.items.length / $scope.pageSize);
+// }
+$scope.selectedData = {};
+   $scope.getSelected = function () {
+       var list = [];
+       for (var val in $scope.selectedData) {
+           list.push(val);
+       }
+       return list.join(", ");
+   };
 
 
 });
