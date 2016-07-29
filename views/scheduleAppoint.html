@@ -54,16 +54,15 @@
                 </div>
 
               <div class="appoin-con">Requested Date
-                <select class="select-sched-dropdown" name="" ng-model="data.selectedCar">Requested Date
-                  <option ng-repeat = "car in data.vehicles track by $index" value="{{$index}}">(google calender)
-                    {{car.year}} {{car.make}} {{car.model}}
+                <select class="select-sched-dropdown" name="" ng-model="date.datePick">Requested Date
+                  <option ng-repeat = "date in datePick">{{date.date}}
                   </option>
                 </select>
               </div>
 
                 <div class="appoin-con">Available Times
-                  <select class="select-sched-dropdown" name="" ng-model="data.selectedCar">Available Times
-                    <option ng-repeat = "car in data.vehicles track by $index" value="{{$index}}">(google calender)</option>
+                  <select class="select-sched-dropdown" name="" ng-model="time.timePick">Available Times
+                    <option ng-repeat = "time in timePick">{{time.time}}</option>
                   </select>
                 </div>
               </div>
@@ -74,7 +73,7 @@
             </section>
           <div id="today-app">
             <div class="today-wahoo">Today's Appointments</div>
-            <div class="today-date">{{ today | date :  "MMM d, y h:mm a" }} </div>
+            <div class="today-date">{{ today | date :  "MMM d, y" }} </div>
           </div>
           <section class="dash-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll2">
 

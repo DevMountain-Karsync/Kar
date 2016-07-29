@@ -7,4 +7,6 @@ angular.module('karSync')
 
 
   $scope.business = partner[0].business_name;
+
+
 });

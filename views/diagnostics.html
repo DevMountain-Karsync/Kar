@@ -4,13 +4,14 @@
      </section>
 <section class="route-main">
 
-  <!-- do you actually read these Jessica? -->
+  <!-- do you actually read these Jessica?
+   Just don't open the console log for this view. Ever. All is fine. I promise -->
   <div class="column1">
     <div class="search-container">
     <input type="text" placeholder="Search..." class="makesSearch" ng-model="searchString" ng-class="{'typeSearch': searchString }">
     </div>
       <section class="make-list" ng-scrollbars ng-scrollbars-config="configScroll1">
-        <section data-ng-repeat="make in makes | searchFor:searchString" ng-click="makeList(make.name); select(make)">
+        <section data-ng-repeat="make in makes | filter:searchString" ng-click="makeList(make.name); select(make)">
         <div class="make-click" ng-class="{'active' : isActive(make)}">
           {{make.name}}
           <div class="icon-check" ng-class="{'activeicon' : isActive(make)}">
@@ -20,7 +21,7 @@
    <input type="text" placeholder="Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelsList': searchString1 }">
     </div>
     <section class="model-list" ng-scrollbars ng-scrollbars-config="configScroll1">
-      <section data-ng-repeat="model in models | searchFor:searchString1" ng-click="yearOption(model); selectModel(model)">
+      <section data-ng-repeat="model in models | filter:searchString1" ng-click="yearOption(model); selectModel(model)">
         <div class="model-click" ng-class="{'active' : isActiveModel(model)}">
           {{model.name}}
            <div class="icon-check" ng-class="{'activeicon' : isActiveModel(model)}">
@@ -36,13 +37,19 @@
   </div>
   <div class="column2">
     <div class="search-container-diag">
-    <input type="text" placeholder="Search..." class="diagSearch" ng-model="search3"  ng-class="{'diagSearchCheck': search3 }">
+    <input type="text" placeholder="Search..." class="diagSearch" ng-model="search3" ng-class="{'diagSearchCheck': search3 }">
     </div>
     <section class="maintenance-schedule">
+
       <div class="maint-container">
         <section class="maintence-user-car-cont">
          Diagnostic Code Look-up
+
          <section class="diag-maint-table-container">
+           <div>
+             <button id='add-appointment-button' ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">Previous</button> {{ currentPage+1 }}  {{ numberOfPages() }}
+             <button id='add-appointment-button' ng-disabled="currentPage >= items.length/pageSize - 1" ng-click="currentPage=currentPage+1">Next</button>
+           </div>
            <section class="dash-maint-table-header dash-table-row">
              <section class=" diag-table-col1 dash-header">
                Engine Code
@@ -54,21 +61,24 @@
 
            </section>
            <section class="diag-table-data-container">
-             <section class="dash-table-row" ng-repeat="test in test | filter:{code: search3}" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
+
+             <section class="dash-table-row" ng-model="search" ng-repeat="test in test | filter:search3 | startFrom:currentPage * pageSize:pageSize | limitTo:pageSize" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
                <section class=" diag-table-col1">
                 {{test.code}}
                </section>
                <section class=" diag-table-col3">
                 {{test.description}}
                </section>
-
-
              </section>
+
            </section>
+
          </section>
 
         </section>
 
   </section>
   </div>
+
+</div>
 </section>
