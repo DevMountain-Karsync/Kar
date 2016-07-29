@@ -128,6 +128,6 @@ angular.module('karSync')
 
   })
 
-
+ $scope.today = new Date();
  // console.log($scope.user);
 });

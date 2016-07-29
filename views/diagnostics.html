@@ -39,7 +39,6 @@
     <input type="text" placeholder="Search..." class="diagSearch" ng-model="search3"  ng-class="{'diagSearchCheck': search3 }">
     </div>
     <section class="maintenance-schedule">
-    <!-- <section class="diag-view"> -->
       <div class="maint-container">
         <section class="maintence-user-car-cont">
          Diagnostic Code Look-up
@@ -54,8 +53,8 @@
              </section>
 
            </section>
-           <section class="diag-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll2">
-             <section class="dash-table-row" ng-repeat="test in test | filter: search3" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
+           <section class="diag-table-data-container">
+             <section class="dash-table-row" ng-repeat="test in test | filter:{code: search3}" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
                <section class=" diag-table-col1">
                 {{test.code}}
                </section>
@@ -69,11 +68,7 @@
          </section>
 
         </section>
-    <!-- <p><div class="diag-code">Engine Code:</div> {{test.code}}</p>
-    <p><div class="diag-code">Description:</div>{{test.description}}</p>
-    </div> -->
-  <!-- </section> -->
+
   </section>
-    <!-- {{test}} -->
   </div>
 </section>
