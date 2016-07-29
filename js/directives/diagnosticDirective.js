@@ -3,17 +3,14 @@ angular.module('karSync')
   return function (input, start, pageSize) {
         start = +start;
         pageSize = +pageSize;
-        // if (input === undefined) {
-        //   return
-        //   // input.length = 1;
-        // }
         while (start > input.length) {
+          
             start -= pageSize;
         }
         if (start < 0) {
             start = 0;
         }
-        return input;
+        return input.slice(start);
     };
 
 
