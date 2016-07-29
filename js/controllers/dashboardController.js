@@ -125,7 +125,7 @@ angular.module('karSync')
 
     // console.log("after: ", array);
 
-    $scope.data = {
+    $rootScope.data = {
       vehicles: array,
       selectedCar: 0,
     }
@@ -177,31 +177,7 @@ angular.module('karSync')
   $scope.$on('vehicle-added', function(event, args) {
     console.log("howdy new car");
     vehicleService.getCar($scope.user.account_id).then(function(res){
-
-
-
-      // console.log("response: ", res);
-      var array = res;
-
-      for (var i = 0; i < array.length; i++) {
-        if (array[i].vin === $scope.user.primary_vehicle) {
-          // console.log(array);
-          array.unshift(array[i])
-          array.splice(i+1,1)
-        }
-      }
-
-      // console.log("after: ", array);
-
-      $scope.data = {
-        vehicles: array,
-        selectedCar: 0,
-      }
-
-      $rootScope.data.vehicles = $scope.data.vehicles;
-
-      getMaintenance($scope.data.vehicles[0].edmonds_model_year_id);
-      console.log($scope.data);
+     $rootScope.data.vehicles = res;
   })
 });
 
