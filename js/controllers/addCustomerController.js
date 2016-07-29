@@ -16,6 +16,14 @@ angular.module('karSync')
   $scope.processForm = function(user){
     userServ.postUser(user)
     .then (function(res) {
+      console.log(res)
+      swal({
+        title: "Your A Pro!",
+        text: "Brandon Salutes You!",
+        type: "success",
+        closeOnConfirm: true
+        })
+
       //clears form data after sending
         $scope.user.first_name = null;
         $scope.user.phone = null;
@@ -45,6 +53,10 @@ angular.module('karSync')
     alert('Customer Saved!')
   }
 
+// $scope.testAlert = function () {
+//   swal("Good job!", "You clicked the button!", "success");
+//
+// }
     $scope.customerClicked = function(user){
       // console.log("this is the user" + user.first_name)
       $scope.user.first_name = user.first_name;
