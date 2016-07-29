@@ -128,6 +128,25 @@ angular.module('karSync')
 
   })
 
-
+ $scope.today = new Date();
  // console.log($scope.user);
+ $scope.datePick = [
+   {date: "Monday"},
+   {date: "Tuesday"},
+   {date: "Wednesday"},
+   {date: "Thursday"},
+   {date: "Friday"}
+ ]
+
+ $scope.timePick = [
+   {time: "9 AM"},
+   {time: "10 AM"},
+   {time: "11 AM"},
+   {time: "12 AM"},
+   {time: "1 PM"},
+   {time: "2 PM"},
+   {time: "3 PM"},
+   {time: "4 PM"},
+   {time: "5 PM"}
+ ]
 });

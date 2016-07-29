@@ -1,20 +1,31 @@
-<section class="display-view-container">
+
+<section class="diag-container">
+  <!-- <section class="main-container"> -->
+       <!-- <section class="nav-bar">
+         <nav-dir></nav-dir>
+
+       </section> -->
+     <section class="routeAdd-main">
+  <div class="columnsched1">
     <div class="schedcolumn1">
         <div class="add-Appoint">
-          <div class="icon-calendar-check-o">
-          <div class="sched-appoint">Schedule Appointment
-            <button class='add-appointment'>ADD APPOINTMENT</button>
-        </div></div>
+          <div class="icon-calendar-check-o"> Schedule Appointment
+          <!-- <div class="sched-appoint">Schedule Appointment -->
+            <!-- <button class='add-appointment'>ADD APPOINTMENT</button> -->
+        <!-- </div> -->
+      </div>
       </div>
     </div>
+
+
     <div class="addcolumn2">
         <div id="schedule-info">
 
             <div class="select-car-container">
               <div class="users-car">
-                <span class="users-car1" ng-bind="data.vehicles[data.selectedCar].year"></span> -
-                <span class="users-car1" ng-bind="data.vehicles[data.selectedCar].make "></span>
-                <span class="users-car1" ng-bind=" data.vehicles[data.selectedCar].model"></span>
+                <span class="users-car2" ng-bind="data.vehicles[data.selectedCar].year"></span> -
+                <span class="users-car2" ng-bind="data.vehicles[data.selectedCar].make "></span>
+                <span class="users-car2" ng-bind=" data.vehicles[data.selectedCar].model"></span>
 
               <!-- {{user.primary_vehicle_year}} - {{user.primary_vehicle_make}} {{user.primary_vehicle_model}} -->
             </div>
@@ -29,7 +40,7 @@
 
 
               <div class="mech-cont">Schedule an Appointment with
-                <div class="mech-name">{{username}}
+                <div class="mech-name">{{business}}
                   </div>
                 <!-- {{partner.first_name}} -->
               </div>
@@ -43,24 +54,26 @@
                 </div>
 
               <div class="appoin-con">Requested Date
-                <select class="select-sched-dropdown" name="" ng-model="data.selectedCar">Requested Date
-                  <option ng-repeat = "car in data.vehicles track by $index" value="{{$index}}">(google calender)
-                    {{car.year}} {{car.make}} {{car.model}}
+                <select class="select-sched-dropdown" name="" ng-model="date.datePick">Requested Date
+                  <option ng-repeat = "date in datePick">{{date.date}}
                   </option>
                 </select>
               </div>
 
                 <div class="appoin-con">Available Times
-                  <select class="select-sched-dropdown" name="" ng-model="data.selectedCar">Available Times
-                    <option ng-repeat = "car in data.vehicles track by $index" value="{{$index}}">(google calender)</option>
+                  <select class="select-sched-dropdown" name="" ng-model="time.timePick">Available Times
+                    <option ng-repeat = "time in timePick">{{time.time}}</option>
                   </select>
                 </div>
               </div>
         </div>
-          <button id='add-appointment-button'>SCHEDULE APPOINTMENT</button>
+        <section class="buttons-section">
+          <button id='add-appointment-button'>ADD APPOINTMENT</button>
+            <button id='add-appointment-button' ui-sref="dashboard">Dashboard</button>
+            </section>
           <div id="today-app">
             <div class="today-wahoo">Today's Appointments</div>
-            <div class="today-date">July 26, 2016 </div>
+            <div class="today-date">{{ today | date :  "MMM d, y" }} </div>
           </div>
           <section class="dash-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll2">
 
@@ -87,4 +100,9 @@
             </section>
           </section>
       </div>
+    </div>
+    <div class="column2">
+      <iframe src="https://calendar.google.com/calendar/embed?src=fbp63aafjugpehu008259cghto%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+
 </section>
