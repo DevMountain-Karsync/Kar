@@ -8,7 +8,7 @@ var session = require('express-session');
 //   origin: ''
 // }
 var app = express();
-app.use(express.static('../'));
+app.use(express.static('../public'));
 app.use(bodyParser.json());
 var db = require('node-mysql');
 var DB = db.DB;
