@@ -1,18 +1,11 @@
 
 <section class="diag-container">
-  <!-- <section class="main-container"> -->
-       <!-- <section class="nav-bar">
-         <nav-dir></nav-dir>
 
-       </section> -->
      <section class="routeAdd-main">
   <div class="columnsched1">
     <div class="schedcolumn1">
         <div class="add-Appoint">
           <div class="icon-calendar-check-o"> Schedule Appointment
-          <!-- <div class="sched-appoint">Schedule Appointment -->
-            <!-- <button class='add-appointment'>ADD APPOINTMENT</button> -->
-        <!-- </div> -->
       </div>
       </div>
     </div>
@@ -26,14 +19,10 @@
                 <span class="users-car2" ng-bind="data.vehicles[data.selectedCar].year"></span> -
                 <span class="users-car2" ng-bind="data.vehicles[data.selectedCar].make "></span>
                 <span class="users-car2" ng-bind=" data.vehicles[data.selectedCar].model"></span>
-
-              <!-- {{user.primary_vehicle_year}} - {{user.primary_vehicle_make}} {{user.primary_vehicle_model}} -->
             </div>
 
             <select class="select-car-dropdown" name="" ng-model="data.selectedCar">
                 <option ng-repeat="car in data.vehicles track by $index" value="{{$index}}">{{car.year}} {{car.make}} {{car.model}}</option>
-            <!-- </select> -->
-                              <!-- {{car.year}} {{car.make}} {{car.model}} -->
                 </option>
               </select>
             </div>
@@ -42,14 +31,13 @@
               <div class="mech-cont">Schedule an Appointment with
                 <div class="mech-name">{{business}}
                   </div>
-                <!-- {{partner.first_name}} -->
               </div>
 
               <div class="sched-container">
                 <div class="appoin-con">Appointment For
 
-                <select class="select-sched-dropdown" name="" ng-model="data.report_id">(pulling from vehicle alerts here)
-                  <option ng-repeat = "item in maintenance track by $index" value="{{$index}}">{{item.item}}</option>
+                <select class="select-sched-dropdown" name="" ng-model="data.alerts">(pulling from vehicle alerts here)
+                  <option ng-repeat = "alert in alerts">{{alert.description}}</option>
                 </select>
                 </div>
 
