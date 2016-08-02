@@ -1,0 +1,28 @@
+<section class="main-container">
+     <section class="nav-bar">
+       <nav-dir></nav-dir>
+     </section>
+<section class="route-main">
+  <div class="column1">
+
+    <div class="search-container">
+      <input type="text" placeholder="Search..." class="usersSearch" ng-model="searchString2"  ng-class="{'typeSearch': searchString2 }">
+  </div>
+  <section class="user-list">
+    <section ng-repeat="user in userList | filter:searchString2">
+      <div class="users-div" ng-click="customerClicked(user); select(user)" ng-class="{'activeUser' : isActive(user)}" ui-sref="dashboardDisplay">
+
+        <div class="usersappear">{{user.first_name}} {{user.last_name}}
+          <div><div class="icon-bell" ng-show="user.first_name === 'April'"></div>
+          <div class="icon-info" ng-class="{'activeUser' : isActive(user)}"></div></div></div>
+        <div class="primary-vehicles">{{user.primary_vehicle_year}} {{user.primary_vehicle_make}} {{user.primary_vehicle_model}}
+          </div>
+      </div>
+    </section>
+  </section>
+  </div>
+  <div class="column2">
+    <ui-view></ui-view>
+  </div>
+</section>
+</section>

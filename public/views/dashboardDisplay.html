@@ -1,0 +1,182 @@
+<section class="display-view-container">
+    <section class="customer-info-container">
+        <section class="customer-container">
+            <h3>{{user.first_name}} {{user.last_name}}</h3> {{user.primary_phone}}
+            <br> {{user.secondary_phone}}
+            <br>
+            <span class="italic">{{user.email}}</span>
+            <br>
+            <br>
+            <br> {{user.streetAddress}}
+            <br> {{user.cityAndState}}
+        </section>
+        <section class="primaryUser-on-account-container">
+            <h3>{{primaryUser.first_name}} {{primaryUser.last_name}}</h3> {{primaryUser.primary_phone}}
+            <br> {{primaryUser.secondary_phone}}
+            <br>
+            <span class="italic">{{primaryUser.email}}</span>
+            <br>
+            <br>
+            <br> {{primaryUser.streetAddress}}
+            <br> {{primaryUser.cityAndState}}
+        </section>
+        <section class="customer-service-plan-container">
+            <h3>Current Service Plan</h3>
+            <br> {{user.service_plan}} - <strong>$ {{user.userPlanPrice}}</strong>/mo
+            <br>
+            <br>
+            <span id="billing-dates">NEXT BILL DATE</span>
+            <br>
+            <strong>08/12/16</strong>
+            <br>
+            <br>
+            <span id="billing-dates">END BILL DATE</span>
+            <br>
+            <strong>12/12/16</strong>
+        </section>
+    </section>
+    <section class="select-car-container">
+        Select a Car
+        <select class="select-car-dropdown" name="" ng-model="data.selectedCar">
+            <option ng-repeat="car in data.vehicles track by $index" value="{{$index}}">{{car.year}} {{car.make}} {{car.model}}</option>
+        </select>
+        <button type="button" class="blue dash-button" name="button" ng-click="showCustom()"> ADD NEW CAR</button>
+        <button class="dash-button green"type="button" name="button" ui-sref="addAppoint">SCHEDULE APPT</button>
+
+    </section>
+    <section class="car-info-container">
+        <section class="car-update-container">
+            <span ng-bind="data.vehicles[data.selectedCar].make"></span>
+            <span ng-bind="data.vehicles[data.selectedCar].model"></span>
+            <section class="top-box box-container">
+                <div class="miles-div">
+                    Miles:
+                    <br>
+                    <input class="dash-display-input dash-button" type="text" name="name" value="" ng-model="milesInput">
+                </div>
+                <div class="oil-div">
+                    Last Oil Change:
+                    <br>
+                    <input class="dash-display-input dash-button" type="text" name="name" value="" ng-model="oilInput">
+                </div>
+            </section>
+            <section class="middle-box box-container">
+                <div class="tire-div">
+                    Last Tire Rotation:
+                    <br>
+                    <input class="dash-display-input dash-button" type="text" name="name" value="" ng-model="tireInput">
+                </div>
+                <div class="empty dash-button">
+                </div>
+            </section>
+            <section class="bottom-box box-container">
+                <div class="save-div">
+                    <button id='dash-save' class="blue dash-button" type="button" name="button">SAVE</button>
+                </div>
+                <div class="empty dash-button">
+                </div>
+            </section>
+        </section>
+
+
+
+
+    <section class="alert-box-container">
+      <section class="alert-box-head red">
+        <img src="../IMG/bell.png" alt="bell" />
+        <span class="white" ng-bind="data.vehicles[data.selectedCar].make"></span>
+        <span class="white" ng-bind="data.vehicles[data.selectedCar].model"></span>
+      </section>
+      <section class="alert-body-container" ng-scrollbars ng-scrollbars-config="configScroll1">
+          <section class="absolute" ng-show="news">
+            {{goodNews}}
+          </section>
+        <section class="alert" ng-repeat="alert in alerts">
+          Diagnostic Code: {{alert.code}}
+          <p class="smaller">
+            {{alert.time_reported}}
+          </p>
+          <br>
+          <p>
+            {{alert.description}}
+          </p>
+
+        </section>
+
+        <!-- <section class="alert">
+          lorem ipusm there isnt any alert data yet dolor set amin bacon some more text she loves me yeah yeah yeah she loves me yeah yeah yeah
+        </section>
+        <section class="alert">
+          another alert yeah yeah yeah another alert yeah yeah yeah
+        </section>
+        <section class="alert">
+          another alert yeah yeah yeah another alert yeah yeah yeah
+        </section>
+        <section class="alert">
+          another alert yeah yeah yeah another alert yeah yeah yeah
+        </section>
+        <section class="alert">
+          another alert yeah yeah yeah another alert yeah yeah yeah
+        </section>
+        <section class="alert">
+          another alert yeah yeah yeah another alert yeah yeah yeah
+        </section> -->
+
+      </section>
+    </section>
+  </section>
+  <section class="maintence-user-car-container">
+   Upcoming Maintenance Schedule
+   <section class="dash-maint-table-container">
+     <section class="dash-maint-table-header dash-table-row">
+       <section class=" dash-table-col1 dash-header">
+         Action
+       </section>
+       <section class=" dash-table-col2 dash-header">
+         Maintenace Items
+       </section>
+       <section class=" dash-table-col3 dash-header">
+         Frequency
+       </section>
+       <section class=" dash-table-col4 dash-header">
+         Labor Units
+       </section>
+       <section class=" dash-table-col5 dash-header">
+         Part Units
+       </section>
+       <section class=" dash-table-col6 dash-header">
+         Miles
+       </section>
+     </section>
+     <section class="dash-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll2">
+       <section class="dash-table-row" ng-repeat="item in maintenance" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
+         <section class=" dash-table-col1">
+           {{item.action}}
+         </section>
+         <section class=" dash-table-col2">
+           {{item.item}}
+         </section>
+         <section class=" dash-table-col3">
+           <span data-balloon="{{item.frequencyDisc}}" data-balloon-pos="right" data-balloon-length="large">{{item.frequency}}</span>
+         </section>
+         <section class=" dash-table-col4">
+           {{item.laborUnits}}
+         </section>
+         <section class=" dash-table-col5">
+           {{item.partUnits}}
+         </section>
+         <section class=" dash-table-col6">
+           {{item.intervalMileage}}
+         </section>
+
+       </section>
+     </section>
+
+  </section>
+  <section class="bottom-button-holder">
+    <button class="blue dash-button"type="button" name="button" ui-sref="schedule">REVIEW </button>
+    <button class="red dash-button" type="button" name="button"> DELETE CAR</button>
+  </section>
+
+</section>
+</section>

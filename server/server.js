@@ -1,21 +1,21 @@
 // EXTERNAL MODULES //
 var express = require("express");
 var bodyParser = require('body-parser');
-var cors = require('cors');
+// var cors = require('cors');
 var session = require('express-session');
 
-var options = {
-  origin: ''
-}
+// var options = {
+//   origin: ''
+// }
 var app = express();
-app.use(express.static('../'));
+app.use(express.static('../public'));
 app.use(bodyParser.json());
 var db = require('node-mysql');
 var DB = db.DB;
 var BaseRow = db.Row;
 var BaseTable = db.Table;
 
-app.use(cors(options));
+// app.use(cors(options));
 
 // SERVICES //
 var passport = require("./services/passport");
