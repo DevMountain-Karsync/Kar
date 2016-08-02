@@ -625,6 +625,13 @@ button {
   margin-left: 20px;
   margin-top: 20px;
 }
+.column2-1 {
+  width: 80vw;
+  height: 100vh;
+  background-color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+}
 .column2 {
   width: 63%;
   height: 100vh;
@@ -640,6 +647,25 @@ iframe {
 }
 
 .icon-check {
+  color: white;
+}
+.dash-table-col6 {
+  margin-right: 2vw;
+}
+.page-buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-top: -4vh;
+  margin-right: .3vw;
+}
+#add-page-button {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  background-color: #21418C;
   color: white;
 }
 .activeicon {
