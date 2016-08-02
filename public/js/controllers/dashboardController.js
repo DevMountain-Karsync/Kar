@@ -1,7 +1,8 @@
 angular.module('karSync')
 
 .controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService,$rootScope,diagnosticService){
-
+  $scope.alertShow=false;
+  $scope.alertShow = true;
   $scope.alertData = [];
   $scope.maintenance =[];
 
@@ -203,4 +204,6 @@ angular.module('karSync')
    {time: "4 PM"},
    {time: "5 PM"}
  ]
+
+
 });

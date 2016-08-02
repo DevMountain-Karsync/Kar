@@ -4,7 +4,7 @@ angular.module('karSync')
 this.getUser = function(partner_id){
   return $http({
     method: 'GET',
-    url: 'http://karsync.ninja/api/customers/' + partner_id
+    url: 'http://localhost:3000/api/customers/' + partner_id
   })
   .then(function(response){
     // console.log(response.data[1]);
