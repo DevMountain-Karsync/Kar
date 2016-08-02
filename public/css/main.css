@@ -532,7 +532,11 @@ p3 {
   text-align: center;
   background-size: 20vw 10vh;
 }
+.login-buttons {
+  border-top: 2vh;
+}
 #login-b {
+  padding-top: 3vh;
   width: 5vw;
   height: 3vh;
   background-color: #21418C;
