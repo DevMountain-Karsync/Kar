@@ -531,6 +531,12 @@ p3 {
   text-align: center;
   background-size: 20vw 10vh;
 }
+#login-b {
+  width: 5vw;
+  height: 3vh;
+  background-color: #21418C;
+  color: white;
+}
 #login-container {
   display: -ms-flexbox;
   display: flex;
