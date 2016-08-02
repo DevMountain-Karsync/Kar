@@ -705,7 +705,7 @@ iframe {
 .sched-table-data-container {
   border: 1px solid #EEEEEE;
   overflow: auto;
-  height: 70%;
+  height: 60%;
 }
 .makesSearch {
   background-color: white;
