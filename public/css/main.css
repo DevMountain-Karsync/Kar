@@ -113,16 +113,11 @@ p3 {
 }
 
 .icon-bell {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row;
-      flex-flow: row;
-  -ms-flex-align: stretch;
-      align-items: stretch;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
   margin-left: 19vw;
-  margin-right: 1vw;
+  color: #727476;
+}
+.icon-info {
+  margin-top: -2.8vh;
   color: #727476;
 }
 .display-view-container {
@@ -662,6 +657,15 @@ iframe {
 }
 .dash-table-col6 {
   margin-right: 2vw;
+}
+.icon-info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-right: 1vw;
 }
 .page-buttons {
   display: -ms-flexbox;
