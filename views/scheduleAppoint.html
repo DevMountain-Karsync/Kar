@@ -36,8 +36,8 @@
               <div class="sched-container">
                 <div class="appoin-con">Appointment For
 
-                <select class="select-sched-dropdown" name="" ng-model="data.report_id">(pulling from vehicle alerts here)
-                  <option ng-repeat = "item in maintenance track by $index" value="{{$index}}">{{item.item}}</option>
+                <select class="select-sched-dropdown" name="" ng-model="data.alerts">(pulling from vehicle alerts here)
+                  <option ng-repeat = "alert in alerts">{{alert.description}}</option>
                 </select>
                 </div>
 
