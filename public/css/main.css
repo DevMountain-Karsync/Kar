@@ -587,6 +587,9 @@ body {
 button {
   border: none;
 }
+.red {
+  color: #F46868;
+}
 .smaller {
   font-size: 70%;
 }
