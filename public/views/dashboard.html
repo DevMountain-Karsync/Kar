@@ -13,8 +13,9 @@
       <div class="users-div" ng-click="customerClicked(user); select(user)" ng-class="{'activeUser' : isActive(user)}" ui-sref="dashboardDisplay">
 
         <div class="usersappear">{{user.first_name}} {{user.last_name}}
-        
-            <div class="icon-bell" ng-show="user.first_name === 'April'"></div>
+
+            <div class="icon-bell" style='color: #F46868' ng-show="user.first_name === 'April'"></div>
+            <div class="icon-bell" ng-show="user.first_name !== 'April'"></div>
 
 
           <div class="icon-info" ng-class="{'activeUser' : isActive(user)}"></div></div>
