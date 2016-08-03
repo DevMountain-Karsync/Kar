@@ -1,0 +1,104 @@
+<section class="main-container">
+     <section class="nav-bar">
+       <nav-dir></nav-dir>
+
+     </section>
+<section class="route-main">
+  <div class="column1">
+    <div class="search-container">
+    <input type="text" placeholder="Search..." class="makesSearch" ng-model="searchString" ng-class="{'typeSearch': searchString }">
+    </div>
+      <section class="make-list" ng-scrollbars ng-scrollbars-config="configScroll1">
+        <section data-ng-repeat="make in makes | searchFor:searchString" ng-click="makeList(make.name); select(make)">
+        <div class="make-click" ng-class="{'active' : isActive(make)}">
+          {{make.name}}
+          <div class="icon-check" ng-class="{'activeicon' : isActive(make)}">
+      </div></div></section>
+    </section>
+    <div class="search-container">
+   <input type="text" placeholder="Search..." class="modelSearch" ng-model="searchString1"  ng-class="{'modelsList': searchString1 }">
+    </div>
+    <section class="model-list" ng-scrollbars ng-scrollbars-config="configScroll1">
+      <section data-ng-repeat="model in models | searchFor:searchString1" ng-click="yearOption(model); selectModel(model)">
+        <div class="model-click" ng-class="{'active' : isActiveModel(model)}">
+          {{model.name}}
+           <div class="icon-check" ng-class="{'activeicon' : isActiveModel(model)}">
+      </div></div></section>
+    </section>
+    <section class="year-list" ng-scrollbars ng-scrollbars-config="configScroll1">
+      <section ng-repeat="year in years" ng-class="{'active' : isActiveYear(year)}">
+        <div class="year-click" ng-click="yearsModel(year.year); selectYear(year)">
+          {{year.year}}
+          <div class="icon-check" ng-class="{'activeicon' : isActiveYear(year)}">
+      </div></div></section>
+    </section>
+  </div>
+  <div class="column2">
+
+    <section class="maintenance-schedule">
+
+        <section class="maintence-user-car-cont">
+         Upcoming Maintenance Schedule
+         <section class="sched-maint-table-container">
+           <section class="dash-maint-table-header dash-table-row">
+             <section class=" dash-table-col1 dash-header">
+               Action
+             </section>
+             <section class=" dash-table-col2 dash-header">
+               Maintenance Items
+             </section>
+             <section class=" dash-table-col3 dash-header">
+               Frequency
+             </section>
+             <section class=" dash-table-col4 dash-header">
+               Labor Units
+             </section>
+             <section class=" dash-table-col5 dash-header">
+               Part Units
+             </section>
+             <section class=" dash-table-col6 dash-header">
+               Miles
+             </section>
+           </section>
+           <div class="no-maint" ng-show="showAlert">{{alert}}</div>
+           <section class="maint-table-data-container" ng-scrollbars ng-scrollbars-config="configScroll2">
+             <section class="dash-table-row" ng-repeat="item in maintArr" ng-class-odd="'oddRow'" ng-class-even="'evenRow'">
+               <section class=" dash-table-col1">
+                 {{item.action}}
+               </section>
+               <section class=" dash-table-col2">
+                 {{item.item}}
+               </section>
+               <section class=" dash-table-col3">
+                 <span  data-balloon="{{item.frequencyDisc}}" data-balloon-pos="right" data-balloon-length="large">
+                 {{item.frequency}}</span>
+               </section>
+               <section class=" dash-table-col4">
+                 {{item.laborUnits}}
+               </section>
+               <section class=" dash-table-col5">
+                 {{item.partUnits}}
+               </section>
+               <section class=" dash-table-col6">
+                 {{item.intervalMileage}}
+               </section>
+
+             </section>
+           </section>
+         </section>
+
+        </section>
+    <!-- <p><section class="maint-sched">Service:</section> {{item.item}}</p>
+    <p><section class="maint-sched">Engine Code:</section> {{item.engineCode}}</p>
+    <p><section class="maint-sched">Interval Mileage:</section> {{item.intervalMileage}}</p>
+    <p><section class="maint-sched">Interval Month:</section>  {{item.intervalMonth}}</p>
+    <p><section class="maint-sched">Frequency:</section> {{item.frequencyDisc}}</p>
+    <p><section class="maint-sched">Labor Units:</section>  {{item.laborUnits}}</p>
+    <p><section class="maint-sched">Part Units:</section> {{item.partUnits}}</p>
+    <p><section class="maint-sched">maintenance Type:</section> {{item.action}}</p>
+    <p><section class="maint-sched">Description:</section> {{item.itemDescription}}</p> -->
+
+  </section>
+
+  </div>
+</section>
