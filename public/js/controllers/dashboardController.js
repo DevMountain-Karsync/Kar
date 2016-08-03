@@ -1,8 +1,18 @@
 angular.module('karSync')
+.controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService, $rootScope, diagnosticService){
 
-.controller('dashCtrl', function($scope, userServ,$state, vehicleService, partner, edmundService,$rootScope,diagnosticService){
+  $scope.addAppt = function () {
+    swal({
+      title: "Appointment Added!",
+      text: "Good Job!",
+      type: "success",
+      closeOnConfirm: true
+      })
+  }
+
   $scope.alertShow=false;
   $scope.alertShow = true;
+
   $scope.alertData = [];
   $scope.maintenance =[];
 

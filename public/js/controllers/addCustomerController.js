@@ -18,8 +18,8 @@ angular.module('karSync')
     .then (function(res) {
       console.log(res)
       swal({
-        title: "Your A Pro!",
-        text: "Brandon Salutes You!",
+        title: "Customer Added!",
+        text: "Good Job!",
         type: "success",
         closeOnConfirm: true
         })
