@@ -441,7 +441,6 @@ p3 {
   -moz-osx-font-smoothing: grayscale;
 }
 .icon-bell:before {
-  color: #F46868;
   content: "\61";
   margin-top: .3vh;
   font-size: 1.3rem;
