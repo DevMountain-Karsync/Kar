@@ -94,7 +94,7 @@
         <section class="alert" ng-repeat="alert in alerts">
           Diagnostic Code: {{alert.code}}
           <p class="smaller">
-            {{alert.time_reported}}
+            {{alert.time_reported | date :  "MMM d, y h:mm:ss a" }}
           </p>
           <br>
           <p>
