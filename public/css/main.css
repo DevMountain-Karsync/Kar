@@ -116,6 +116,10 @@ p3 {
   margin-left: 19vw;
   color: #727476;
 }
+.date-pick {
+  width: 15.9vw;
+  margin-bottom: 1vh;
+}
 .usersAppear {
   display: -ms-flexbox;
   display: flex;
