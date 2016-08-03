@@ -23,19 +23,9 @@ angular.module('karSync', ['ui.router','ngScrollbars', 'angularModalService', 'n
     parent: "dashboard",
     controller: "dashDisplayCtrl"
     })
-    .state('addCust', {
-      templateUrl: './views/addCustomer.html',
-      url: 'add/',
-      parent: "newCustomer",
-      resolve: {
-        partner: function(loginServ) {
-          return loginServ.getLogin()
-        }
-       }
-  })
   .state('addAppoint', {
     templateUrl:'./views/scheduleAppoint.html',
-    url: '/appointSched/',
+    url: 'appointSched/',
     parent: 'dashboard',
     controller: 'dashCtrl',
     resolve: {
@@ -44,7 +34,6 @@ angular.module('karSync', ['ui.router','ngScrollbars', 'angularModalService', 'n
       }
      }
   })
-
     .state('newCustomer', {
       templateUrl: './views/newCustomer.html',
       url: '/newCustomer/',
@@ -55,6 +44,17 @@ angular.module('karSync', ['ui.router','ngScrollbars', 'angularModalService', 'n
         }
        }
   })
+  .state('addCust', {
+    templateUrl: './views/addCustomer.html',
+    url: 'add/',
+    controller: "addCtrl",
+    parent: "newCustomer",
+    resolve: {
+      partner: function(loginServ) {
+        return loginServ.getLogin()
+      }
+     }
+})
     .state('currentCust', {
       templateUrl: './views/currentCustomer.html',
       url: '/current/',
