@@ -116,8 +116,16 @@ p3 {
   margin-left: 19vw;
   color: #727476;
 }
+.usersAppear {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
 .icon-info {
-  margin-top: -2.8vh;
+  margin-top: -2.3vh;
   color: #727476;
 }
 .display-view-container {
@@ -531,7 +539,6 @@ p3 {
   border-top: 2vh;
 }
 #login-b {
-  padding-top: 3vh;
   width: 5vw;
   height: 3vh;
   background-color: #21418C;
