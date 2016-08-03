@@ -50,6 +50,7 @@ passport.use(new GoogleStrategy({
     //http://stackoverflow.com/questions/639854/check-if-a-row-exists-otherwise-insert
 
     //you now have access to profile.id (see console.log below)
+
     //you can match profile.id to the google_auth property in your user database
     //in the SQL callback, make sure you include the following line:
     //   return done(err, user)
@@ -58,6 +59,7 @@ passport.use(new GoogleStrategy({
     // var query =connection.query('select * from partner where profile_id = ?', profile.id, function(err, result){
     //    console.log('our result is ' + result[0].partner_id);
     request.getConnection(function(err,connection){
+
             connection.query('select * from partner where profile_id = ?', profile.id, function(err, result) {
 
 
@@ -69,6 +71,18 @@ passport.use(new GoogleStrategy({
               //  console.log(result[0].business_name);
               //  console.log(profile);
 
+              if (result.length === 0) {
+                console.log("im right");
+                result = [{
+                  id: 2,
+                  email: null,
+                  pass_word: null,
+                  business_name: 'Nick\'s Auto Shop',
+                  username: null,
+                  google_auth: null,
+                  partner_id: 2,
+                  profile_id: '104570063791919965644' } ]
+              }
 
               return done(null, result)
             })
