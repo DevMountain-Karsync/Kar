@@ -17,7 +17,7 @@ var server = app.listen(3000, function() {
 
 var OAuth2 = google.auth.OAuth2;
 
-var oauth2Client = new OAuth2("310600689678-ficp4o5b2o2jo1q5s7c468a58k4qvfhn.apps.googleusercontent.com", "0MmV6gvihJ1MLqKuxeNIN4em", "http://localhost:3000/oauthcallback");
+var oauth2Client = new OAuth2("310600689678-ficp4o5b2o2jo1q5s7c468a58k4qvfhn.apps.googleusercontent.com", "0MmV6gvihJ1MLqKuxeNIN4em", "http://karsync.ninja/oauthcallback");
 
 // generate a url that asks permissions for Google+ and Google Calendar scopes
 var scopes = [
