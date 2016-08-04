@@ -110,7 +110,7 @@ app.get('/api/dtc/', getDTC.queryDTC)
 
 app.get('/api/dtc/:code', getDTCbyCode.queryDTCbyCode)
 // app.get('/api/report:id', getReportbyId.queryReportbyId)
-var port = 3000;
+var port = 80;
 
 app.listen(port, function(){
 console.log('Beginning your downfall on ' + port + "...");

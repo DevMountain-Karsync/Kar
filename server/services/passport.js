@@ -39,7 +39,7 @@ var getPartner = require('../controllers/getPartner')
 passport.use(new GoogleStrategy({
     clientID:     config.clientID,
     clientSecret: config.clientSecret,
-    callbackURL: "http://localhost:3000/auth/google/callback",
+    callbackURL: "http://karsync.ninja/auth/google/callback",
     passReqToCallback: true
   },
 
