@@ -138,7 +138,9 @@ p3 {
       align-items: center;
 }
 .icon-info {
-  margin-top: -3.3vh;
+  margin-top: -3.6vh;
+  margin-right: -1vw;
+  margin-bottom: -2vh;
   color: #727476;
 }
 .display-view-container {
@@ -323,6 +325,7 @@ p3 {
   margin: 1em;
 }
 .dash-maint-table-header {
+  padding-left: 1vw;
   background: #6FC17F;
 }
 .dash-table-row {
@@ -347,9 +350,11 @@ p3 {
   cursor: pointer;
 }
 .oddRow {
+  padding-left: 1vw;
   background: white;
 }
 .evenRow {
+  padding-left: 1vw;
   background: #EEEEEE;
 }
 .dash-table-col1 {
@@ -697,8 +702,9 @@ iframe {
   margin-right: .3vw;
 }
 #add-page-button {
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  height: 2vw;
+  width: 5vw;
+  margin-top: 4vh;
   background-color: #21418C;
   color: white;
 }
