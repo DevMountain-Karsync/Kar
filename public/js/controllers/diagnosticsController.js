@@ -74,7 +74,7 @@ $scope.yearsModel = function() {
   }
 
   $scope.currentPage = 0;
-  $scope.pageSize = 40;
+  $scope.pageSize = 18;
 //   $scope.numberOfPages = function () {
 //     return Math.ceil($scope.items.length / $scope.pageSize);
 // }
